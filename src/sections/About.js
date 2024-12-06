@@ -124,7 +124,7 @@ const About = () => {
         data-scroll-speed="-2"
         data-scroll-direction="horizontal"
       >
-        About Us
+        About Me
       </Title>
       <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
         We're fashion studio based in california. We create unique designs that

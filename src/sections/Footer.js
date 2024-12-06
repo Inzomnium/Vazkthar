@@ -33,7 +33,7 @@ const LogoContainer = styled.div`
   }
   h3 {
     font-size: ${(props) => props.theme.fontxxl};
-    font-family: "Kaushan Script";
+    font-family: "Permanent Marker", cursive;
 
     @media (max-width: 48em) {
       font-size: ${(props) => props.theme.fontxl};
@@ -128,7 +128,7 @@ const Footer = () => {
       <LogoContainer>
         <img data-scroll data-scroll-speed="2" src={Logo} alt="Wibe Studio" />
         <h3 data-scroll data-scroll-speed="-1">
-          Wibe Studio
+          C. Vakzthar
         </h3>
       </LogoContainer>
       <FooterComponent

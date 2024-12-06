@@ -197,7 +197,7 @@ const NewArrival = () => {
         data-scroll-speed="-2"
         data-scroll-direction="horizontal"
       >
-        New Arrivals
+        My Work
       </Title>
 
       <Container ref={ScrollingRef}>

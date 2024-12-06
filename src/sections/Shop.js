@@ -4,7 +4,6 @@ import React, { useLayoutEffect } from "react";
 import styled from "styled-components";
 import { useRef } from "react";
 
-import { motion } from "framer-motion";
 
 import img1 from "../assets/Images/1.webp";
 import img2 from "../assets/Images/2.webp";
@@ -16,6 +15,7 @@ import img7 from "../assets/Images/7.webp";
 import img8 from "../assets/Images/8.webp";
 import img9 from "../assets/Images/9.webp";
 import img10 from "../assets/Images/10.webp";
+import Product from "../components/Product";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -107,45 +107,9 @@ const Right = styled.div`
   }
 `;
 
-const Item = styled(motion.div)`
-  width: 20rem;
-  margin-right: 6rem;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-  }
-  h1 {
-    display: inline-block;
-    width: fit-content;
-    font-weight: 500;
-    text-align: center;
-    cursor: pointer;
-  }
 
-  @media (max-width: 48em) {
-    width: 15rem;
-  }
-`;
 
-const Product = ({ img, title = "" }) => {
-  return (
-    <Item
-      initial={{ filter: "grayscale(100%)" }}
-      whileInView={{ filter: "grayscale(0%)" }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: false, amount: "all" }}
-    >
-      <img src={img} alt={title} />
-      <h1>{title}</h1>
-    </Item>
-  );
-};
 
 const Shop = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -223,7 +187,7 @@ const Shop = () => {
         </p>
       </Left>
       <Right ref={horizontalRef}>
-        <Product img={img1} title="Man Basics" />
+        <Product img={img1} title="Lorem ipsum" />
         <Product img={img2} title="Tops" />
         <Product img={img3} title="Sweatshirts" />
         <Product img={img4} title="Ethnic Wear" />
