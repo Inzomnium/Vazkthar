@@ -22,7 +22,7 @@ const Section = styled.section`
 `;
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontBig};
-  font-family: "Kaushan Script";
+  font-family: "Permanent Marker", cursive;
   font-weight: 300;
 
   position: absolute;

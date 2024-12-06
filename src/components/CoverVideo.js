@@ -51,20 +51,20 @@ const Title = styled(motion.div)`
   }
 
   h1 {
-    font-family: "Kaushan Script";
+    font-family: "Permanent Marker", cursive;
     font-size: ${(props) => props.theme.fontBig};
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
 
     @media (max-width: 30em) {
-      font-size: calc(5rem + 8vw);
+      font-size: calc(3rem + 8vw);
     }
   }
   h2 {
-    font-family: "Sirin Stencil";
     font-size: ${(props) => props.theme.fontlg};
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
-    font-weight: 300;
+    font-weight: 100;
     text-transform: capitalize;
+    margin-top:-20px;
 
     @media (max-width: 30em) {
       font-size: ${(props) => props.theme.fontmd};
@@ -104,34 +104,66 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.13"
+            data-scroll-delay="0.20"
             data-scroll-speed="4"
           >
-            S
+            V
           </motion.h1>
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.09"
-            data-scroll-speed="4"
-          >
-            e
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.06"
-            data-scroll-speed="4"
-          >
-            b
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.04"
+            data-scroll-delay="0.17"
             data-scroll-speed="4"
           >
             a
+          </motion.h1>
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.14"
+            data-scroll-speed="4"
+          >
+            k
+          </motion.h1>
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.11"
+            data-scroll-speed="4"
+          >
+            z
+          </motion.h1>
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.08"
+            data-scroll-speed="4"
+          >
+            t
+          </motion.h1>
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.05"
+            data-scroll-speed="4"
+          >
+            h
+          </motion.h1>
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.03"
+            data-scroll-speed="4"
+          >
+            a
+          </motion.h1>
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.02"
+            data-scroll-speed="4"S
+          >
+            r
           </motion.h1>
         </div>
         <motion.h2
@@ -140,7 +172,7 @@ const CoverVideo = () => {
           data-scroll-delay="0.04"
           data-scroll-speed="2"
         >
-          Inspire. Create. Belive
+          Art for everyone
         </motion.h2>
       </Title>
       <video src={MainVideo} type="video/mp4" autoPlay muted loop />

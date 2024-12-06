@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Logo from "../assets/Svgs/star_white_48dp.svg";
+import Logo from "../assets/Svgs/Asset 1.svg";
 import { motion } from "framer-motion";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 
