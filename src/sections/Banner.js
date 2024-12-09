@@ -3,12 +3,13 @@ import styled from "styled-components";
 
 const Section = styled.section`
   min-height: 100vh;
-  width: 80vw;
+  width: 100%;
   margin: 0 auto;
-
+  background-color:black;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   position: relative;
 
@@ -18,7 +19,7 @@ const Section = styled.section`
 `;
 const Container = styled.div`
   min-height: 100vh;
-
+  background-color:#202020
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -36,6 +37,7 @@ const BannerComponent = styled.h3`
   white-space: nowrap;
   text-transform: uppercase;
   line-height: 1;
+  margin-top 20px;
   @media (max-width: 70em) {
     font-size: ${(props) => props.theme.fontxxl};
   }
@@ -55,12 +57,13 @@ const BannerComponent = styled.h3`
     background-color: ${(props) => props.theme.body};
     padding: 1rem 2rem;
   }
+
 `;
 
 const Banner = () => {
   return (
-    <Section>
-      <Container id="up">
+    <Section id="Static">
+      <Container id="up" className="estatica">
         <BannerComponent>
           <span
             data-scroll
@@ -111,6 +114,7 @@ const Banner = () => {
             with a Little Black Dress
           </span>
         </BannerComponent>
+        <div className="staticX"></div>
       </Container>
     </Section>
   );
