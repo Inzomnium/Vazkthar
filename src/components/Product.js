@@ -1,7 +1,6 @@
 
 import Modal from "./Modal";
 import styled from "styled-components";
-
 import { motion } from "framer-motion";
 const Item = styled(motion.div)`
     width: 20rem;

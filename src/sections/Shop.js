@@ -105,6 +105,18 @@ const Right = styled.div`
     width: 5rem;
     margin: 0 2rem;
   }
+  .img-base {
+    background:none;
+    border:none;
+  }
+  .img-base h2 {
+    font-weight: 100;
+    font-size: 1.8em;
+    margin-top: 0.5em;
+  }
+  .img-base img {
+    border: 2px #202020 solid;
+  }
 `;
 
 

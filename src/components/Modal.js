@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence  } from "framer-motion";
+import { motion , AnimatePresence  } from "framer-motion";
 
 
 function generateRandomKey() {
@@ -27,7 +27,7 @@ function Modal({img, title}) {
                         key={generateRandomKey()}
                         > 
                  <img src={img} alt={title} />
-                 <h1>{title}</h1>
+                 <h2>{title}</h2>
                 </motion.button>
             <AnimatePresence>                {showModal && (
                    <motion.div

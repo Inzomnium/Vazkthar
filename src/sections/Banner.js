@@ -29,9 +29,9 @@ const Container = styled.div`
   }
 `;
 
-const BannerComponent = styled.h1`
+const BannerComponent = styled.h3`
   font-size: ${(props) => props.theme.fontxxxl};
-  font-family: "Kaushan Script";
+  font-family: "Permanent Marker", cursive;
   color: ${(props) => props.theme.text};
   white-space: nowrap;
   text-transform: uppercase;
