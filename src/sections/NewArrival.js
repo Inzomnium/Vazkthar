@@ -184,8 +184,8 @@ const NewArrival = () => {
 
     return () => {
       // Let's clear instances
-      t1.kill();
-      ScrollTrigger.kill();
+      if (t1) t1.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 

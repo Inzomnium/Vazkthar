@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
+import Texts from './pages/Texts';
 import './styles/estilos.css'
 // import reportWebVitals from './reportWebVitals';
 
@@ -9,7 +10,10 @@ import './styles/estilos.css'
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <App />
+     <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/texts" element={<Texts />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

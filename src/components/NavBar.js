@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
+import { Link } from 'react-router-dom';
 
 const NavContainer = styled(motion.div)`
   width: 100vw;
@@ -145,6 +146,13 @@ const NavBar = () => {
           whileTap={{ scale: 0.9, Y: 0 }}
         >
           My Work
+        </MenuItem>
+        <MenuItem        
+          whileHover={{ scale: 1.1, y: -5 }}
+          whileTap={{ scale: 0.9, Y: 0 }}
+        >
+          <Link to="/texts">My Texts</Link>
+         
         </MenuItem>
       </MenuItems>
     </NavContainer>
