@@ -130,14 +130,18 @@ const Shop = () => {
   const horizontalRef = useRef(null);
 
   useLayoutEffect(() => {
+    if (!ref.current || !horizontalRef.current) return;
+  
     let element = ref.current;
     let scrollingElement = horizontalRef.current;
-
+  
     let pinWrapWidth = scrollingElement.offsetWidth;
-
+  
     let t1 = gsap.timeline();
-
+  
     setTimeout(() => {
+      if (!element || !scrollingElement) return; // Verifica nuevamente antes de aplicar GSAP
+  
       t1.to(element, {
         scrollTrigger: {
           trigger: element,
@@ -146,35 +150,29 @@ const Shop = () => {
           scroller: ".App", // locomotive element
           scrub: true,
           pin: true,
-          // markers:true,
         },
-        // we have to increase scrolling height of this section same as the scrolling element width
         height: `${scrollingElement.scrollWidth}px`,
-        ease: "none,",
+        ease: "none",
       });
-
-      // Horizontal Scrolling
+  
       t1.to(scrollingElement, {
         scrollTrigger: {
           trigger: scrollingElement,
           start: "top top",
           end: pinWrapWidth,
-          scroller: ".App", // locomotive element
+          scroller: ".App",
           scrub: true,
-
-          // markers:true,
         },
-        // we have to increase scrolling height of this section same as the scrolling element width
         x: -pinWrapWidth,
-        ease: "none,",
+        ease: "none",
       });
+  
       ScrollTrigger.refresh();
     }, 1000);
-
+  
     return () => {
-      // Let's clear instances
-      t1.kill();
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      if (t1) t1.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 

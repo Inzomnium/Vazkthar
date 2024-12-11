@@ -138,52 +138,47 @@ const NewArrival = () => {
   const ScrollingRef = useRef(null);
 
   useLayoutEffect(() => {
+    if (!ref.current || !ScrollingRef.current) return;
+  
     let element = ref.current;
     let scrollingElement = ScrollingRef.current;
-
+  
     let t1 = gsap.timeline();
-
+  
     setTimeout(() => {
+      if (!element || !scrollingElement) return; // Verifica nuevamente antes de aplicar GSAP
+  
       t1.to(element, {
         scrollTrigger: {
           trigger: element,
           start: "top top",
           end: "bottom+=100% top-=100%",
-          scroller: ".App", // locomotive element
+          scroller: ".App",
           scrub: true,
           pin: true,
-          //   markers:true,
         },
-        // we have to increase scrolling height of this section same as the scrolling element width
-        ease: "none,",
+        ease: "none",
       });
-
-      // Verticle Scrolling
+  
       t1.fromTo(
         scrollingElement,
-        {
-          y: "0",
-        },
-
+        { y: "0" },
         {
           y: "-100%",
           scrollTrigger: {
             trigger: scrollingElement,
             start: "top top",
             end: "bottom top",
-            scroller: ".App", // locomotive element
+            scroller: ".App",
             scrub: true,
-
-            //   markers:true,
           },
-          // we have to increase scrolling height of this section same as the scrolling element width
         }
       );
+  
       ScrollTrigger.refresh();
     }, 1000);
-
+  
     return () => {
-      // Let's clear instances
       if (t1) t1.kill();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };

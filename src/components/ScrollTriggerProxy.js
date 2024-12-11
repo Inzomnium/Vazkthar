@@ -32,11 +32,18 @@ const ScrollTriggerProxy = () => {
       });
   
       ScrollTrigger.addEventListener("refresh", () => scroll.update());
-      ScrollTrigger.refresh();
+ 
+      // Detectar navegación hacia atrás
+      const handlePopState = () => {
+        setTimeout(() => {
+          ScrollTrigger.refresh();
+          scroll.update();
+        }, 500); // Pequeño retraso para asegurar que el DOM esté listo
+      };
   
       return () => {
         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-        scroll.destroy();
+        window.removeEventListener("popstate", handlePopState);
       };
     }
   }, [scroll]);
