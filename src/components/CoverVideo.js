@@ -161,7 +161,7 @@ const CoverVideo = () => {
             variants={item}
             data-scroll
             data-scroll-delay="0.02"
-            data-scroll-speed="4"S
+            data-scroll-speed="4"
           >
             r
           </motion.h1>

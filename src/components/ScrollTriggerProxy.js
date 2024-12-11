@@ -9,7 +9,7 @@ const ScrollTriggerProxy = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    if (scroll && document.querySelector('.App')) {
+    if (scroll && document.querySelector('.shop-scroller')) {
       const element = scroll?.el;
   
       scroll.on("scroll", ScrollTrigger.update);
@@ -32,7 +32,7 @@ const ScrollTriggerProxy = () => {
       });
   
       ScrollTrigger.addEventListener("refresh", () => scroll.update());
- 
+  
       // Detectar navegación hacia atrás
       const handlePopState = () => {
         setTimeout(() => {
@@ -40,6 +40,9 @@ const ScrollTriggerProxy = () => {
           scroll.update();
         }, 500); // Pequeño retraso para asegurar que el DOM esté listo
       };
+
+      // Agregar el listener para "popstate"
+      window.addEventListener("popstate", handlePopState);
   
       return () => {
         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -49,7 +52,6 @@ const ScrollTriggerProxy = () => {
   }, [scroll]);
 
   return null;
-  
 };
 
 export default ScrollTriggerProxy;

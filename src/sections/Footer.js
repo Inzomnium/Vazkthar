@@ -173,7 +173,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              CodeBucks
+              Vakzthar
             </a>
           </span>
         </Bottom>

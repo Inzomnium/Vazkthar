@@ -88,9 +88,9 @@ const Logo = () => {
 
 
          <linearGradient id="animation">
-        <stop offset="0" stop-color="white">
+        <stop offset="0" stopColor="white">
             <animate
-                fill-opacity="1"
+                fillOpacity="1"
                 dur="1s"
                 attributeName="offset"
                 fill="freeze"
@@ -100,11 +100,11 @@ const Logo = () => {
                 
             />
         </stop>
-        <stop offset="0" stop-opacity="0">
+        <stop offset="0" stopOpacity="0">
             <animate                
                 dur="1s"
                 attributeName="offset"
-                fill-opacity="1"
+                fillOpacity="1"
                 begin="8.5s"
                 from="0"
                 to="1"
@@ -114,7 +114,7 @@ const Logo = () => {
     </linearGradient>
        
         <g 
-        stroke-width="1"
+        strokeWidth="1"
         fill="url(#animation)"
         
         >
@@ -123,7 +123,7 @@ const Logo = () => {
             variants={pathVariants}
             initial="hidden"
             animate="visible"
-            classname="cls-1"
+            className="cls-1"
             d="M33.5,40.6c0.1,0.1,0.3,0.2,0.5,0.3c1.5,0.3,2.9,0.7,4.4,1l4.1,0.9l4.9,1.1l5.4,1.2c1.5,0.3,2.9,0.6,4.4,0.9
             c0.3,0.1,0.5,0.2,0.8,0.2v0.1c-0.3,0.2-0.5,0.4-0.8,0.6l-2.7,1.8l-3,2l-3,2c-0.9,0.5-0.7,0.6-1.7,0S45,51.5,44.2,51
             c-2.1-1.4-4.3-2.7-6.4-4.1c-1.4-0.9-2.7-1.8-4.1-2.7c-0.6-0.4-1.2-0.8-1.8-1.1c-0.2-0.1-0.4-0.2-0.7-0.3c0,0.2,0,0.3,0,0.4

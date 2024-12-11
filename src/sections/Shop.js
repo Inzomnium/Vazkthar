@@ -147,7 +147,7 @@ const Shop = () => {
           trigger: element,
           start: "top top",
           end: pinWrapWidth,
-          scroller: ".App", // locomotive element
+          scroller: ".shop-scroller", // locomotive element
           scrub: true,
           pin: true,
         },
@@ -160,7 +160,7 @@ const Shop = () => {
           trigger: scrollingElement,
           start: "top top",
           end: pinWrapWidth,
-          scroller: ".App",
+          scroller: ".shop-scroller",
           scrub: true,
         },
         x: -pinWrapWidth,

@@ -153,7 +153,7 @@ const NewArrival = () => {
           trigger: element,
           start: "top top",
           end: "bottom+=100% top-=100%",
-          scroller: ".App",
+          scroller: ".shop-scroller",
           scrub: true,
           pin: true,
         },
@@ -169,7 +169,7 @@ const NewArrival = () => {
             trigger: scrollingElement,
             start: "top top",
             end: "bottom top",
-            scroller: ".App",
+            scroller: ".shop-scroller",
             scrub: true,
           },
         }

@@ -4,16 +4,19 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import Texts from './pages/Texts';
 import './styles/estilos.css'
+import ErrorBoundary from "./components/ErrorBoundary";
 // import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <ErrorBoundary>
      <Routes>
         <Route path="/" element={<App />} />
         <Route path="/texts" element={<Texts />} />
       </Routes>
+    </ErrorBoundary>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
