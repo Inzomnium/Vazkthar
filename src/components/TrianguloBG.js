@@ -38,8 +38,8 @@ const TriangleBackground = () => {
     calculateGrid();
     window.addEventListener('resize', calculateGrid);
     return () => window.removeEventListener('resize', calculateGrid);
-  }, [calculateGrid]);  // Agrega 'calculateGrid' como dependencia
-  
+  }, []);
+
   return (
     <div className='container-canvas'>
     <div className="triangle-grid">
