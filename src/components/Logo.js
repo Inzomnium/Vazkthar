@@ -187,7 +187,7 @@ const Logo = () => {
         </g>
       </svg>
         <Text variants={textVariants} initial="hidden" animate="visible">
-          C. Vakzthar
+          Vakzthar
         </Text>
       </Link>
     </Container>

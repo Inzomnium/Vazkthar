@@ -14,7 +14,7 @@ const Section = styled.section`
   position: relative;
 
   @media (max-width: 48em) {
-    width: 90vw;
+    width: 100vw;
   }
 `;
 const Container = styled.div`

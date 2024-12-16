@@ -3,11 +3,12 @@ import styled from "styled-components";
 import Logo from "../assets/Svgs/Asset 1.svg";
 import { motion } from "framer-motion";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
+import { Link } from 'react-router-dom';
 
 const Section = styled.section`
   min-height: 100vh;
   width: 100vw;
-  margin: 5rem auto;
+  padding: 5rem auto;
 
   display: flex;
   flex-direction: column;
@@ -127,7 +128,7 @@ const Footer = () => {
       <LogoContainer>
         <img data-scroll data-scroll-speed="2" src={Logo} alt="Wibe Studio" />
         <h3 data-scroll data-scroll-speed="-1">
-          C. Vakzthar
+           Vakzthar
         </h3>
       </LogoContainer>
       <FooterComponent
@@ -143,16 +144,7 @@ const Footer = () => {
           <li onClick={() => handleScroll(".about")}>about</li>
           <li onClick={() => handleScroll("#shop")}>shop</li>
           <li onClick={() => handleScroll("#new-arrival")}>new arrival</li>
-          <li>
-            <a href="https://google.com" target="_blank" rel="noreferrer">
-              look book
-            </a>
-          </li>
-          <li>
-            <a href="https://google.com" target="_blank" rel="noreferrer">
-              reviews
-            </a>
-          </li>
+          <li><Link to="/texts">My Texts</Link></li>
         </ul>
         <Bottom>
           <span
@@ -169,7 +161,7 @@ const Footer = () => {
           >
             Made with &hearts; by &nbsp;
             <a
-              href="https://youtube.com/codebucks"
+              href="https://www.vakzthar.com/"
               target="_blank"
               rel="noreferrer"
             >
