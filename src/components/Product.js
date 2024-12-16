@@ -1,60 +1,33 @@
+import React from 'react';
+import styled from 'styled-components';
 
-import Modal from "./Modal";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-const Item = styled(motion.div)`
-    width: 20rem;
-    margin-right: 6rem;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 100%;
-      height: auto;
-    }
-    h1 {
-      display: inline-block;
-      width: fit-content;
-      font-weight: 500;
-      text-align: center;
-      cursor: pointer;
-    }   
-    @media (max-width: 48em) {
-      width: 15rem;
-    }
-    #shop {
-        position: relative
-    }
-    .imagen-desactivada {
-        pointer-events: none;
-        opacity: 0.5;
-        z-index:1
-    }
-    .model-open { 
-        position:fixed;
-        z-index: 10;
-        width:150%;
-    }
+const Item = styled.div`
+  width: 20rem;
+  margin-right: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
-  `;
+  img {
+    width: 100%;
+    height: auto;
+  }
 
-const Product = ({ img, title }) => {
-   
-    return (
-      <Item
-        initial={{ filter: "grayscale(100%)" }}
-        whileInView={{ filter: "grayscale(0%)" }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: false, amount: "all" }}
-      >
+  h2 {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+`;
 
-        <Modal img={img} title={title} />
+const Product = ({ img, title, openModal }) => {
+  return (
+    <Item onClick={() => openModal(img, title)}>
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+    </Item>
+  );
+};
 
-     
-      </Item>
-    );
-  };
-
-  export default Product;
+export default Product;

@@ -71,7 +71,7 @@ const Banner = () => {
             data-scroll-speed="8"
             data-scroll-target="#up"
           >
-            Fashion is an armour{" "}
+            Art is an armour{" "}
           </span>
         </BannerComponent>
         <BannerComponent>
@@ -81,7 +81,7 @@ const Banner = () => {
             data-scroll-speed="-6"
             data-scroll-target="#up"
           >
-            to survive everyday life
+           to face the chaos of reality
           </span>
         </BannerComponent>
         <BannerComponent>
@@ -91,7 +91,7 @@ const Banner = () => {
             data-scroll-speed="6"
             data-scroll-target="#up"
           >
-            One is never over-dressed or
+            One is never lost or found
           </span>
         </BannerComponent>
         <BannerComponent>
@@ -101,7 +101,8 @@ const Banner = () => {
             data-scroll-speed="-4"
             data-scroll-target="#up"
           >
-            under-dressed
+           When imagination cracks reality,  
+
           </span>
         </BannerComponent>
         <BannerComponent>
@@ -111,7 +112,7 @@ const Banner = () => {
             data-scroll-speed="6"
             data-scroll-target="#up"
           >
-            with a Little Black Dress
+            And Chaos bleeds color
           </span>
         </BannerComponent>
         <div className="staticX"></div>

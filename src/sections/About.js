@@ -127,20 +127,10 @@ const About = () => {
         About Me
       </Title>
       <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
-        We're fashion studio based in california. We create unique designs that
-        will blow your mind. We also design unique jewellary pieces. Fashion is
-        an ART that can not be grasped by everyone.
-        <br />
-        <br />
-        We are very dedicated to making our products. We offer unique and
-        creative products to a wide range of people. We have a variety of
-        styles, but for most people, all of the options are in the box. We
-        specialize in making things that make you happy.
-        <br />
-        <br />
-        We strive to build on our vision. As a fashion label, we do our best to
-        create amazing experiences for all people. We are always looking to make
-        something that is easy for everyone.
+      I am an artist who explores the intersections between chaos, color, and imagination. Through vibrant patterns, abstract forms, and symbolic compositions, I create pieces that invite viewers to discover new meanings within the layers of color and texture. 
+      <br />
+      <br />
+      My work is a constant dialogue between reality and creativity — a canvas where chaos bleeds into color and imagination cracks the ordinary. Welcome to my world of visual storytelling.
       </Left>
       <Right>
         <img src={img1} alt="About Us" />

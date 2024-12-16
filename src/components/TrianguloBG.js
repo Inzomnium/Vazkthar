@@ -86,7 +86,7 @@ const TriangleBackground = () => {
                     getRandomBackgroundPosition(),
                     getRandomBackgroundPosition(),
                   ],
-                  transition: { duration: 40, repeat: Infinity, ease: 'linear' },
+                  transition: { duration: getRandomAniDur() , repeat: Infinity, ease: 'linear' },
                 }}
               />
             </div>

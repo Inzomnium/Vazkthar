@@ -1,16 +1,15 @@
+import React, { useState, useRef, useLayoutEffect } from 'react';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import React, { useLayoutEffect } from "react";
 import styled from "styled-components";
-import { useRef } from "react";
+import Modal from "../components/Modal";
 
-
-import img1 from "../assets/Images/1.webp";
-import img2 from "../assets/Images/2.webp";
-import img3 from "../assets/Images/3.webp";
-import img4 from "../assets/Images/4.webp";
-import img5 from "../assets/Images/5.webp";
-import img6 from "../assets/Images/6.webp";
+import img1 from "../assets/Images/paintings/dusk.webp";
+import img2 from "../assets/Images/paintings/parentsandchild.webp";
+import img3 from "../assets/Images/paintings/priestess.webp";
+import img4 from "../assets/Images/paintings/the world.webp";
+import img5 from "../assets/Images/paintings/Tango.webp";
+import img6 from "../assets/Images/paintings/elephant.webp";
 import img7 from "../assets/Images/7.webp";
 import img8 from "../assets/Images/8.webp";
 import img9 from "../assets/Images/9.webp";
@@ -125,7 +124,14 @@ const Right = styled.div`
 
 const Shop = () => {
   gsap.registerPlugin(ScrollTrigger);
+  const [modalData, setModalData] = useState({ show: false, img: '', title: '' });
+  const openModal = (img, title) => {
+    setModalData({ show: true, img, title });
+  };
 
+  const closeModal = () => {
+    setModalData({ show: false, img: '', title: '' });
+  };
   const ref = useRef(null);
   const horizontalRef = useRef(null);
 
@@ -179,35 +185,29 @@ const Shop = () => {
   return (
     <Section ref={ref} id="shop">
       <Title data-scroll data-scroll-speed="-1">
-        New Collection
+        My Art
       </Title>
       <Left>
         <p>
-          The brand new collection is currently being developed in USA. We
-          create our products using best quality material, including the use of
-          some of the pure fabrics to make our products. All products are made
-          using the best materials, from the finest cotton to the finest
-          fabrics.
-          <br />
-          <br />
-          We have lots of different clothing options like shoes, jackets and
-          dresses. Not only clothes but we also provide unique Jewellery as
-          well. It is great for us to carry our new clothes all around the
-          country and look different.
+        My artwork is a vibrant exploration of color, form, and emotion. Blending elements of abstraction, symbolism, and figurative expression, I seek to create visual stories that evoke both the familiar and the enigmatic. 
+        <br />
+        <br />
+        Through intricate patterns, dynamic compositions, and bold contrasts, each piece captures a moment of connection, spirituality, or introspection. My work draws inspiration from folk art, surrealism, and contemporary concepts, inviting viewers to find their own narratives within the layers of color and texture."
         </p>
       </Left>
       <Right ref={horizontalRef}>
-        <Product img={img1} title="Lorem ipsum" />
-        <Product img={img2} title="Tops" />
-        <Product img={img3} title="Sweatshirts" />
-        <Product img={img4} title="Ethnic Wear" />
-        <Product img={img5} title="Blazers" />
-        <Product img={img6} title="Suits" />
-        <Product img={img7} title="Antiques" />
-        <Product img={img8} title="Jewellery" />
-        <Product img={img9} title="Watches" />
-        <Product img={img10} title="Special Edition" />
+      <Product img={img1} title="The Dusk" openModal={openModal} />
+        <Product img={img2} title="Parents and descendants" openModal={openModal} />
+        <Product img={img3} title="The faceless devotee" openModal={openModal} />
+        <Product img={img4} title="The World in my eyes" openModal={openModal} />
+        <Product img={img5} title="Tango for one" openModal={openModal} />
+        <Product img={img6} title="Elephants" openModal={openModal} />
+        <Product img={img7} title="Lorem" openModal={openModal} />
+        <Product img={img8} title="Lorem" openModal={openModal} />
+        <Product img={img9} title="Lorem" openModal={openModal} />
+        <Product img={img10} title="Lorem" openModal={openModal} />
       </Right>
+      <Modal img={modalData.img} title={modalData.title} showModal={modalData.show} closeModal={closeModal} />
     </Section>
   );
 };

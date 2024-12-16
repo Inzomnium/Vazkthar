@@ -61,7 +61,7 @@ function App() {
             <About />
             <Shop />
             <Banner />
-            <NewArrival />
+          
             <Footer />
           </main>
           </AnimatePresence>
