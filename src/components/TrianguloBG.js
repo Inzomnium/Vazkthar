@@ -15,7 +15,7 @@ const getRandomBackgroundPosition = () => {
 };
 
 function getRandomAniDur() {
-  return Math.floor(Math.random() * (40 - 10 + 1)) + 10;
+  return Math.floor(Math.random() * (40 - 10 + 1)) + 65;
 }
 function getRandomBGNumber() {
   return Math.floor(Math.random() * 4); // Número aleatorio entre 0 y 3
@@ -44,7 +44,7 @@ const TriangleBackground = () => {
     const positions = Array.from({ length: totalTriangles }, () => getRandomBackgroundPosition());
     setBackgroundPositions(positions);
   }, [size, horizontalMargin, verticalMargin]);
-
+  const randomIndex = getRandomBGNumber(); // Generar número aleatorio para cada triángulo
   // Agregar calculateGrid como una dependencia
   useEffect(() => {
     calculateGrid();
@@ -57,14 +57,14 @@ const TriangleBackground = () => {
       <div className="triangle-grid">
         {Array.from({ length: dimensions.rows }).map((_, rowIndex) => {
           const lastTriangleInverted = (rowIndex + dimensions.cols - 1) % 2 === 1;
-
+          
           return (
             
             <div className="triangle-row" key={rowIndex}>
               {Array.from({ length: dimensions.cols }).map((_, colIndex) => {
                 const isInverted = (rowIndex + colIndex) % 2 === 1;
                 const controlIndex = rowIndex * dimensions.cols + colIndex;
-                const randomIndex = getRandomBGNumber(); // Generar número aleatorio para cada triángulo
+                
                 return (
                   
                   <motion.div
@@ -91,7 +91,7 @@ const TriangleBackground = () => {
                   backgroundPosition:
                     backgroundPositions[rowIndex * dimensions.cols + dimensions.cols] || 'center',
                   backgroundImage:
-                    `url(${i1})`,
+                    `url(${images[randomIndex]})`
                 }}
                 animate={{
                   backgroundPosition: [

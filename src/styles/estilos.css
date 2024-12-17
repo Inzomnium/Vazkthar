@@ -37,6 +37,8 @@
   }
   .container-canvas {
     background-color: #202020;
+    position: absolute;
+    z-index: 0;
   }
   .triangle-grid {
     display: flex;
@@ -60,7 +62,7 @@
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 2px -34px;
+    margin: 1px -34px;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     transition: transform 0.3s ease; 
   }
@@ -150,4 +152,34 @@
   
   .cookie-consent-banner button:hover {
     background-color: #0056b3;
+  }
+
+  .portada {
+    position: absolute;
+    z-index: 1;
+    inset: 0px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+  }
+  .portada h1 {
+    font-family: "Permanent Marker", cursive;
+    color:#fff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 10vw;
+    margin:0;
+   
+  }
+  .portada h3 {
+    font-family: "Permanent Marker", cursive;
+    display: block;
+    background-color: #202020;
+    padding: 5px 8px;
+    font-size: 2.2vw;
+    margin-top:-15px
   }
