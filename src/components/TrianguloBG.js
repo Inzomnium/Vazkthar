@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
+import i0 from '../assets/Images/bgs/0.webp'
+import i1 from '../assets/Images/bgs/1.webp'
+import i2 from '../assets/Images/bgs/2.webp'
+import i3 from '../assets/Images/bgs/3.webp'
+
+const images = [i0, i1, i2, i3];
 // Función para generar una posición aleatoria
 const getRandomBackgroundPosition = () => {
   const x = Math.floor(Math.random() * 100);
@@ -11,13 +17,17 @@ const getRandomBackgroundPosition = () => {
 function getRandomAniDur() {
   return Math.floor(Math.random() * (40 - 10 + 1)) + 10;
 }
-
+function getRandomBGNumber() {
+  return Math.floor(Math.random() * 4); // Número aleatorio entre 0 y 3
+}
 const TriangleBackground = () => {
   const [dimensions, setDimensions] = useState({ rows: 0, cols: 0 });
   const [backgroundPositions, setBackgroundPositions] = useState([]);
   const size = 100; // Tamaño del triángulo (en píxeles)
   const horizontalMargin = -25; // Margen horizontal negativo aplicado en CSS
   const verticalMargin = 2; // Margen vertical aplicado en CSS
+
+ 
 
   // Memoriza la función calculateGrid con useCallback
   const calculateGrid = useCallback(() => {
@@ -49,19 +59,21 @@ const TriangleBackground = () => {
           const lastTriangleInverted = (rowIndex + dimensions.cols - 1) % 2 === 1;
 
           return (
+            
             <div className="triangle-row" key={rowIndex}>
               {Array.from({ length: dimensions.cols }).map((_, colIndex) => {
                 const isInverted = (rowIndex + colIndex) % 2 === 1;
                 const controlIndex = rowIndex * dimensions.cols + colIndex;
-
+                const randomIndex = getRandomBGNumber(); // Generar número aleatorio para cada triángulo
                 return (
+                  
                   <motion.div
                     className={`triangle ${isInverted ? 'inverted' : ''}`}
                     key={`${rowIndex}-${colIndex}`}
                     style={{
                       backgroundPosition: backgroundPositions[controlIndex] || 'center',
                       backgroundImage:
-                        "url('https://cdn.carredartistes.com/en-fr/content_images/watercolor%20painting%20(2).png')",
+                        `url(${images[randomIndex]})`
                     }}
                     animate={{
                       backgroundPosition: [
@@ -79,7 +91,7 @@ const TriangleBackground = () => {
                   backgroundPosition:
                     backgroundPositions[rowIndex * dimensions.cols + dimensions.cols] || 'center',
                   backgroundImage:
-                    "url('https://cdn2.hubspot.net/hubfs/2351684/Imported_Blog_Media/File-formats-and-sizes-image-1000.jpg')",
+                    `url(${i1})`,
                 }}
                 animate={{
                   backgroundPosition: [
