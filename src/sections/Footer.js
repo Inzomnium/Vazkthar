@@ -145,6 +145,7 @@ const Footer = () => {
           <li onClick={() => handleScroll("#shop")}>shop</li>
           <li onClick={() => handleScroll("#new-arrival")}>new arrival</li>
           <li><Link to="/texts">My Texts</Link></li>
+          <li><Link to="/privacy-policy">Privacy Policy</Link></li> {/* Enlace agregado */}
         </ul>
         <Bottom>
           <span
@@ -152,7 +153,8 @@ const Footer = () => {
             data-scroll-speed="2"
             data-scroll-direction="horizontal"
           >
-            &copy; {new Date().getFullYear()}. All Rights Reserved.
+            &copy; {new Date().getFullYear()}. All Rights Reserved.  
+            <Link to="/privacy-policy">Privacy Policy</Link> {/* Enlace agregado en los créditos */}
           </span>
           <span
             data-scroll
