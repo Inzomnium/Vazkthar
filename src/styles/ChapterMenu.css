@@ -1,0 +1,62 @@
+
+.menu-button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', sans-serif;
+  }
+  .menu-button a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .menu-button:hover {
+    background-color: #555;
+  }
+  
+  .menu-dropdown {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #303030;
+    max-height: 80vh; /* Ajusta la altura máxima para ocupar más espacio en la pantalla */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Hace que la barra de desplazamiento sea más delgada (Firefox) */
+    scrollbar-color: #555 #303030; /* Color del thumb y track (Firefox) */
+  }
+  
+  .menu-item {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.7em;
+  }
+  
+  .menu-item:hover {
+    background-color: #444;
+    transition: transform 0.2s ease;
+  }
+
+  /* Estiliza la barra de scroll para navegadores basados en Webkit (Chrome, Safari) */
+  .menu-dropdown::-webkit-scrollbar {
+    width: 6px; /* Hace que la barra de desplazamiento sea más delgada */
+  }
+  
+  .menu-dropdown::-webkit-scrollbar-track {
+    background: #303030; /* Color del track (fondo) */
+  }
+  
+  .menu-dropdown::-webkit-scrollbar-thumb {
+    background-color: #555; /* Color del thumb (barra) */
+    border-radius: 3px; /* Redondea las esquinas del thumb */
+  }
+  
+  .menu-dropdown::-webkit-scrollbar-thumb:hover {
+    background-color: #777; /* Color del thumb al pasar el cursor */
+  }
+  

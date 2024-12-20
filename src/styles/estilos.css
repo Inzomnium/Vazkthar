@@ -1,185 +1,189 @@
 .staticX {
-    position: absolute;
-    inset: -200%;
-    background-image: url('../assets/Images/WN3.jpg');
-    opacity: 0.4;
-    animation: shifter  0.2s linear infinite both ;
-    pointer-events: none;
+  position: absolute;
+  inset: -200%;
+  background-image: url('../assets/Images/WN3.jpg');
+  opacity: 0.4;
+  animation: shifter 0.2s linear infinite both;
+  pointer-events: none;
 }
 
- @keyframes shifter {
-    0% {
-        transform: translateX(10%) translateY(10%);
-    }
-    50% {
-        opacity: 0.37;
-    }
-    100% {
-        transform: translateX(-10%) translateY(-10%);
-    }
- }
- .estatica h3 span {
-    animation: tshadow 0.2s linear infinite both;
- }
- @keyframes tshadow {
-    0% {
-        text-shadow: 0px -1px 16px rgba(255,255,255,0.68);
-    }
-    100% {
-        text-shadow: -1px 3px 16px rgba(255,255,255,0.68);
-    }
- }
- body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
-  }
-  .container-canvas {
-    background-color: #202020;
-    position: absolute;
-    z-index: 0;
-  }
-  .triangle-grid {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    margin-left: -25px;
-    position: relative;
-  }
-  
-  .triangle-row {
-    display: flex;
-    align-items: center;
-  }
-  
-  .triangle,
-  .half-triangle {
-    width: 200px;
-    height: 130px;
-    background-image: url('https://cdn.carredartistes.com/en-fr/content_images/watercolor%20painting%20(2).png');
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 1px -34px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transition: transform 0.3s ease; 
-  }
-  
-  .triangle.inverted {
-    
-    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
-  }
-  
-  .half-triangle {
-    width: 100px;
-    height: 130px;
-    clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
-    
-  }
-  
-  .half-triangle.inverted {
-    clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
-  }
-  .triangle:hover {
-    transform: scale(1.5);
+@keyframes shifter {
+  0% {
+    transform: translateX(10%) translateY(10%);
   }
 
-  /* modal */
-
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Asegura que el modal esté por encima de todo */
-  }
-  
-  .modal-content {
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    max-width: 90vw;
-    max-height: 90vh;
-    overflow: auto;
-    border-color: #202020;
-    border: 10px solid;
-  }
-  
-  .modal-content img {
-    max-width: 100%;
-    max-height: 80vh;
-    display: block;
-    margin: 0 auto;
-  }
-  
-
-
-  .cookie-consent-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #222;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  .cookie-consent-banner p {
-    margin: 0;
-    font-size: 0.9rem;
-  }
-  
-  .cookie-consent-banner button {
-    margin-left: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .cookie-consent-banner button:hover {
-    background-color: #0056b3;
+  50% {
+    opacity: 0.37;
   }
 
-  .portada {
-    position: absolute;
-    z-index: 1;
-    inset: 0px;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    color: rgb(255, 255, 255);
+  100% {
+    transform: translateX(-10%) translateY(-10%);
   }
+}
+
+.estatica h3 span {
+  animation: tshadow 0.2s linear infinite both;
+}
+
+@keyframes tshadow {
+  0% {
+    text-shadow: 0px -1px 16px rgba(255, 255, 255, 0.68);
+  }
+
+  100% {
+    text-shadow: -1px 3px 16px rgba(255, 255, 255, 0.68);
+  }
+}
+
+
+/* modal */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* Asegura que el modal esté por encima de todo */
+}
+
+.modal-content {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  border-color: #202020;
+  border: 10px solid;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.cookie-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cookie-consent-banner p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.cookie-consent-banner button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cookie-consent-banner button:hover {
+  background-color: #0056b3;
+}
+
+.portada {
+  position: absolute;
+  z-index: 1;
+  inset: 0px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+}
+
+.portada h1 {
+  font-family: "Permanent Marker", cursive;
+  color: #fff;
+  background-color: #202020;
+  font-size: 10vw;
+  margin: 0;
+  height: 22vh;
+  line-height: 20vh;
+  width: 82vw;
+  text-align: center;
+}
+
+.portada h3 {
+  font-family: "Kumbh Sans", sans-serif;
+  display: block;
+  background-color: #202020;
+  padding: 5px 8px;
+  font-size: 2vw;
+  margin-top: -15px;
+  font-weight: 100
+}
+
+.chapter-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #202020;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
   .portada h1 {
-    font-family: "Permanent Marker", cursive;
-    color:#fff;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    font-size: 10vw;
-    margin:0;
-   
+    font-size: 15vw; /* Ajusta el tamaño de la fuente para que sea más pequeño */
+    height: 15vh;    /* Reduce la altura del contenedor */
+    line-height: 14vh; /* Ajusta la línea de altura para que se centre mejor */
+    width: 90vw;     /* Hace que el ancho del texto sea un poco más ajustado */
   }
+
   .portada h3 {
-    font-family: "Permanent Marker", cursive;
-    display: block;
-    background-color: #202020;
-    padding: 5px 8px;
-    font-size: 2.2vw;
-    margin-top:-15px
+    font-size: 4vw; /* Reduce el tamaño de la fuente para el subtítulo */
+    padding: 5px 10px; /* Ajusta el padding del subtítulo */
+    margin-top: -10px; /* Ajusta el margen para evitar el espacio excesivo */
   }
+}
+
+/* Ajuste adicional para pantallas extra pequeñas, como iPhone SE */
+@media (max-width: 480px) {
+  .portada h1 {
+    font-size: 11vw;
+    height: 12vh;
+    line-height: 11vh;
+    width: 95vw;
+  }
+
+  .portada h3 {
+    font-size: 5vw;
+    margin-top: -5px;
+  }
+}

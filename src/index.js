@@ -6,6 +6,7 @@ import Texts from './pages/Texts';
 import './styles/estilos.css'
 import ErrorBoundary from "./components/ErrorBoundary";
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Druids from './pages/Texts/Story/Druids';
 // import reportWebVitals from './reportWebVitals';
 
 
@@ -16,7 +17,12 @@ ReactDOM.render(
      <Routes>
         <Route path="/" element={<App />} />
         <Route path="/texts" element={<Texts />} />
+
+        <Route path="/texts/tales/druids" element={<Druids />} />
+
+
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
       </Routes>
     </ErrorBoundary>
     </BrowserRouter>

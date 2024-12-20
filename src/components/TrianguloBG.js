@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/TriangleBg.css'
 
 import i0 from '../assets/Images/bgs/0.webp'
 import i1 from '../assets/Images/bgs/1.webp'
@@ -27,7 +28,15 @@ const TriangleBackground = () => {
   const horizontalMargin = -25; // Margen horizontal negativo aplicado en CSS
   const verticalMargin = 2; // Margen vertical aplicado en CSS
 
- 
+  useEffect(() => {
+    // Al montar el componente, establece overflow:hidden
+    document.body.style.overflow = 'hidden';
+  
+    // Al desmontar el componente, restablece overflow a su valor por defecto
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
 
   // Memoriza la función calculateGrid con useCallback
   const calculateGrid = useCallback(() => {
@@ -53,6 +62,7 @@ const TriangleBackground = () => {
   }, [calculateGrid]);
 
   return (
+   
     <div className="container-canvas">
       <div className="triangle-grid">
         {Array.from({ length: dimensions.rows }).map((_, rowIndex) => {
@@ -106,6 +116,7 @@ const TriangleBackground = () => {
         })}
       </div>
     </div>
+   
   );
 };
 

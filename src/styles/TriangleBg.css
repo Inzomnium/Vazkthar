@@ -1,0 +1,59 @@
+
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.container-canvas {
+  background-color: #202020;
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.triangle-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  margin-left: -25px;
+  position: relative;
+}
+
+.triangle-row {
+  display: flex;
+  align-items: center;
+}
+
+.triangle,
+.half-triangle {
+  width: 200px;
+  height: 130px;
+  background-image: url('https://cdn.carredartistes.com/en-fr/content_images/watercolor%20painting%20(2).png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1px -34px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transition: transform 0.3s ease;
+}
+
+.triangle.inverted {
+
+  clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+}
+
+.half-triangle {
+  width: 100px;
+  height: 130px;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
+}
+
+.half-triangle.inverted {
+  clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
+}
+
+.triangle:hover {
+  transform: scale(1.5);
+}
