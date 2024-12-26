@@ -35,6 +35,7 @@
     text-decoration: none;
     text-align: center;
     font-size: 0.7em;
+    background-color: #555;
   }
   
   .menu-item:hover {

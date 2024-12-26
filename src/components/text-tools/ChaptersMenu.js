@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/ChapterMenu.css'
+import '../../styles/ChapterMenu.css';
 import { Link } from 'react-router-dom';
 
 const chapters = [
@@ -26,10 +26,19 @@ const ChapterMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleScrollToChapter = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    localStorage.setItem('lastChapter', id); // Guarda el id en localStorage
+    setIsOpen(false); // Cierra el menú
+  };
+
   return (
     <div className="chapter-menu">
       <button className="menu-button">
-       <Link to="/texts">Back</Link>
+        <Link to="/texts">Back</Link>
       </button>
       <button className="menu-button" onClick={toggleMenu}>
         Chapters
@@ -37,14 +46,13 @@ const ChapterMenu = () => {
       {isOpen && (
         <div className="menu-dropdown">
           {chapters.map((chapter) => (
-            <a
+            <button
               key={chapter.id}
-              href={`#${chapter.id}`}
               className="menu-item"
-              onClick={() => setIsOpen(false)}
+              onClick={() => handleScrollToChapter(chapter.id)}
             >
               {chapter.label}
-            </a>
+            </button>
           ))}
         </div>
       )}

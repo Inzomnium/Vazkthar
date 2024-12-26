@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import ChapterMenu from '../../../components/text-tools/ChaptersMenu';
@@ -31,6 +31,18 @@ const DruidsContainer = styled.div`
 `;
 
 const Druids = () => {
+
+  useEffect(() => {
+    const lastChapter = localStorage.getItem('lastChapter');
+    if (lastChapter) {
+      const element = document.getElementById(lastChapter);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }, []);
+
+
   return (
 
     
@@ -52,12 +64,12 @@ const Druids = () => {
   
 
 
-    <div class="WordSection1">
-      <a id="c1">I</a>
+    <div className="WordSection1">
+      <a role="button" id="c1">I</a>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Mateo worked happily at home. For many, he was simply another unsociable
         and poor person who lived on one of the hills of Valparaiso. Many of his
         neighbors not only wondered why the young man of about twenty-five years
@@ -73,9 +85,9 @@ const Druids = () => {
         Roble Street.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Another thing that everyone was wondering was how the hell that house
         hadn't fallen on its own foundations yet. It was a very old house, held
         together only by patches and pieces of various wood nailed to it. The
@@ -86,9 +98,9 @@ const Druids = () => {
         getting into the house.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         There were many myths about Mateo in the neighborhood. He didn't go to
         mass, he didn't talk much to others, only what was strict and necessary.
         His appearance, not entirely unpleasant, was deliberately unkempt. That
@@ -101,9 +113,9 @@ const Druids = () => {
         tame it but long enough to look disheveled.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         For a long time, there was talk that Mateo was a demonic figure or that
         he had dealings with Satan due to his constant absence from Sunday mass,
         which 99% of his neighborhood attended punctually (more like a social
@@ -117,9 +129,9 @@ const Druids = () => {
         Mateo concentrated an impressive wisdom regarding plants and animals.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         And it was true, Mateo was a young man who, without having a university
         education, knew many things that a qualified biologist could not even
         imagine using only his scientific method. This knowledge fascinated
@@ -130,18 +142,18 @@ const Druids = () => {
         often had heated discussions with Father Franco in his home.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Although not much was known about how he lived, it was obvious that he
         found all the food he needed to survive in plants. Even so, from time to
         time he would come down the hill to sell a bonsai he had cared for and
         cultivated at David Marpas's shop in the centre of the city.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         David Marpas owned a nursery shop that sold various plants and gardening
         supplies. David was a 55-year-old man who was quite famous for his hard
         heart and nose for money, so he had no qualms about buying Mateo's
@@ -152,9 +164,9 @@ const Druids = () => {
         present the tree was exquisitely handcrafted by himself.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         David Marpas was once a great botanist, famous for his knowledge of
         trees. He was passionate about climbing and smelling them since he was a
         child. That passion had to take a backseat when he became the father of
@@ -167,9 +179,9 @@ const Druids = () => {
         prices for species that both knew could be quite valuable.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Still, there were things that caught David's attention about Mateo. It
         wasn't just his humility and lack of ambition, but also his vast
         knowledge, as well as his strange ability to recognize species at a
@@ -183,9 +195,9 @@ const Druids = () => {
         favorite hobby as a child.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Martina Marpas was a twenty-three-year-old university student studying
         Environmental Engineering. Despite her father's influence, Martina had
         always had a certain apathy towards her father's closeness to plants.
@@ -195,9 +207,9 @@ const Druids = () => {
         marry him, have children and live in that world that anyone would want.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         The relationship between Martina and Mateo was non-existent, tending to
         fail completely. She saw Mateo simply as a poor person begging for money
         with a couple of plants in his hands. There were no traces of sympathy
@@ -212,9 +224,9 @@ const Druids = () => {
         externally as the simplest act of disinterest and contempt.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         After returning home from the day of selling bonsais and the endless
         conversations with David Marpas, Mateo began the slow ascent through the
         streets of Valparaiso at a slow and calm pace. His step reflected peace,
@@ -224,9 +236,9 @@ const Druids = () => {
         for a fact.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Coming home was always the same and routine, at least for Mateo. He
         would open the door slowly because he knew he had some plants that would
         be bothered by seeing one of their leaves compromised by the movement of
@@ -242,9 +254,9 @@ const Druids = () => {
         prevent the entry of cold wind during winter.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         The side of the house that faced the hillside had an impressive view of
         Valparaiso and a great view of the sea that borders the port city. On
         that same side of the house there was a small balcony that was commonly
@@ -252,9 +264,9 @@ const Druids = () => {
         the cold, and often without it as well.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Despite everything, the area where a normal human should live was
         somehow strange, in harmony with the lush natural environment of the
         house. Mateo's bed, despite its humility, was quite tidy and clean, free
@@ -264,9 +276,9 @@ const Druids = () => {
         the bathroom was also ordinary.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Life was happy under this basic but strange routine for Mateo, his
         neighborhood accepted him and even felt affection for him and his
         strange abode. Even the children tended to snoop around there. But it
@@ -277,49 +289,49 @@ const Druids = () => {
         found Martina Marpas and in her hands a bonsai broken in half.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -My boyfriend broke it by accident,- Martina's expression was
         inexplicably strange, especially the mixture of the deep blue eyes that
         sharpened with a strange but curious look towards the interior of the
         house full of plants, - Can you fix it? - she replied.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -I think so, come in, go ahead- Mateo answered, with his normal hint of
         shyness.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         "Let me see it," Mateo said as he slowly picked up the flowerpot with
         the damaged plant half by half.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -If my father finds out that I broke that bonsai, he'll kill me- Martina
         spoke, but she was really interested in seeing how Mateo's home
         coexisted with the plants, which made all the water enter, reaching one
         plant or another. It was a spectacle.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -You'll have to leave him with me for a couple of days, until I see that
         he's okay and I'll give him back to you- said Mateo, giving a ruthless
         diagnosis of the situation.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Martina stared at him, mostly curious about how someone so young could
         live in such a harmoniously natural environment like that, in the middle
         of the city. But Martina's attention was slightly shocked when Mateo
@@ -329,63 +341,63 @@ const Druids = () => {
         Martina, who was not used to that type of aesthetics and fashion sense.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Do you have a phone so we can ask you when to come?- Martina asked as
         she searched her light brown bag for her cell phone.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -No.- Mateo stared very sincerely into Martina's eyes, and she paused
         for a moment in silence to observe the light brown eyes that scrutinized
         her in such a profound way that she felt the strange need to look away
         from there and continue searching in her bag.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Then give me your cell phone number.- Martina said while the movement
         of a lot of things inside could still be heard.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -I don't have a cell phone.- Mateo's gaze was still staring at her, and
         Martina once again met his gaze without realizing it. She asked:
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -So how do they locate you? Or how can I locate you?
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">- I'm always here- said Mateo.</p>
+      <p className="MsoNormal">- I'm always here- said Mateo.</p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Well, then I'll have to come in a couple of days. I guess I'll meet you
         here, until then, see you later, I have to leave quickly.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -See you later.- Mateo had barely finished saying these words when
         Martina had already closed her door.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Anyone would say that this was a gesture of contempt, but Mateo
         understood in his heart the repulsion that Martina felt in some way
         inside, or the fear that curiosity about Mateo's life produced in her.
@@ -393,13 +405,13 @@ const Druids = () => {
         attitude when he heard a slight croak. And he thought:
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">-A frog? Here?...</p>
+      <p className="MsoNormal">-A frog? Here?...</p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         It didn't take long for him to figure out that the croaking was coming
         from the broken bonsai he had in his hand. When he brought it close to
         his eye, he saw a frog of about 5cm, bright green and with deep red
@@ -410,29 +422,29 @@ const Druids = () => {
         couldn't help but smile and say to the wind:
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">-You are a rather ugly but cute little animal.</p>
+      <p className="MsoNormal">-You are a rather ugly but cute little animal.</p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         But amidst the croaking, the frog answered him clearly.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -You say it like your hair matches your ugly face.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <a id="c2">II</a>
+      <a role="button" id="c2">II</a>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         How is your faith these days, Father? was a phrase that was going around
         in the head of a young parish priest in the city of Valparaiso. Although
         he had felt the call of God at the early age of 12, at that time his
@@ -443,9 +455,9 @@ const Druids = () => {
         formed in that wall in his head called Faith in God.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         The point was not that Father Franco's faith was not ill-founded from
         the beginning, in fact everything had happened suddenly, but at the same
         time at a very slow and subtle pace. It began with the arrival of a
@@ -457,9 +469,9 @@ const Druids = () => {
         fix it up, he raised it almost from the ruins.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Soon after, people in the neighborhood began to look at the house
         strangely. All the stray cats and dogs seemed to want to sleep nearby.
         The few rumors that were circulating were positive because Valparaiso at
@@ -469,9 +481,9 @@ const Druids = () => {
         something positive.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Soon the rumour of a man who helped animals from his poverty began to
         bounce around on everyone's lips, it was even said that wounded animals
         would arrive at his house on their own to be cured. Some began to call
@@ -480,9 +492,9 @@ const Druids = () => {
         appearance who rarely left his house to feed the dogs.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Father Franco was always reluctant to get involved in neighborhood
         gossip, rumors and gossip were too often and in great quantity around
         his church and his charity food kitchen. Everyone who came there brought
@@ -494,9 +506,9 @@ const Druids = () => {
         and who restored it by raising it from its very foundations.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         The young priest had a burning desire to meet such a man, but he knew
         that if he brought the sight and patience of his parishioners to that
         house, he would only further ignite the flame of rumors of holy events
@@ -508,9 +520,9 @@ const Druids = () => {
         him yes.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         The wait that Tuesday morning was not too long; before the kitchen
         opened there was already a line of poor but strangely happy people
         outside the church, waiting amid laughter and greetings among
@@ -518,9 +530,9 @@ const Druids = () => {
         adversity.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         At 9 o'clock in the morning sharp, the doors of the church opened.
         People entered, chatting and shaking hands with Father Franco, who had
         strategically placed himself at the entrance of the dining room to see
@@ -546,9 +558,9 @@ const Druids = () => {
         as a totally simple cover.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Mrs. Margot, the lady who volunteered to serve the food from the large
         pot where the food was cooked, was obviously surprised and frightened
         when she saw this man approaching with a tray with an empty plate and a
@@ -559,83 +571,83 @@ const Druids = () => {
         peaceful smile and soon returned to an empty table to sit down to eat.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Franco knew that this was the right moment to meet him, so he approached
         him, took the chair next to him and said very discreetly:
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         "On behalf of the entire community, I wanted to thank you for what
         you've done for stray animals," Franco said from a safe distance.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">-You're welcome...- the man said tersely.</p>
+      <p className="MsoNormal">-You're welcome...- the man said tersely.</p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -My name is Franco, I am the parish priest of this church.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -I know who he is, I know that he is the representative of the Christian
         God in the religious sector. - these words sounded rude, but they did
         not frighten Franco.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -It sounds a bit crude to call it that, but yes, I am a representative
         of the Christian faith.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -My name is Anibal.- he said timidly while dipping a piece of bread into
         the soup.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Nice to meet you, Anibal. I'd like to know more about you, where you
         come from, what you do.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -I would rather tell you that I come from far away and I dedicate myself
         to observing things.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -That sounds a bit volatile, you see, I want to see a way to help you.-
         <span>Franco said very confidently, but was quickly interrupted.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -You are wrong, I am the one who has come to help you...- these words
         produced a lapse of confusion but also triggered a certain impatience.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Look, you don't strike me as an alcoholic, or a drug addict, or a
         timeless madman, I've heard too many similar things in this kitchen. If
         you want to help, it seems like a very noble task, but what I'm trying
@@ -647,56 +659,56 @@ const Druids = () => {
         after finishing this sentence.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Okay, I'll allow you to help me, but you must remain silent and not ask
         too many questions and I think that because of your religious background
         you must have experience in this.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -That's right, tell me what you need and I'll see how to help you.-
         Franco felt a little more relieved to feel a little more sympathy from
         Anibal.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -I just need help finishing my house. If you have some materials to give
         me, it would be very helpful. and containers, pots for the soil. oh and
         organic things, scraps, fruit peels that I don't use and things like
         that.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Anibal stared blankly at Franco, who only let out a laugh and patted
         Anibal on the back.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Everyone here wants money, they want money for everything, and you ask
         me for soil and flower pots, I will definitely help you, you definitely
         seem like a unique man to me.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Franco stood up but turned around with his hand on his chin as if
         remembering something.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Before you go, I'll give you some clothes that arrive here every so
         often, very few people want them, I think fashion sense influences even
         the most needy. I'll stop by your house later if you don't mind, so we
@@ -704,22 +716,22 @@ const Druids = () => {
         whatever you have in mind to do.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         After this, Franco leaves smiling as if he had just chatted with a
         celebrity. As he leaves, Anibal observes him and feels that Franco has
         the need to be part of something extraordinary and that made him feel
         good, and that he had arrived at the right place.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <a id="c3">III</a>
+      <a role="button" id="c3">III</a>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         The expression on Mateo's face explained his perplexity. Despite being a
         person who was used to extraordinary things, this event shook his brains
         to the point that within his own rationality he did not know which route
@@ -727,136 +739,136 @@ const Druids = () => {
         of his neurons became confused.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Hey, human. if you make that expression every time you see a frog, you
         should do something about the flies, this place is a feast.- It was
         obvious that the frog had not realized that he could hear him either.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Can... can... can you talk?...- Mateo was in shock.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         The frog's giant red eyes were absentmindedly rolling around the flies
         in the house before immediately fixing their gaze on Mateo's face.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Can you understand me?...- the frog was surprised within his rigid
         expression.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">-You...can you understand me?...- answered Mateo.</p>
+      <p className="MsoNormal">-You...can you understand me?...- answered Mateo.</p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Bah, my first conversation with one of those who proclaim themselves
         intelligent beings and all I get is a conversation that goes in
         circles.- the frog said very sure of herself.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">-But, this is... fantastic, you can talk!</p>
+      <p className="MsoNormal">-But, this is... fantastic, you can talk!</p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Talk?... Everyone talks, human, the question is what language they
         speak... frogs speak in frog language, like dogs speak in dog language
         and cats in cat language...
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -But how is it that you can speak a language that I understand.- Mateo
         said as he carefully placed the bonsai on the small table next to the
         patched window of his house and sat down to look at it and examine it
         with quick glances around its body that was at the bottom of the pot.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -I'm not speaking in any special human language, I'm speaking in my
         native language, you're the one who can understand me in some paranormal
         way.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -But if that were the case, I could understand the dogs and cats there.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">-Don't ask me, I just do what a frog does...</p>
+      <p className="MsoNormal">-Don't ask me, I just do what a frog does...</p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -And how can you understand what I say?- Mateo asked immediately.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -Most animals can understand human language, their language is quite
         archaic and essential, but personally, let's say that I have dedicated
         myself to educating myself in human matters, I am a very educated frog.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         Mateo remained suspended in his thoughts trying to swallow this abnormal
         situation and at the same time trying to understand what this was all
         about.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         "Well, I don't know what you'll have to do now, but I have to eat, I
         hope you don't mind if the fly population decreases," said the frog, to
         which he received a distracted silence in response.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -What's your name?...- said Mateo, staring at the frog.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">-My name is Mo, what is yours, human?</p>
+      <p className="MsoNormal">-My name is Mo, what is yours, human?</p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">-Mateo</p>
+      <p className="MsoNormal">-Mateo</p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">-Nice to be able to talk to you Mateo.</p>
+      <p className="MsoNormal">-Nice to be able to talk to you Mateo.</p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -I guess it's a pleasure for me too,- said Mateo while scratching his
         messy hair, -Now, I guess you can stay here as long as you're careful,
         there are plenty of plants for you to live in,- said Mateo as he began
@@ -864,33 +876,33 @@ const Druids = () => {
         his pocket.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         -It has some broken branches, uhmmm a major crack at the main apex, a
         bit of lifting at the roots. I wonder what the hell they were doing when
         this happened.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         "They were arguing, she and her breeding male," Mo said as he began to
         look for a good spot by moving in short jumps on the table.
       </p>
 
-      <p class="MsoNormal">&nbsp;</p>
+      <p className="MsoNormal">&nbsp;</p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Male breeder, you mean her boyfriend, right?- Mateo said, paying
           attention to her.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Oh yeah, that's it, I don't really understand the human mating
           system, but I know he was her mate,- said Mo as she kept her gaze
@@ -900,9 +912,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It seems that guy is an idiot, but an idiot with money... something
           very useful in this world,- said Mateo while looking for a plastic bag
@@ -910,9 +922,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Well, the world is much bigger than your head, Mateo, but I do
           understand you. I was once in a similar situation, the frog I liked
@@ -921,18 +933,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's right, my friend, women are incomprehensible, it's the
           ugliest part of reality to deal with.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Ugly? Ugly will be the day you wake up and see a giant human butt
           trying to sit on the bonsai you chose as a home, THAT is ugly, - said
@@ -940,9 +952,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Metaphorically, I've seen it, especially in this place and the other
           poor places, - said Mateo while tying some of the strips of plastic
@@ -952,9 +964,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's right, it wasn't a short trip or a quiet trip. I came from
           far north, I arrived on a plant in the store where this bonsai was, -
@@ -963,9 +975,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-This bonsai will take a couple of weeks to recover, it is quite a
           bit of aesthetic damage, but it will survive,- said Mateo while
@@ -974,9 +986,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The situation was not the most common, even though both of them had
           long conversations between frog and human, for Mateo something was
@@ -993,9 +1005,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The rumors had returned and Mateo knew he had to do something to keep
           things in the neighborhood from getting out of control. He knew they
@@ -1005,9 +1017,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >But it was on a Wednesday afternoon, a sunny afternoon, when the real
           complications would begin to arise. Mateo was working some organic
@@ -1018,9 +1030,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The sun was beating down directly on his messy brown hair and on his
           red t-shirt that had a print of "McDonald's, I'm loving it".Mateo was
@@ -1034,9 +1046,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The afternoon went by as normal, Mo continued to splash around in his
           makeshift fish tank, talking about the rambunctious adventures of his
@@ -1052,9 +1064,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >After the shower, and while Mateo was getting dressed, someone
           started knocking on the door. Mateo knew it wasn't someone he knew
@@ -1069,13 +1081,13 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a id="c4">IV</a>
+      <a role="button" id="c4">IV</a>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The door rang with a subtle and timid sound; the day was covered by
           clouds that threatened to bring rain and painted the scene in gray.
@@ -1090,9 +1102,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Upon entering, the scene was strange, the work of rebuilding a small
           abandoned house seemed titanic, too much for just one man, the floor
@@ -1108,9 +1120,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Father Franco couldn't help but cover his nose as best he could and
           put the bags aside. The smell had hit him full force, he wasn't used
@@ -1120,18 +1132,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Wow, that's an impressive job you've done and the work you still
           have to do.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Yes, I don't know how long this house was abandoned, but judging by
           the amount of trash, it's been like this for more than ten years. Do
@@ -1139,9 +1151,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I've been here for seven years and this house was already abandoned
           when I arrived. According to what the locals say, it had been
@@ -1151,9 +1163,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Then I don't think anyone would mind taking this place, besides I
           think it should be temporary, - said Anibal as he began to look
@@ -1161,9 +1173,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I brought plastic containers, some flower pots that had been
           forgotten at the parish, some food, a pot and I don't know what else I
@@ -1171,36 +1183,36 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- A shovel, a big one and a small one, - said Anibal without leaving
           a pause in between.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Shovel?... I can lend you the one we use at church, and I think I
           have a gardening shovel too, but you're too curious.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I'm going to make compost, I need to recycle and reuse all this
           garbage, - said Anibal very dryly.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- But here we have many garbage dispensers, they work very well and
           they collect the garbage every Wednesday without fail, it could speed
@@ -1208,9 +1220,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Taking the trash out of here, collecting it and sending it to
           another place where there is more trash and pretending that that place
@@ -1221,18 +1233,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Oh, I see you're an environmentalist, - said Franco, surprised by
           such a reflection.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- If that's what they call it, I guess so. Now, I don't know if
           you're actually wearing the right clothes, but could you help me sort
@@ -1241,9 +1253,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Young Franco hesitated for a moment and thought of inventing an
           excuse to return to the parish, but seeing Anibal so determined to get
@@ -1253,9 +1265,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal had also been carried away by the curiosity that Franco caused
           him, the reason why he helped him without asking big questions,
@@ -1267,9 +1279,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Mr. Franco, what made you dedicate yourself completely to religion?"
           said Anibal as he lined up the bags in a courtyard full of tall weeds,
@@ -1277,18 +1289,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco laughed subtly as it was a question everyone asked him at some
           point.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It wasn't a divine vision or an attack of faith, it was just an
           option, an alternative... quite valid. When I was a child I realized
@@ -1298,15 +1310,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Hopes?... hopes for what?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Hopes that everything can improve,- said Franco looking at Anibal
           who was beginning to remove the dirt from the floor with a plastic
@@ -1314,26 +1326,26 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-A human being should be able to improve without the help of an
           institution, but I think it's a noble idea.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Why do you say that?" Franco asked as he processed the answer.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Because in nature, things improve by their own necessity, a cheetah
           will improve when it tries to hunt and catches a gazelle, and a
@@ -1343,18 +1355,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But that is where we differ from animals, we have the ability to
           love, to discern and to make decisions.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Well, I have heard a similar position before but with a different
           and much more radical approach, but the fact is that human beings are
@@ -1366,9 +1378,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I don't need to dig too deep to realize that you have a bit of
           resentment in your answer, but I think you are quite right," said
@@ -1376,9 +1388,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Let's say I'm just making peace with a part of me that I left behind
           a long time ago.- Anibal said with a certain melancholy in his
@@ -1386,9 +1398,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I think you're an interesting person, Anibal, I'd be interested in
           knowing more about those ideals you speak of,- said Franco as he took
@@ -1396,9 +1408,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-They are not ideal, it is a way of life. But I think I will tell you
           about this another time, when this is working, - said Anibal while
@@ -1406,9 +1418,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal knew deep down that Franco would look at him with a certain
           condescension and compassion when he met him, but he also knew deep
@@ -1417,36 +1429,36 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Where are you coming from, Mr. Anibal?...- asked Franco in a light
           tone.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"From far away," Anibal replied after a fleeting moment of
           reflection.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-From where? - asked Franco, but he got no answer, Anibal just kept
           silent to maintain himself.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco's mind was incapable of believing in anything supernatural or
           fantastical at that time. So prejudices surfaced in his mind. First he
@@ -1466,57 +1478,57 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco's eyes were staring into space, lost in his 1980s childhood,
           when a friendly hand rested on his shoulder.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-I forgot to thank you, you are a good man,- said Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Franco could only respond with a smile.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I have to go, it's almost time for dinner at the church, tomorrow I
           will bring the shovels you asked for, without fail.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Okay," Anibal replied, "I have to find a quick and effective way to
           remove the mud and dirt from the floor as soon as possible."</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Well, I'm leaving, I have a lot to do. And they're waiting for me
           for dinner. See you tomorrow, Don Anibal.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Tell me, Anibal, don't call me sir.- said Anibal while scratching
           his head thinking about what to do with the floor covered in mud and
@@ -1525,15 +1537,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Okay, see you later Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >As Franco left, he noticed that the floor would take a hellish amount
           of work and several days, and when he saw Franco close the door he
@@ -1541,9 +1553,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >That night, Franco couldn't sleep as easily as other times, there was
           a very old demon whipping him in the head, the silence whipped him
@@ -1555,9 +1567,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The next day the sun was beating down as usual in spring, the breeze
           made the day exquisite, neither too hot nor too cool. The orange
@@ -1580,9 +1592,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco couldn't help but think how strange it was that out of a whole
           neighborhood of houses, many of which were more comfortable and had
@@ -1595,9 +1607,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >As the door opened, his heart either thumped too hard, or was beating
           too fast, he didn't know. Suddenly, when the door was fully open, the
@@ -1607,9 +1619,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The dirt floor was gone and instead there were many little roots
           sticking out between the gaps in the wooden floor that were blatantly
@@ -1621,18 +1633,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I asked for some help to finish the job," Anibal said as he picked
           up the shovels that had fallen to the ground.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco's head, being a man of Christian faith, only spun on a giant
           short circuit, all the calculations and equations that his head made
@@ -1645,13 +1657,13 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a id="c9">IX</a>
+      <a role="button" id="c9">IX</a>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The situation was tense, Mateo was completely covered in vines that
           kept his hands clinging to the wall and his feet tied to the floor,
@@ -1665,15 +1677,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-You're a druid from the south, aren't you?- said Mateo.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"How do you know that? How do you know about the druids?" answered
           the hermit druid who was concentrating so that the force of his magic
@@ -1681,17 +1693,17 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I asked first- Mateo smiled on his face despite the situation.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I will grant you that right," the stranger replied. "Yes, I am a
           druid from Chiloe, in southern Chile. Now tell me, how did you know
@@ -1699,9 +1711,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Simple, the Chilote legends are known throughout the country, I know
           they call them witches by Spanish tradition, and I also know that they
@@ -1715,18 +1727,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Why do you say that about my appearance?" asked the strange-looking
           man.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Because spending so much time away from ordinary humans, and so much
           time surrounded by other witches, you have a very deplorable and
@@ -1734,24 +1746,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I thought long hair was fashionable," said the stranger with a
           totally out of place answer.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-The nineties ended in the nineties, - Mateo replied.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The curious turn of the conversation threw the strange young man off
           balance, and for a moment his expression showed that his mind had
@@ -1760,27 +1772,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Now tell me, if you are not a druid, how do you know about them? -
           asked the stranger who was coming to.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Well, I'm afraid I'm not authorized to give you that information,-
           replied Mateo, breathing deeply.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Well, if you know about us, you will know that a Chilote witch must
           kill whoever sees him,- said the stranger who was preparing a new
@@ -1788,18 +1800,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Yes, I had heard something like that, but I also heard that when a
           witch is unmasked he dies in a strange way.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Ah, yes, that's true, but it's because other members of our
           community make sure that our order remains silent - said the stranger
@@ -1808,9 +1820,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo began to feel that the branches were beginning to strangle him
           very quickly, at the last moment, he turned his right hand upwards.
@@ -1820,9 +1832,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo managed to free his right arm completely and pulled the
           branches that were around his neck. At that moment the man who had his
@@ -1836,9 +1848,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo managed to free himself from all his restraints and quickly
           took position under the chestnut tree that seemed willing to defend
@@ -1846,9 +1858,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >On the ground, the surprised wizard in his fox transformation had to
           make a quick decision; he did not expect resistance, in fact he did
@@ -1860,9 +1872,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The fox stood up and in a fraction of a second charged Mateo again,
           who, surprised, lifted three thick roots from the ground to defend
@@ -1879,9 +1891,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >He stepped back just enough to think of his strategy, Mateo took
           advantage of the moment to observe his opponent, from his wall of
@@ -1896,9 +1908,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo didn't have a defense plan much more complex than "avoid what
           comes," and the witcher was designing a plan, he could see it in the
@@ -1910,9 +1922,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Here came the new attack, the game was the same, the fox ran straight
           towards Mateo, again dodging the roots that tried to hit him, and with
@@ -1924,18 +1936,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo was perplexed, his strategy of only avoiding attacks had
           completely fallen apart, because his back was not covered.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Turning around, Mateo found that his own wall was cornering him, and
           the fox had already transformed into a man and had his stick pointed
@@ -1943,9 +1955,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo almost gave up, but at that moment he saw a frog jump from the
           tip of the stick. Despite its small size, it surprised them both with
@@ -1953,9 +1965,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The wizard had been distracted for a moment and when he came to, he
           threw the frog away. With one hand on the wall, Mateo, frightened,
@@ -1963,22 +1975,22 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-Mo!</span></p>
+      <p className="MsoNormal"><span>-Mo!</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Rage had taken hold of Mateo, a blind rage, he felt his insides
           burning and almost on the verge of losing control.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The wizard tried to deliver the final blow, but he felt a slight
           tremor in the ground, and a root had seized his staff and instantly
@@ -1988,9 +2000,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo was furious and his role had been exchanged from victim to
           victimizer. Mateo, concentrated by his own rage, raised his hands with
@@ -2001,9 +2013,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >At the last second he managed to dodge it, but as he fell, the roots
           dispersed, reconfiguring into another shape, a giant hand that began
@@ -2019,9 +2031,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >In an instant, the chestnut tree's roots returned to their origin
           underground, now it was the trees of the orchard that imprisoned the
@@ -2035,54 +2047,54 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >From the depths he could hear Mo's voice complaining, that sign of
           life calmed him and brought him back to his senses.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"You must kill me, druid," said the stranger, battered and with his
           mouth bloodied by the blow from the apple tree.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I'm not a druid, and I won't kill you- replied Mateo, now calmer-
           you come from far away, don't you?</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-From the south, Chiloe. The journey has not been easy.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"Oh yeah?" Mateo said, still on top of him.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"Yes," the stranger replied innocently.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-So, - at that moment Mateo punched the druid with all his strength,
           leaving him unconscious and knocked out on the floor, - welcome to
@@ -2090,9 +2102,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo then ran to the place where Mo fell, and found the frog on its
           back on the ground. Despite everything, its flexible skeleton
@@ -2100,48 +2112,48 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-Are you okay, Mo?</span></p>
+      <p className="MsoNormal"><span>-Are you okay, Mo?</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-When you get slammed into a giant wall really hard, ask me that,- at
           least Mo's character was intact.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But are you okay? Aren't you hurt? - insisted Mateo, taking him in
           his hands.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I think my stomach is empty, I'm going to need a lot of food.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Okay, I'll buy you some turtle food, - said Mateo, laughing
           tenderly.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-This experience also showed me how fragile my life is, I think it
           would be good if you could get me a female frog, - added Mo, who by
@@ -2149,24 +2161,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's difficult Mo, and you know it, and don't start because I'm
           not trying.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Okay, then just turtle food.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The situation had calmed down, but Mateo knew he had to do something
           about the intruder who was unconscious and already showing signs of
@@ -2175,9 +2187,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >When the man came to, he saw Mateo smiling, holding a glass of water
           in his hand, and above his head, a frog that this time did not jump
@@ -2185,36 +2197,36 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Friends?- Mateo said ironically.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Why didn't you kill me?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's not my style- said Mateo- but, I need to know why you are here,
           so far from your land.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-I can't tell you - said the stranger.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I think that's fine, but if you are from the order of the Chilote
           witches, they themselves will come to kill you, you failed in your
@@ -2222,103 +2234,103 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I have no mission and no one will come," the stranger replied,
           looking away for a moment.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-Because?</span></p>
+      <p className="MsoNormal"><span>-Because?</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Because they think I'm dead,- with these words, Mateo was
           perplexed.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-That still doesn't answer why you're here.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I was looking for the footprint of a legendary druid, the oldest
           rumors say that he is in this place.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-He's not here - Mateo replied.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Do you know him? Do you know where he is? - asked the
           stranger.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Mateo remained silent without answering that question.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"What's your name?" Mateo asked kindly.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-My druid name is Vilu - said the stranger.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's the name your order gave you, and your name when you were
           human?- Mateo said as he began to untie him.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"I don't remember," Vilu replied.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo stopped at those words, as if forgetting his origins echoed in
           his head, but he instantly recovered and smiled.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I guess since you have nowhere to stay, and you have nowhere to go,
           stay here, my house is your house - said Mateo while giving him his
@@ -2326,52 +2338,52 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Mateo, you should do something with your hair, if you don't take
           care of it, you'll end up like him,- Mo said from Mateo's head.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Mateo couldn't help but laugh out loud.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"What are you laughing at?" said Vilu, looking at them
           sideways.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-About what the frog said, - Mateo answered simply.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Can you understand what a frog says? - Vilu asked, surprised to
           death.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-       <a id="c5">V</a>
+       <a role="button" id="c5">V</a>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Opening the door was something somewhat abnormal, since it had to be
           done carefully, and the wood had made the door press against the
@@ -2387,9 +2399,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I don't have to be a genius frog to realize that she has
           problems...- from the back of the small room Mo's croaking could be
@@ -2397,9 +2409,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo looked towards Mo, thinking that Martina had heard him too, but
           no; she passed by subtly and in a way Mateo realized that Mo could be
@@ -2407,27 +2419,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Do you want something? Tea, coffee, something like that? - asked
           Mateo.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-A courtship dance?- Mo shouted from the back,
           uncompromisingly.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo looked away again, the situation was getting tense without even
           starting. She looked at Mateo and her mind wandered through meadows of
@@ -2437,24 +2449,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-A coffee would be fine for me,- said Martina.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Well... have a seat, and give me seven minutes and I'll bring
           it.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo walked to the back of the room, where a very small partition
           made it clear that he was in the kitchen, and despite his humility,
@@ -2469,9 +2481,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Wow, she must be the most fertile female around, because I see
           you're putting a lot of effort into your coffee," Mo said from a rock
@@ -2479,9 +2491,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I'm not doing this to reproduce myself, Mo, it's just a gesture of
           kindness, nothing more, - said Mateo as he examined the ground grain
@@ -2489,9 +2501,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Excuse me? I can't hear you from here, - Martina said, standing up
           to closely observe the strange but attractive arrangement of the
@@ -2499,17 +2511,17 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- No, nothing, I was just doing mental calculations out loud.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I think you like her, Mateo, but it's okay with me, I can help you
           if you want, I helped many friends court in the Amazon, you
@@ -2517,9 +2529,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I'm not going to court the daughter of one of my benefactors, Mo,
           understand that, - replied Mateo in a harsh tone, but when he finished
@@ -2531,9 +2543,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Courtship! Courtship! Courtship! - Mo jumped on his wet rock,
           enraged by his own ideas, but a moment later he stopped, looking at
@@ -2541,9 +2553,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- You don't have very bright colors to woo her, but you could paint
           yourself green, and do something with your eyes, no!, yellow, paint
@@ -2554,9 +2566,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo took the thermos with hot water and added the water to the
           ground coffee while he covered Mo's glass fish tank with a fly board
@@ -2564,9 +2576,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Does this mean you won't be painting yourself? You can still jump,
           maybe a fly, yes! - Mo immediately got distracted by devouring a
@@ -2578,27 +2590,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Arriving at the table, Mateo immediately had to make up an
           excuse.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I'm sorry, but I'm out of sugar, I have to buy some as soon as I
           can.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- It doesn't matter, I have some in my bag, - Martina's answer shook
           Mateo's foundations, - it's just that I usually keep these little bags
@@ -2607,9 +2619,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Martina's curious solution had brought a sincere smile to Mateo's
           face, which Martina accepted with appreciation. When she tasted the
@@ -2619,46 +2631,46 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- Excellent coffee, very good, is it grain coffee?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>- That's how it is.</span></p>
+      <p className="MsoNormal"><span>- That's how it is.</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo was about to talk about the broken bonsai when he was
           interrupted.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- How did you manage to live like this, surrounded by vegetation and
           plants?</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I guess I've always been unable to imagine a life without being
           surrounded by this.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I love what you managed to do with all this, have you thought about
           working for a biology department? You have some very exotic plant
@@ -2666,9 +2678,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Thank you very much, but I'm not interested, - said Mateo while
           looking into the bottom of his rough cup - besides, I'm not very good
@@ -2676,18 +2688,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I think that's a sensible answer, but anyway, I'll see if I can
           help you in any way.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Thanks, but I don't really need much help, - Mateo's surly manner
           slipped through his mouth, causing Martina to withdraw, and at the
@@ -2695,17 +2707,17 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- How long did it take you to grow all this? - Martina asked.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Her curiosity had been ignited, it was something inevitable in her
           personality, acquired and inherited from her father. She always found
@@ -2714,18 +2726,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- The ones in the corner of the door took me about two years, the
           ones at the back of the kitchen took me six months.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- And the rest of the plants, the largest and most grown, the vines
           that have obviously been there for a long time... since when were they
@@ -2733,9 +2745,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The question hung in the air and Mateo refused to take it, he just
           stayed silent, staring at the bottom of his cup, and Martina, who had
@@ -2744,9 +2756,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- How did it go with the bonsai thing? - said Martina, changing the
           subject smoothly, without stopping to do calculations in her
@@ -2754,9 +2766,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Pretty good, but you'll have to leave it here for at least two
           weeks, - Mateo replied while scratching his head, more or less
@@ -2764,9 +2776,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Would you mind if I came by next week to see how she is? - Martina
           had a riddle in her head and she was convinced she could solve
@@ -2774,9 +2786,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I have no problems, just knock on the door loudly, I'm often in the
           yard.- Mateo was surprised by the gradual courtesy and affection with
@@ -2784,9 +2796,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Okay, I'll leave then.- Martina stood up, leaving the cup of coffee
           on the humble table, followed by Mateo who imitated her
@@ -2794,27 +2806,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I loved your coffee by the way, what brand is it? - Martina asked
           as she left the house, with Mateo pulling the door open for her.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- It doesn't have a brand, - Mateo said as he finished opening the
           door.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- How come it doesn't have a brand? Where do you buy it? - Martina
           was surprised as she searched her bag for the car keys on the other
@@ -2822,9 +2834,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I grow it, that's why it doesn't have a mark, - Mateo answered
           innocently, and Martina looked up and stared into Mateo's sincere
@@ -2832,18 +2844,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Grow it?... but the climate? and the quantity, and the
           process.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- It's nothing that doesn't require a little extra effort, like many
           things that have to be done in life- Mateo smiled, scratching his
@@ -2851,9 +2863,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >For Mateo, growing plants that are difficult or that no one would
           grow was a habit. Coffee was difficult, but he had managed it, and of
@@ -2862,9 +2874,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >That sentence inserted more electricity into the mental short circuit
           that Martina had in her brain regarding Mateo. There was too much data
@@ -2874,9 +2886,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >As he closed the door, Mateo felt that something had happened with
           Martina, but he couldn't identify it. It was an attraction, but not a
@@ -2889,33 +2901,33 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- What are you doing Mo?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I was enjoying myself, until you came along, - Mo said as he got
           back into the frog position.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- How did it go with the female? - Mo asked, yawning,
           frog-like.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Well, and she's not a female, her name is Martina and she's the
           daughter of a good friend of mine, so I'd like you to speak
@@ -2923,27 +2935,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Respect? Tell me one thing, do you have anything in common with
           spiders? - Mo asked while moving his red eyes in circles.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Not that I know of, I mean, I don't know what you're referring
           to.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Because I would hate it if when you mate with her she cuts off your
           head and puts her eggs inside your body, if that were the case, I
@@ -2952,9 +2964,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Don't come to me and talk about exemplary relationships, you climb
           on the female's back, mate and leave, there is no great depth or
@@ -2963,88 +2975,88 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Well, it's love based on independence and respect, - Mo stated
           proudly.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Independence? Tell me, what do you know about your father? - Mateo
           smiled triumphantly.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The question obviously made Mo think quickly, as he didn't really
           know his father.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-"it was green" with red eyes?- said Mo, lowering his voice.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- So you don't know who your father was?- said Mateo, laughing.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Hey, in our species all we need is our mom and our fifty-eight
           siblings. We all work hard to grow big and strong.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But your mom never had a stable partner,- said Mateo, drying a cup
           and looking at the fish tank.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Hey, nobody talks about my mom like that, one more time and I'll
           beat you up right here with my wet paws.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Okay, okay, I got the message, it was just saying, damn, what a
           character, Mo.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's familiar, I had to deal with fifty-seven other brothers. That's
           how I became the tough frog I am today, and maybe it would have been
@@ -3054,24 +3066,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Don't you miss them?- asked Mateo.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-The thugs? No, and most of them are in the stomach of some bird of
           prey right now.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mo was jumping around happily, when he looked out the window
           overlooking the backyard and was puzzled. In an instant, he made a
@@ -3080,36 +3092,36 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"What's wrong, Mo?" Mateo said, looking up.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- They're coming for me! ... I know it, I feel it! The birds are
           chasing me, - said Mo, very worried.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-But what's happening, Mo? Explain to me.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Look at that tree, the one directly outside this window.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo turned his head and looked at the old tree outside his window.
           On the branch next to the window there was a silent black bird,
@@ -3119,13 +3131,13 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-       <a id="c6">VI</a>
+       <a role="button" id="c6">VI</a>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Father Franco's face showed a mental disorder of considerable
           proportion. He was not sure what he was witnessing; the fact that the
@@ -3139,9 +3151,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >In a thousandth of a second, an uncountable number of thoughts occur
           in a person's head, the same thing happened in Franco's, and these
@@ -3156,9 +3168,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The feeling reached his stomach as he realized that the walls were
           quite clean, the bad smell was going away and was mutating into a deep
@@ -3166,27 +3178,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal stared at him for the millisecond in which the universe turned
           the other way in Franco's head, and asked him kindly:</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-And what do you think? How does it look? - Anibal smiled as he put
           his hands in the pockets of his worn, dark brown pants.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- How did he achieve this?... what kind of help did he have to
           achieve this? - Franco's sharp mind was trying to directly attack
@@ -3196,9 +3208,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal let out a huge laugh into the wind, one of those that requires
           putting one hand behind one's back to allow the back to arch and be
@@ -3206,27 +3218,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I suppose so, it is magic. Explain to me what you mean by magic, -
           said Anibal, completely calm.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The question was so simple, but at the same time so complex for
           Franco that he could say little.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-"A supernatural event that cannot be explained",- said Franco
           innocently but with a tenacious gaze on Anibal, who calmly avoided
@@ -3234,36 +3246,36 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Supernatural? What a strange term, what does it mean? - said
           Anibal, sharpening his mind.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I suppose it is a fact that cannot be explained by natural laws, or
           that is alien to nature.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- And you think you know all of nature? Could it be that nature
           doesn't know you?</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- You're trying to avoid my question, Anibal. I want to know how I
           managed to do this, - said Franco, lowering his guard a little.
@@ -3272,18 +3284,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Magic, definitely magic, - Anibal said with a smile on his face, as
           he walked towards the courtyard.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Magic?... Witchcraft? ...Something to do with Satan?... Please
           answer me.- Father Franco's patience was not a wonder when it came to
@@ -3291,33 +3303,33 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal stopped as if he had had enough of the conversation, turned
           around and faced Franco.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Tell me, Mr. Franco, when a magician pulls a rabbit out of his hat,
           is it magic? - Anibal looked seriously at Franco who answered.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Yes, it is, but it is not the same as this.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- You say that because I don't have a hat and a rabbit in my hand? -
           said Anibal gravely, interrupting whatever response Franco had wanted
@@ -3325,9 +3337,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- The magician takes his hat, taps it with his wand and pulls out a
           rabbit by the ears from inside the hat, regardless of the trick he
@@ -3338,18 +3350,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco tried to come up with some words so as not to be humiliatingly
           silenced, but Anibal still had more.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- If you want to see this as magic, or witchcraft, or whatever name
           you want, it's all the same to me... I'm just going to tell you this,
@@ -3357,18 +3369,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Now pass me that shovel please, I have a lot to do,- concluded
           Anibal in a more relaxed voice.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco kindly handed him the shovel, but his head was in a state of
           catatonia. Thousands of questions were running through his head in
@@ -3378,18 +3390,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Are you going to accompany me? We can't discuss points of view if
           you stay at the front door.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco shook his head in reaction and walked towards the patio. When
           he left, Franco was amazed, but at the same time he couldn't help but
@@ -3404,9 +3416,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >That day, despite the fact that extraordinary situations were
           happening around Franco, and that it was a perfect occasion for Franco
@@ -3419,18 +3431,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Why are you burying this trash... won't it harm the land? - Franco
           asked humbly.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- On the contrary, when organic materials decompose, the soil becomes
           much more fertilized, compost is produced, which is the material that
@@ -3438,9 +3450,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The answer was satisfactory for Franco, and Anibal rested with
           justified reasons sitting under the chestnut tree while the afternoon
@@ -3449,31 +3461,31 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco took the long brown jacket that he had taken off to work, and
           put it on. Then Anibal said to him:</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-It's complex.</span></p>
+      <p className="MsoNormal"><span>-It's complex.</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- What's complex? - asked Franco, who smiled halfway, ironized by the
           situation and internally by his constant position of asking.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Everything - Anibal responded relaxedly while he calmly looked at
           the sky from the base of the chestnut tree trunk - everything is
@@ -3481,33 +3493,33 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"But I guess not everything can be openly explained," Franco said
           somewhat dejectedly.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Come back in four nights, counting this one, - Anibal
           indicated.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"For what purpose?" asked Franco, still discouraged.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I'll pull more rabbits out of my hat- said Anibal, his gaze lost in
           the clouds, searching for shapes in them. - I wish you were here, I've
@@ -3516,18 +3528,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I am a man of God, Anibal, which means I am a man of one faith, you
           cannot convince me to engage in acts of witchcraft.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-You're boring me with your cheap labels of ignorance,- the subject
           of witchcraft was beginning to irritate Anibal easily,- besides, I
@@ -3536,27 +3548,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-So, how could I help you? Besides being like you say, how could I
           help you? - Franco said with great skepticism.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Just understanding, or beginning to understand - snapped
           Anibal.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >This answer was yet another in the collection of short circuits in
           Franco's head. He immediately said in his mind "I won't come," but
@@ -3572,9 +3584,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco said goodbye to Anibal with a handshake and walked slowly
           through the streets, thinking, thinking about what he saw, what he
@@ -3584,9 +3596,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The days passed and Franco continued to live his life as best he
           could, but he could not lie to himself. He prayed deeply, seeking
@@ -3596,9 +3608,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >By the second day, Franco's thoughts had become a tornado of
           consciousness, but too deep for his faith to silence. He was
@@ -3606,9 +3618,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Finally, the day that Anibal had summoned had arrived, and Franco's
           mind held a firm "no" in its place, holding back an avalanche of
@@ -3624,9 +3636,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >When the clock struck 11:59, Franco jumped out of bed, instinctively
           filled with courage and without looking for a rational basis for what
@@ -3640,9 +3652,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The road seemed especially long that night, the impatience and
           anxiety to find answers to Franco's collection of powerful internal
@@ -3651,9 +3663,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >His breathing was getting more labored as he knocked on the door,
           once, and heard no movement. He tried to look through the
@@ -3668,9 +3680,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The room was pitch black, but the door to the backyard was open,
           letting in the light of a full moon that was especially bright that
@@ -3678,9 +3690,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >When we reached the threshold of the door, the spectacle was
           something out of the ordinary; it would have left any scientist in a
@@ -3688,9 +3700,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >In the middle of the yard was Anibal, covered with his usual shabby
           blanket, making strange movements, his arms moving from bottom to top
@@ -3700,18 +3712,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco's astonishment was of gigantic proportions, but it did not
           compare to what was to come.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The trees began to move on their trunks, the chestnut tree closest to
           Franco began to creak and make a sound like wood twisting, but it did
@@ -3720,18 +3732,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Franco, I thought you wouldn't come, I had to start without
           you.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco didn't answer, as his world as he knew it was busy collapsing,
           but he had enough lucidity left to walk a little closer to the center
@@ -3744,31 +3756,31 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Witch!- was the best exclamation Franco could make.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal turned his head and with a slight smile answered him.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-No, druid.</span></p>
+      <p className="MsoNormal"><span>-No, druid.</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a id="c7">VII</a>
+      <a role="button" id="c7">VII</a>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The bird was not easy to distinguish, but looking more closely, Mateo
           could see that it was a black cormorant; a bird that was common in the
@@ -3781,9 +3793,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Night had come and the bird continued to watch, unmoved, from the
           chestnut tree that looked out of the kitchen window. Mateo had
@@ -3793,9 +3805,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Before thinking about getting ready for bed, at that moment when she
           was washing the dishes and pots for dinner, she could not hold back
@@ -3806,36 +3818,36 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Has he left already?" was the only question Mateo heard from the
           house.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"That's right," said Mateo, his gaze lost in the moon that was about
           to become full.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Will he not come back? - asked a frightened Mo, while Mateo entered
           with his gaze nowhere, wondering what all this could mean.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo distracted his mind enough to not be able to answer that
           question, although deep inside, he could easily feel that it would not
@@ -3845,9 +3857,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The night passed smoothly despite Mateo's doubts and the morning came
           smoothly, with the typical smell of the sea that characterizes the
@@ -3856,9 +3868,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Watering the plants that needed water that day was not at all
           complex, just the routine of taking from the patio his elaborate set
@@ -3871,9 +3883,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Martina Marpas waited on the other side of the entrance, she was a
           little uneasy, but more than anything she was full of curiosity.
@@ -3884,36 +3896,36 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Hi Mateo,- said Martina, staring into Mateo's eyes, while he rubbed
           them like a child getting out of bed.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Hi Martina, what brings you here?- said Mateo as he pulled the door
           open wide- come in.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Martina came in with a question she couldn't calm down in her
           head.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Martina's life had not been easy. The loss of her mother when she was
           a child had marked her adolescence and the way she interacted in the
@@ -3924,9 +3936,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Martina was a very restless girl with a very volatile imagination.
           She always felt that her mother was watching her, that she was
@@ -3951,9 +3963,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"How could you grow coffee here?" Martina said bluntly, the question
           having eaten away at her enough that she tried futilely to disguise it
@@ -3961,18 +3973,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Despite that, she got no response from Mateo, who only continued
           watering the plants in the living room of the house.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- There's no way for someone to get a coffee seed without paying for
           it, and they don't sell coffee by the handful anywhere, not here, not
@@ -3987,36 +3999,36 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Mateo stopped and looked at Martina.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's not possible,- concluded Martina, with a sincere look of
           wanting to know the truth.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- it's magic, Martina- said Mateo without much emotion.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Explain to me- Martina replied.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's like you said, somehow the only coffee bean that was poorly
           roasted, the only one that was saved from several processes that would
@@ -4026,9 +4038,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But, how could you raise a plant from a seed that, even if it
           reaches your hands, is practically dead?- Martina had already calmed
@@ -4036,37 +4048,37 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-That's where the magic comes into play.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-Magic?</span></p>
+      <p className="MsoNormal"><span>-Magic?</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Technically, listening, listening to the plants, communicating with
           them,- Mateo explained calmly while caressing one of the vines.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Listen? How can you listen to plants? - said Martina, about to
           belittle Mateo's argument.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Communicating, would be the most sensible way to call it, when you
           can tell that each one wants something, care, watering, light and to
@@ -4082,9 +4094,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Martina was left in a period of silence, her inner child dancing to
           Mateo's phrases, but the forced teenager only found that all this was
@@ -4092,9 +4104,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-When you understand that, when you see a wounded seed, you will
           immediately realize that that seed wants to be saved, and saving a
@@ -4105,9 +4117,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Martina certainly had the answer she was looking for, but it was
           certainly not what she was expecting. She was expecting calculations,
@@ -4118,9 +4130,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But how did you find out the type of soil?- Martina was still trying
           to find the precise answer that would fit into her little
@@ -4128,27 +4140,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Easy, the best instrument to achieve results is the mouth,- said
           Mateo, who continued watering the plants.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Did you eat the seed? - asked Martina, who didn't know what to ask
           at that point, to which Mateo gave a very sincere smile.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, when you drink coffee, you can distinguish the acidity that a
           coffee requires, it is not totally acidic; on the other hand, used
@@ -4157,24 +4169,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Make compost soil by burying rotten coffee,- Martina intervened very
           shrewdly.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-That's right, and well, the rest is magic,- said Mateo.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Martina was more than satisfied, but amazed by the answer in its
           basic form, but she wanted to find out more, there was something that
@@ -4185,9 +4197,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Magic?" Martina repeated innocently, but only received the typical
           silence from Mateo at that point, which told her that she wouldn't get
@@ -4195,9 +4207,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Well, I think I won't bother you anymore for today, but I would like
           to talk more about the plants, I'm curious about your method, - said
@@ -4205,18 +4217,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- You know you just have to knock hard on the door, - said Mateo as
           he politely opened the door for Martina.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I hope you'll invite me for another coffee soon,- Martina said as
           she walked out the door, but something caught her attention as she
@@ -4225,9 +4237,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Turning his gaze, Mateo realized with a shiver in his spine that the
           black cormorant had returned and was looking at him from the
@@ -4235,9 +4247,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's nothing, it happens all the time,- Mateo smiled so falsely as
           he said this, that Martina couldn't help but notice that something was
@@ -4246,17 +4258,17 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>Well, goodbye.</span></p>
+      <p className="MsoNormal"><span>Well, goodbye.</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-Goodbye Martina.</span></p>
+      <p className="MsoNormal"><span>-Goodbye Martina.</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >As he closed the door, Mateo turned around, determined to face the
           threat with all the courage he had, he took steps decisively towards
@@ -4265,27 +4277,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I know you've come for something, show yourself! - he told the bird
           that was staring at him, - leave us alone! -</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- You are brave to challenge me like that, - the bird answered in a
           moderately serious human voice.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The bird spread its wide wings and flew to the ground, a few steps
           away from Mateo, who abruptly stepped back a little at this sudden
@@ -4296,9 +4308,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The person in front of Mateo looked young at first glance, around 25
           years old, Mateo's age, but he was wearing only a large skin that
@@ -4309,9 +4321,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo was in shock but not out of his mind. He took a few steps back
           and his back hit the wall of the house. The hermit-like man raised his
@@ -4322,55 +4334,55 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Are you the druid here? What order do you belong to? - said the man
           with a cold and penetrating look.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-I'm not a druid,- Mateo answered, struggling uselessly.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-So who is the guard of this area?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>It's me,Mateo said, staring into the stranger's eyes.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-But you are not a druid.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, but I know you are, - Mateo said decisively - and I knew that at
           some point one of yours would come.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a id="c8">VIII</a>
+      <a role="button" id="c8">VIII</a>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The scene would have turned a person's mind upside down, indeed such
           a break from reality would have driven anyone mad, but Anibal knew
@@ -4382,9 +4394,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco was shocked to the core, he didn't know where to start, the
           things he managed to see or perceive were beyond any canon of reality.
@@ -4400,18 +4412,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Let me through," Anibal asked, advancing to where they had buried
           the garbage that was to be turned into compost.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Standing over what had been the hole for burying garbage, Anibal
           concentrated and began to move his hands up and down again and in the
@@ -4421,18 +4433,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco, already resigned, only devoted himself to looking closely to
           see in a certain way how Anibal's ritual worked.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Suddenly Anibal raised his right hand to the sky and the roots, which
           had been waiting like raised snakes, sank into the earth together with
@@ -4441,9 +4453,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The ritual was over, the dogs were left scratching themselves
           insolently as if nothing worried them and together they went out to
@@ -4456,66 +4468,66 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-This isn't much of a trick, Franco- said Anibal, but I think it's a
           good starting point.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco did not reply with any answer, he had no way and he did not
           know why, everything was turned upside down in his head.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- What color is green, Franco? - said Anibal, while he picked up a
           couple of leaves that were on the ground.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-What... what was all this about?- said Franco, taking huge gulps of
           air.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Let's call it magic- answered Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But... how does it... how does it work?- Franco was decidedly
           shocked.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-This is not rocket science, Franco- said Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-The compost thing and the conservation of plants and the environment
           is fine, but I don't understand the thing about the trees moving,
@@ -4523,9 +4535,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Calm down Franco, I'll explain everything to you to a certain
           extent, but what I'm going to tell you is like food, you have to
@@ -4533,52 +4545,52 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"How does your religion explain your life?" asked Anibal as he
           invited Franco into the house.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-The Lord arranged for there to be life on the planet.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-And how do you know that?- asked Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-The Bible says so.</span></p>
+      <p className="MsoNormal"><span>-The Bible says so.</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-And who wrote the Bible?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-She wrote it, What are you trying to get at?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-What if I told you to start accepting yourself as a human?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-What? A motivational speech is not the kind of answer I'm looking
           for - said Franco, who was touching the chestnut tree at the entrance,
@@ -4586,18 +4598,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- You are human Franco, you are a priest and very intelligent, but
           you are clearly human.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-To err is human?... I don't understand anything - said Franco, who
           was still trying to find some trace of joint movement in the fall of
@@ -4605,9 +4617,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-If you accept how tiny you are, you can begin to understand - said
           Anibal, who was watching him from the doorway - life on this planet
@@ -4617,33 +4629,33 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Why not? You're 3000 years old? - said Franco with a somewhat
           incisive attitude.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- No, but we druids have existed since humanity was created on this
           planet.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Franco put himself in his place and harshly said:</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- So far you're a wizard to me, explain this thing about druids to
           me, because as far as I know it's a Celtic or Viking term or something
@@ -4651,18 +4663,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal took a breath and was patient and looked at the ceiling as if
           organizing his thoughts.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Since man is man, and since he has lived in communities, whether
           they are called tribes or clans, there has always existed a sacred
@@ -4672,13 +4684,13 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-The church?</span></p>
+      <p className="MsoNormal"><span>-The church?</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- That's right, there has always been a person capable of being in
           contact with many things that not everyone can see, or convince
@@ -4687,9 +4699,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- And because "so that I understand, nature" is it natural? - Franco
           himself smiled when he realized that he was having a hard time
@@ -4697,9 +4709,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Nature is much more than what you can see, hear, or even study.
           Nature is life, but not only what gives, but also what takes away. It
@@ -4710,18 +4722,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- A source is like a vessel of water and that water is required for
           something to have life - said Franco.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I like that you learn quickly, - Anibal smiled softly. - That
           fountain, in the druid vision, hangs in the balance, if you take
@@ -4732,18 +4744,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco sat on the floor looking at Anibal and thinking with his gaze
           into space, Anibal continued explaining from the door frame.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- The source that we Druids believe in is almost visible under
           certain circumstances - said Anibal delicately - it is not a fact of
@@ -4752,13 +4764,13 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>- The human.</span></p>
+      <p className="MsoNormal"><span>- The human.</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- It is not difficult to deduce, but the human is the greatest enigma
           of the modern druids, nobody knows for sure why they were created and
@@ -4766,46 +4778,46 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- According to the Christian religion, human beings are here to find
           their way to paradise and heaven.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>- Oh yeah? And how?</span></p>
+      <p className="MsoNormal"><span>- Oh yeah? And how?</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- Through forgiveness and devotion.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"And what role does nature play in that story?" asked Anibal while
           scratching his chin with his half-grown beard.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Nature is here to serve humans, at least that's what the Bible says
           - said Franco innocently.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- That is the error of your belief, I am not going to debate your
           beliefs about paradises or distant heavens, but for the druids, human
@@ -4814,18 +4826,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- But that is what modernity is all about, isn't it? - Franco
           adds.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Exactly, man was originally able to live and coexist with his
           environment because he took from it only what he needed to be able to
@@ -4836,24 +4848,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Anyone could agree with that - said Franco - but... all this
           environmentalist talk doesn't explain what happened here.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Anibal gave a rather understanding laugh.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Druids do not have a specific power, or at least that is how we see
           it, our ability is to understand and comprehend the environment to
@@ -4862,23 +4874,23 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Franco looked at him and said:</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-You still haven't explained the thing about the trees to me.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Each druid does his own research on what the source is, but when you
           get closer and understand how the source works, you can have the
@@ -4890,30 +4902,30 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-This may sound ridiculous, but did you move the plants with love?-
           Franco said incredulously.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-No, I ordered them to feed on the compost.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-But the trees don't move - Franco replied.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Trees do move all the time, whether you can't see them, perceive
           them or not. That's not my problem - said Anibal, somewhat overwhelmed
@@ -4922,18 +4934,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-So I assume you mentally said "trees move" and they moved - Franco
           said.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No one can talk to plants as such, not even to animals, that is a
           universal law even for us, you can only motivate, stimulate or in this
@@ -4943,9 +4955,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-So I guess it is something internal and spiritual that achieves
           greater things, meaning there are different types of magnitudes of
@@ -4953,9 +4965,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Yes, absolutely, but they are not governed by anything physical,
           technically you could do the same thing I do if you had lived and
@@ -4964,15 +4976,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- What kind of druid are you? In fact, why the word druid?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-The word druid was adopted as a convention, because the Celts were
           the only ones who adopted druidic beliefs, they were an aristocratic
@@ -4983,18 +4995,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Are there more of your kind? - answered Franco, breaking his
           silence, deeply impressed.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Yes, many more, of all kinds; in fact, druids are classified by what
           we call "orders", and these orders are defined only by philosophical
@@ -5003,91 +5015,91 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-The different creeds according to the interpretation of the Bible -
           Franco answered shrewdly.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's right, there is everything, although the majority and the
           strongest druid orders are hermits like mine.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But, if they have the solution for the world and nature, why don't
           they intervene, appear and change everything.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-So, if there's one thing we've learned, it's that every change in
           the source has a consequence; it's all action and reaction.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-And if you are a hermit druid, what are you doing here?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-I exiled myself from my order.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-Because?</span></p>
+      <p className="MsoNormal"><span>-Because?</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Because I didn't agree with what they were planning.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- And why did you come here?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-All that is a story that I will tell you in due time and I think I
           should do it, now I need you to understand what I am.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I've barely understood it, but it's still not easy to digest,"
           Franco said, half-convinced.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I need you to come at midnight tomorrow, so I can continue
           explaining to you, there are still some very important things that I
@@ -5095,9 +5107,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco shook Anibal's hand, almost trembling with emotion. Everything
           was confusing in his head, but he had an answer and a pretty clear
@@ -5106,18 +5118,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >As she left the house, she raised her hand to wave goodbye to him
           while Anibal pulled the door shut.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The return to the church was relaxed, but halfway there, a couple of
           blocks from his destination, he could make out a very subtle white
@@ -5136,13 +5148,13 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a id="c10">X</a>
+      <a role="button" id="c10">X</a>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The morning was strange, Father Franco had barely managed to fall
           asleep, when he opened his eyes he just lay motionless staring at the
@@ -5155,9 +5167,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Everyone noticed that he was particularly quiet that morning, just
           going about his business without saying much. A part of him was giving
@@ -5167,9 +5179,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Then, remembering Anibal's definition of druids made him even more
           uneasy as he realized that his role as a priest was really or should
@@ -5187,9 +5199,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The afternoon passed quietly, despite everything, the old doubts and
           fears about Anibal were gone, but still the old questions gave way to
@@ -5200,9 +5212,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Night came very quickly, Franco had already dressed in his priest's
           attire, with dress pants, a black shirt and a clerical collar, and his
@@ -5210,9 +5222,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >This time, Franco was walking with great anxiety at 11:50 at night
           towards Anibal's house. The situation was clearly much more
@@ -5220,9 +5232,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Upon reaching the old door, he knocked loudly, assuming that Anibal
           was engaged in some ritual in the backyard and would not hear him.
@@ -5233,9 +5245,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Upon entering as usual, Franco greeted Anibal cordially with a
           handshake. The scene was not paranormal or extraordinary as Franco
@@ -5245,24 +5257,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Something happened to me last night, while I was walking back to
           church - Franco said with a sincere look.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Something like what you saw here?- asked Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I don't know, something strange,- Franco's gaze turned desperate,-
           normally I would turn to my faith in cases like this, but I confess,
@@ -5270,18 +5282,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal invited Franco to sit on a rustic vegetable box improvised as
           a chair.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Last night I saw that certain things were slowly emerging from the
           dark parts, like faintly glowing white lines - Franco did not finish
@@ -5290,15 +5302,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Were these lines white and wavy? - asked Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The question immediately relieved Franco, who immediately erased the
           possibility of madness from his mind, which although it had been in
@@ -5306,59 +5318,59 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Yes!- Franco answered, excited.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's a complex subject, Franco, a bit long and difficult to
           understand, - warned Anibal.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Is it some kind of disease or something? - Franco asked
           immediately.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal showed a slight smile, but his face returned to the
           seriousness illuminated by the candlelight.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, Franco, it's about opening your mind, - replied Anibal.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Open your mind, like accepting new ideas and all that?- asked
           Franco, who didn't understand anything.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, it's more of a biological and mental term - said Anibal, who was
           trying to find a way to explain a complex term quickly and concisely
@@ -5368,9 +5380,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I understand what you are trying to explain with that, the
           subjectivity of the experience of sensations-Franco could not respond
@@ -5378,9 +5390,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Something like that, but purely to explain to you that what you
           perceive through your eyes is simply a process and flow of data that
@@ -5391,9 +5403,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Anibal, you always lead me to a complex idea when I want you to
           explain something simple. What were the white lines? - Franco answered
@@ -5401,9 +5413,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Excuse me if you feel like I'm going around in circles, but to
           understand what the white lines are, you have to understand why you
@@ -5411,9 +5423,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Well, explain to me why my brain allows me to see the white lines
           and why now, after seeing your ritual, does it have something to do
@@ -5422,9 +5434,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal sat down next to Franco on another vegetable box and scratched
           his head as he looked towards the wall, trying to put his thoughts in
@@ -5432,9 +5444,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-As far as we know, when the brain has to process events that go
           beyond its own laws of reality, it has two paths: expansion or
@@ -5442,15 +5454,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-So, am I crazy? - said Franco.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, you are wrong, when your brain processed the information it saw
           when the trees moved, what it was used to perceiving as reality, your
@@ -5460,9 +5472,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Anibal, if that makes it easier to explain, you're not trying very
           hard, - said Franco with his normal ironic tone that shone more and
@@ -5470,9 +5482,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-The brain normally protects you from seeing things that are too
           complex in your reality and blocks them, because they are not part of
@@ -5483,24 +5495,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-It's still complex, Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal became exasperated, took a deep breath and still scratched his
           head.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-When the conquistadors arrived in North America, the natives could
           not see the ships on the horizon, because their minds had blocked the
@@ -5509,18 +5521,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But they didn't go crazy when they saw the conquistadors, did
           they?</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, but still, when they saw a rider, they believed it was a single
           entity, and when a rider dismounted, they ran in fear and panic,
@@ -5529,9 +5541,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-So, let me get this straight. Normal humans, whether it's me or the
           lady who lives on the corner, can only see the color red,
@@ -5541,9 +5553,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's right, Franco, excellent analogy - said Anibal, - but you
           still can't fully see the blue color of the world, you're just
@@ -5551,15 +5563,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-But everything has a beginning.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-What if I told you that a goblin is watching us from the window. He
           probably speaks more languages than you and has been living on this
@@ -5568,18 +5580,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I would tell you that you should write stories for children, because
           elves do not exist.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Why don't they exist? Because you haven't seen them, or nobody has
           seen them? Then why do they exist in the folklore of so many cultures
@@ -5590,9 +5602,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But if that were the case, dragons would also exist, they exist in
           all cultures, Chinese, Aztec, European, South American, but there is
@@ -5601,9 +5613,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I don't recommend you get into the subject of dragons for now
           Franco, it's a very long subject, but yes, they existed and we druids
@@ -5611,18 +5623,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-And why don't they give them to the general public, why deny
           knowledge?</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Because these things cannot be taught, it is like giving a book
           written in purple ink to someone who can only see the color red, -
@@ -5633,9 +5645,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Well, but getting back to the subject, now that I know I can start
           to see a little in purple, what was that white thing? - asked
@@ -5643,17 +5655,17 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-A bicho,- said Anibal.</span></p>
+      <p className="MsoNormal"><span>-A bicho,- said Anibal.</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-An insect?</span></p>
+      <p className="MsoNormal"><span>-An insect?</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, the word bicho or bicho is incorrectly used for insects,- said
           Anibal as he removed the grass from his mouth,-The word bicho is a
@@ -5663,9 +5675,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I know what happens when you scratch your head, and I know there's
           another complex explanation coming," Franco said, a little more
@@ -5673,9 +5685,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's true, it's complex, - said Anibal - if we were to draw a line
           where at one end is the source of life, the origin of everything, and
@@ -5685,18 +5697,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco just nodded with his eyes, because this was easier for him to
           understand.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Immediately after humans we should put animals, and then vegetation,
           insects, microbes, etc., - said Anibal while with his hands he drew
@@ -5707,19 +5719,19 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Franco jumped up from his rustic chair to interrupt Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-Do elves really exist?</span></p>
+      <p className="MsoNormal"><span>-Do elves really exist?</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's right, but they are not very numerous, and they in particular
           can decide to make themselves visible to humans, but they almost never
@@ -5728,17 +5740,17 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Very interesting, I would like to see a goblin - said Franco.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-When you see one, try not to scare it, they can be very annoying if
           they get angry,- said Anibal, who still had his hands holding an
@@ -5747,33 +5759,33 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- Dragons? This is getting too fantastical.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I know it sounds fantastic, but dragons also disappeared voluntarily
           many, many years ago, no one has seen one in centuries.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But why do these rare species decide to go into exile, and where do
           they go into exile?</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Dragons and goblins were and are beings of much deeper wisdom than
           any druid, and for both races the conclusion of all their knowledge
@@ -5784,15 +5796,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- So they're dead? - Franco asked.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, it is not really known, but many say no. But druids and dragons
           have always been great enemies on an intellectual and physical level,
@@ -5800,18 +5812,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-How can they be enemies of something they don't know exists or
           not?</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-There are huge stories of fights against dragons so that they would
           not eliminate humans, - said Anibal, still holding on to his imaginary
@@ -5819,18 +5831,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"And did they spit fire and fly in those stories?" Franco asked like
           a child fascinated by an adventure story.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Apparently so, but they could clearly use the same abilities as the
           druids but much more powerfully,- said Anibal while shaking his head
@@ -5841,15 +5853,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Emotional parasites? - Franco asked, intrigued.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's right, bichos, being pure life, tend to seek out and approach
           the planes and visions of humans to parasitize some emotion or
@@ -5857,54 +5869,54 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-And why would something like that parasitize emotions if it is one
           step away from being pure life?- asked Franco.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It is not known for certain, but apparently, as I was saying, since
           they are made of life, they lack emotion and parasitize humans.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-And this is very common, at least as far as I can see? - said
           Franco.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That you can see them, yes, is common among druids, but that they
           appear is not so common,- said Anibal.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But what could be parasitizing those white lines? - said
           Franco.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-They were probably trying to parasitize fear or terror,- said Anibal
           with his hands at his sides,- ghosts are usually bichos that adopt
@@ -5913,15 +5925,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-But are there more than one? - Franco asked innocently.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-There are many, nobody knows how many, and some are very dangerous,
           but at least we know that they do not reproduce or are "contagious",
@@ -5929,18 +5941,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But if, for example, a bicho were to attack me, can it be removed? -
           Franco asked.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Totally, we druids dedicate ourselves to studying them as much as we
           can and they appear, we really don't know much about what moves them
@@ -5953,21 +5965,21 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-And how do you remove it, with some kind of surgery?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Anibal let out a very subtle laugh.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, you just have to put a couple of drops of normal tea in the ear,
           and the bicho will go away because it doesn't like the taste of
@@ -5975,9 +5987,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Well, it's pretty simple, but I guess that simplicity can be a cause
           for the complexity,- said Franco, quite complicated trying to
@@ -5985,9 +5997,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-In any case, as I said, it is rare to encounter bichos in large
           numbers, it is more likely that you will enter the place where a bicho
@@ -5995,15 +6007,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-What is the most dangerous bicho you know?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-There are all kinds, although I don't know of any that take a life,
           I've heard of bichos that parasitize a person's memories to the point
@@ -6012,18 +6024,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-So the bicho I saw last night, could it have something to do with
           the terror I felt, or the terror I felt? - Franco asked.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Very good question, it's true, it's rare for a bicho to appear just
           like that, it must have been because of terror, or it could be
@@ -6037,30 +6049,30 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-What are you taking about?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It may be that in a short time or in a long time still, more druids
           will come, and their intentions will not be good.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Are they coming after you, Anibal? - asked Franco.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, they probably don't care about my presence, I came to try to
           save them, because at least my intuition and knowledge tell me that
@@ -6068,38 +6080,38 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-Leave with what?</span></p>
+      <p className="MsoNormal"><span>-Leave with what?</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-An idea that I was always opposed to and for which I went into
           self-exile.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- A massacre? - Franco's face looked terrified.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-No, but maybe something worse.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a id="c11">XI</a>
+      <a role="button" id="c11">XI</a>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The afternoon was very calm, the wind blew normally through the cool
           courtyard of the old house on Calle El Roble. Mateo was stunned by
@@ -6108,15 +6120,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"Can't you hear the frog?" Mateo asked in surprise.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, I mean yes, I hear her croaking, but I don't hear words,
           phrases, or sentences - Vilu's expression showed that she was telling
@@ -6124,24 +6136,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Yes, I can hear her saying words,- Mateo answered with a strange
           expression on his face.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"Then you're crazy," Vilu replied.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Talking to a frog? Madness? You're telling me that from someone who
           half an hour ago I saw transform into a fox and a cormorant, - said
@@ -6149,9 +6161,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"His name is Mo, and he tap dances and wants to be a boy, right?
           That's not magic, it's madness," Vilu said as he stood up and shook
@@ -6159,18 +6171,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Hey, I can actually understand her, I can talk to her, I thought it
           might be some sort of druidic ability - Mateo said.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Mateo, we druids communicate, we sympathize with things, you
           sympathize with plants and you communicate with them in an...
@@ -6182,18 +6194,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           > Vilu looked at the chestnut tree and then saw a cat sleeping on the
           roof and couldn't help but say.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Hey you, brown-haired boy, pour me a coffee,- said Vilu laughing at
           Mateo. - Gato, come down here and let's discuss the meaning of life,
@@ -6201,9 +6213,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo, who was not an easy person to irritate, could not help but
           burst out laughing at Vilu's spectacle. But Mo, in his character,
@@ -6211,36 +6223,36 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Of the humans I've met, this would probably be the only one I'd kill
           by strangulation.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"And how could you strangle him?" Mateo asked, and at the same time
           Vilu turned his attention to Mateo's conversation.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I'd get in his mouth and make him choke on my bulky body," Mo said,
           half irritated.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I didn't know about your kamikaze skills, did your species develop
           it? - Mateo asked Mo and Vilu slowly approached Mateo and put her ear
@@ -6248,18 +6260,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I developed it, designed to evolutionarily surpass the idiocy of
           your species, - Mo could not contain his anger.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           > Vilu, who was trying to figure out if this was true or false, through
           strange movements, smelling Mateo's hair, taking his head and putting
@@ -6267,57 +6279,57 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-They were talking to you, right?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's right, Mo, the frog - said Mateo completely calmly - was just
           saying that he wants to strangle you.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-So let's talk about psychosis,- said Vilu between laughter and
           fear,- "the voices are telling me to kill you"?</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-No, it's not the voices, and the one who will kill you will be the
           frog,- said Mateo.- It won't be me.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span> Vilu still didn't quite understand.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Something tells me that you will appear dressed as a frog and with a
           knife chasing me,- Vilu laughed a lot at his own irony.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo was left thinking about how to solve this enigma. It was
           certainly a strong doubt that everything was in his mind, but this was
@@ -6331,9 +6343,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           > Vilu, for his part, felt great joy. All his life he remembered he had
           been a druid, or a witch for his order, and the life of a human seemed
@@ -6347,9 +6359,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Let's do an experiment, you're convincing me that all this could be
           just in my mind,- said Mateo before Mo's stupefied gaze, who just
@@ -6357,15 +6369,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-What's the idea, strangler?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Vilu, stand in front of me 5 meters away and put your hands behind
           your back,- said Mateo who was already devising and materializing a
@@ -6373,9 +6385,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I hope the turtle food is worth it," said Mo, who got down and
           hopped along in small jumps due to his grass injury until he was at
@@ -6383,18 +6395,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Ok," Mo said. "Now I can see your guest's dirty hands," Mo said
           scornfully.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Now Vilu, show me a certain number of fingers, and Mo should be able
           to tell me how many there are,- Mateo's idea seemed simple, but very
@@ -6402,33 +6414,33 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- I like the idea.- said Vilu, who began by clenching his hands
           behind his back.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >All the members were in position, Vilu, Mateo and an irritated
           Mo.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Let's begin,- said Vilu.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The game seemed easy, but Mo's willingness to do the exercise could
           prove crucial. Vilu began by showing three fingers, two on his right
@@ -6436,93 +6448,93 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Three fingers, - said Mo, - two on the right hand and one on the
           left hand.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo repeated the message as is, and Vilu's surprised face did not
           take long to appear.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Let's repeat it - said Vilu, still incredulous.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Okay, - said Mo, already bored with his first test, - but this is
           going to cost you food, Mateo.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The exercise was repeated, and this time Vilu showed seven fingers,
           two on his left hand and five on his right.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Seven, five on the left, two on the right," Mo said immediately, not
           noticing his mistake in limbs.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Seven, five fingers on the left, and two on the right,- Mateo said
           incredulously.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Wrong! Because there were seven, but the hands are wrong.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Hey, I'm not Pythagoras, I can count, but I can get confused with my
           hands - said Mo with an irritated tone.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's right, - answered Mateo, - it's a frog, you can get it in the
           wrong hands, but the number is correct, which makes it real.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           > Vilu touched his chin in thought, he knew that even though he was
           surrounded and influenced by a more extraordinary universe than that
@@ -6533,9 +6545,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The enigma was obvious, and Vilu began to slowly form ideas in his
           head that could reveal the secret behind this very strange ability.
@@ -6543,9 +6555,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >A subtle silence settled over the scene, as if easing everyone's
           minds. Mateo was quite happy to have another druid to share with, but
@@ -6554,76 +6566,76 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"There's knocking on the door," Mo said without much
           encouragement.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-I'll go see - said Mateo.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- Excuse me? Vilu looked at Mateo in surprise.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-There's a knock on the door, - explained Mateo.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- I haven't heard anything - said Vilu.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Me neither - said Mateo.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"And how do you know, then? Do you talk to doors too?" Vilu said with
           his characteristic sense of humor.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-No, the frog told me.</span></p>
+      <p className="MsoNormal"><span>-No, the frog told me.</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo walked slowly, with a relaxed step towards the door, while Vilu
           fixed her gaze on Mo, and watched him touching his chin.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-What secret are you hiding, little creature?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo struggled against the door and the gaze of a man with graying
           hair appeared on the other side, with a beard that was neither short
@@ -6632,17 +6644,17 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Franco, I haven't been here for weeks, - Mateo said candidly.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I know, I've been very busy with church matters,- said Franco -I
           brought you some clothes, there's a trench coat, several t-shirts,
@@ -6651,42 +6663,42 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- A trench coat? That will be interesting to see - said Mateo, while
           he stepped aside to let the priest pass.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco entered the house with a couple of bags, which he left in a
           corner.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-And what do you say? What happened? - asked Franco, stretching his
           back with his hands behind his back.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-It's a long story - said Mateo.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-You'll have to summarize, because I don't have much time, I think
           I'll come over tomorrow for a coffee with you - Franco interrupted
@@ -6694,24 +6706,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Well, I'll summarize it very briefly but I know you won't understand
           anything.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- Test me, Mateo - Franco said with a half smile.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Okay, here I go, - Mateo scratched his head, took a breath and
           staring into space, he began. - Martina Marpas, the daughter of David
@@ -6720,9 +6732,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco had always enjoyed the well-kept and harmonious courtyard of
           Mateo's house, so he walked to the entrance where the door was already
@@ -6730,22 +6742,22 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I think that's fine, it's not a bad thing that these things happen
           to you.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-I know but...</span></p>
+      <p className="MsoNormal"><span>-I know but...</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Mateo,- Franco interrupted, looking at the patio with curiosity- why
           is there a Chiloe fox, an almost extinct species, in the patio of your
@@ -6753,9 +6765,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Oh well, that's the second part of the story,- answered Mateo who
           was approaching the patio. -Well, I also found a frog that can
@@ -6764,63 +6776,63 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco remained motionless at the door, observing the
           landscape.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-A druid also arrived, with whom I had to fight, I won and now he is
           out there transformed into a fox, - Mateo summarized.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco still remained motionless, breathing calmly as he admired the
           view from there. He only flinched when Mateo said:</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-I was looking for Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco immediately turned to Mateo and said in a deep voice, he
           rebuked him:</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-What did you tell him?</span></p>
+      <p className="MsoNormal"><span>-What did you tell him?</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Nothing, for the moment, I wanted to ask you what I should do.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-You did well,- Franco said suddenly, harshly, as he walked towards
           the fox who looked at him contemptuously. -I know you are a druid, we
@@ -6830,15 +6842,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Franco, you talk tough for a man of God,- said Mateo.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I know, but over the years my human side, not the religious one,
           can't help but despise the cause of everything they intend to do, -
@@ -6848,55 +6860,55 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I can't go back," Vilu replied, speaking like a fox. "I had to fake
           my own death in order to escape."</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-So, if you didn't come with a specific purpose, why are you here?-
           Franco asked.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-I'm looking for Anibal, the earth druid.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-For what purpose?</span></p>
+      <p className="MsoNormal"><span>-For what purpose?</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I need a guide," Vilu said. "I ran away from my order because I
           didn't agree with its leader and his extremist ideas.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- "End humanity?" interrupted Mateo, who was leaning against a tree
           listening to the conversation.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's right, the idea of returning the human species to the source
           has been brewing for years - Vilu replied. - This idea had never been
@@ -6905,18 +6917,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But they can't do it, as long as they don't have control of Anibal's
           fountain... Right? - Franco intervened.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Apparently not, that's what scared me so much,- said Vilu while
           scratching behind his ears with his hind paw - in recent years, the
@@ -6927,9 +6939,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Then it's worse than we were warned,- said Franco, who, startled,
           said to Vilu.- I take back what I said, you can stay here as long as
@@ -6939,9 +6951,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Okay,- said Vilu as he transformed into a human.- My name is Vilu,
           and I am from the order... I was from the order of Chiloe
@@ -6949,36 +6961,36 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco approached and, looking at Vilu's ink eye, with a smile on his
           face, said:</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I see that Mateo didn't exactly welcome you with open arms, tomorrow
           I'll bring something in ink for your eye - said Franco.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Welcome to the great port of Valparaiso - said Mateo, - I have some
           plants that can help you with eye swelling.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I think so, I think I'll have to bring some clothes and a haircut
           for Vilu, but for the moment, I wouldn't like Vilu to be seen as
@@ -6987,15 +6999,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-All right, I think so - said Vilu.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The afternoon, which was almost evening, crept upon them accompanied
           by a cool breeze that made the individuals enter the house, where
@@ -7005,9 +7017,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >When night fell, Mateo lay down on his neat and tidy bed, and Vilu
           prepared to sleep in the form of a fox on a blanket that served as a
@@ -7015,9 +7027,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The night passed calmly and peacefully, but Mateo had a very strange
           dream. Mixed with all his unconsciousness, was Martina, standing,
@@ -7031,9 +7043,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >He was standing there watching it, talking to it, but Mateo couldn't
           understand what he was saying. In the dream, Mateo took a few steps to
@@ -7049,9 +7061,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >He checked his hands and neck, everything seemed in order, he knew he
           had to talk about this with someone, he looked at the corner of the
@@ -7064,13 +7076,13 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a id="c12">XII</a>
+      <a role="button" id="c12">XII</a>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The morning was fresh and light, the air was easy to breathe and the
           feeling in the air was clear. Several days had passed since Franco
@@ -7082,9 +7094,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >It was Sunday, the day of the mass, everything was prepared as usual,
           Franco was very confused about the homily, he was not very clear about
@@ -7094,9 +7106,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Restore to me, O Lord, the robe of immortality, which I lost through
           the sin of my first parents; and, although I approach your sacred
@@ -7106,9 +7118,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The church was full, but enough to have seating for everyone, as
           usual. The ceremony began normally with Pedro, a boy of twelve or
@@ -7117,9 +7129,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The ceremony began as usual, when the reading of the gospel came. He
           chose some passages from the life of Jesus as a model, but as he
@@ -7134,9 +7146,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- We are all people living in modern times, full of comfort. Far from
           that comfort being good or bad, rich or poor, we are all living here
@@ -7153,18 +7165,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal and the crowd visiting the church were shocked by the passion
           with which Franco said these words.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Our Lord, and not only him, our children, his grandchildren, and
           future generations will judge us and our time by the way we treated
@@ -7174,9 +7186,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Jesus said "love one another" and the message has been passed on in
           every way to you who have embraced it in such a big way, but how
@@ -7194,9 +7206,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco extended his sermon by talking about the place of humans on
           the planet in very subtle ways, because deep down he was beginning to
@@ -7208,9 +7220,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >When the ceremony was over, it was clear that it had had an effect on
           the people. Many were talking about the sermon among themselves. There
@@ -7225,9 +7237,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal walked very subtly and calmly back to his house, he was very
           happy with the look and perspective that he saw that Franco had
@@ -7242,9 +7254,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The night arrived quietly, almost imperceptibly. Anibal only looked
           up from the window and noticed the dark tone of the night passing by
@@ -7255,9 +7267,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >By the time it was about eleven o'clock at night, Anibal was feeling
           exhausted and the desire to sleep was beginning to whisper in his ear
@@ -7267,9 +7279,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Suddenly the scene was broken by the desperate sound of knocks on the
           door, which opened to reveal Father Franco's face with labored
@@ -7277,9 +7289,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-You have to come with me, Anibal, I think that only you can help
           me,- Father Franco's voice sounded cracked between the labored
@@ -7287,30 +7299,30 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"What's going on?" asked Anibal, frightened.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Something happened, come with me, I think only you can see this,-
           said Franco with a look that urged Anibal to accompany him.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-But, explain to me,- replied Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Come with me and you will explain yourself when you see what I have
           to show you, it is urgent - Franco replied as best he could, while
@@ -7318,9 +7330,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Immediately, Anibal took a long brown blanket that Franco had given
           him earlier and put it on his body like a tunic to protect himself
@@ -7330,9 +7342,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Both men walked quickly, Anibal was very curious about Franco's
           urgency, he could not figure out what a Catholic priest could need
@@ -7340,9 +7352,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Upon reaching the church that stood imposingly above the small houses
           that surrounded it, they had not spoken a single word. Anibal looked
@@ -7351,9 +7363,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco told Anibal to enter quietly, and Franco did as well,
           carefully closing the church door to maintain the reigning silence.
@@ -7363,9 +7375,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"What do I have to see?" asked Anibal immediately upon entering,
           which Franco immediately interrupted by making a "shhh" and putting
@@ -7373,24 +7385,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-It's around here somewhere - Franco replied.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-What thing? - curiosity was still killing Anibal, who did not stop
           searching around him.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Today, while I was sweeping the church in the afternoon, I started
           to hear noises coming from the confessional - Franco commented as he
@@ -7398,42 +7410,42 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Suddenly both eyes turned to the sudden sound of footsteps running
           along the dark side of the church.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>- When I opened the confessional I found this.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Among the shadows and dark places, the small and very ragged
           silhouette of a person appeared.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- A child? - asked Anibal - a child playing in the confessional is
           not something very abnormal, or is it?</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- That's not what's strange, - Franco replied in a whisper - what
           caught my attention at that moment was that he didn't want to
@@ -7441,9 +7453,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The silhouette came a little closer to the point where the moonlight
           hit its face and the figure of a six or seven year old boy became
@@ -7454,9 +7466,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The boy immediately covered his eyes when the light hit his face, and
           let out a subtle moan of sorrow, immediately retreating towards the
@@ -7464,54 +7476,54 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-That's abnormal, I have to check it- said Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-That's what I want you to do.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Did he tell you where he's from? - asked Anibal in a low
           voice.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-That's another thing I want you to do, ask him yourself.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal approached very slowly to the boy who was evidently
           frightened, so Anibal immediately said:</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Hello little friend, my name is Anibal and I don't want to hurt you,
           I just want to get closer to see what's wrong with you.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The boy did not make a sound from his dark silhouette. Anibal then
           approached him resolutely, and was shocked to see that the boy was
@@ -7521,18 +7533,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Look at his eyes," Franco said, approaching cautiously in
           turn.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal stood next to the boy and knelt down to look into his eyes.
           The boy seemed to feel a little calmer and tried to speak but no
@@ -7540,9 +7552,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Looking closely at the eyes, an ordinary human would not have seen
           anything, but for Franco and Anibal there was something else; inside
@@ -7551,24 +7563,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's worse than anything you could have imagined, Franco,- said
           Anibal.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Immediately Franco pulled Anibal back and said silently.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Be more careful with your diagnosis, don't scare him more than he
           already is,- Franco scolded Anibal.- He's a bicho, isn't he? I didn't
@@ -7577,9 +7589,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-You did well, no one would understand what he has and his life would
           be destined to be a medical case for your medicine to dissect in the
@@ -7589,30 +7601,30 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Do you think he can recover?- said Franco.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I don't know if completely, but it will take time, we will have to
           do something with it.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-What do you propose? - said Franco.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's not good for him to stay in the church, it's too dark, there
           are a couple of bichos that will get stronger if you keep him here,-
@@ -7621,18 +7633,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Who would want to receive him?" Franco said correctly, reprimanding
           Anibal and casting a severe glance upon him.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-My house? - said Anibal terrified, reading Franco's intentions, -
           you're crazy, I have no patience for children, besides my house is not
@@ -7640,9 +7652,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-You realize that if I send this child anywhere he will be condemned
           for life, and we have to live knowing that we were the only ones who
@@ -7653,44 +7665,44 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The two men stared at each other, and Franco, from his tough
           position, glared at Anibal, who looked at him thoughtfully.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Okay, let him stay with me, but only until he recovers," Anibal
           relented, kicking like a child.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Okay, I have a couple of mattresses that we'll bring and some
           blankets. Tomorrow I'll bring you the clothes I find.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Do you have some lavender flowers? - Anibal interrupted him.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's not the best time for you to think about the fragrance of your
           house, Anibal,- Franco answered harshly, to which Anibal couldn't help
@@ -7698,27 +7710,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's to cure the child, it would help me with a couple of
           bichos.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I think I have some in the church garden, I'll take it
           tomorrow.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It would be good if you brought him now, Franco, it's quite simple
           and we could help him right now- explained Anibal, who was now the one
@@ -7726,18 +7738,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I'll go get it then, I won't be long," said Franco, immediately
           leaving for the church garden to look for what he needed.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal approached the boy and continued to observe him, and when he
           looked into his eyes again he discovered something that took his
@@ -7748,9 +7760,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Franco returned immediately, holding several lavender flowers in his
           hand, gently closed the church door and quickly approached Anibal, who
@@ -7758,15 +7770,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Here they are,- said Franco- what will you use them for?</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-To see if I can fight off a bicho,- said Anibal, who began to crush
           them and gather them into a ball - from now on, I need you to say
@@ -7776,24 +7788,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >She approached the boy slowly and placed the lavender near his
           nose.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-I need you to smell this lavender ball very strongly.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The boy, trembling, obediently brought his nose close to Anibal's
           hand with the lavender ball that gave off its strong fragrance. He
@@ -7802,17 +7814,17 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Don't stop breathing no matter what happens - Anibal told him.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The boy continued to suck the lavender from Anibal's hand, although
           he showed obvious signs of pain; suddenly he drew his arms over his
@@ -7824,9 +7836,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Finally, the boy raised his head and opened his mouth as if a large
           vomit was going to come out of him, but instead tentacles and very
@@ -7835,18 +7847,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal turned to sternly remind Franco, with a gesture of his finger,
           that he should not open his mouth.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The being that began to emerge from the child's mouth was quite
           large, it was a very bright yellowish color and from between its
@@ -7855,9 +7867,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >When it came out completely, it covered the boy's head and without
           warning it jumped towards Anibal's face, who remained motionless and
@@ -7868,9 +7880,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The object remained there, spinning and screaming, until suddenly it
           stopped making any sound and slowly vanished into the air. The child
@@ -7878,9 +7890,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That bicho is called Chitetaro, and it feeds assiduously on the
           voice of a human, now the child should be able to speak- explained
@@ -7888,9 +7900,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The child was evidently almost asleep, but his soft moans could be
           heard, a sign that his voice was returning. Anibal pulled his blanket
@@ -7898,31 +7910,31 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-What are your parents' names?- asked Franco.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"I don't know," the boy answered very weakly between sobs.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"Are you from here?" Franco insisted again.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-Don't know.</span></p>
+      <p className="MsoNormal"><span>-Don't know.</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-He has a very strange creature called Minmenio - said Anibal,
           interrupting the questioning - and it swallows a person's memories,
@@ -7931,15 +7943,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-And what is the cure? - asked Franco.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That's the problem, he doesn't have it,- said Anibal.- but I'll see
           about that in time, now we have to cure his eyes, he can't see the
@@ -7949,9 +7961,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >They covered the child's face with a blanket to prevent light from
           reaching him and left the church on their way to Anibal's house, who
@@ -7961,18 +7973,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-If you don't remember where you came from, how can we relocate you
           somewhere?- asked Anibal, walking quickly.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I can find him a place to live or a substitute home once he is more
           stable and can integrate into the rest of the world," Franco replied
@@ -7980,9 +7992,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-And if he can't integrate? - said Anibal, - he thinks that from now
           on he will be able to see bichos and things from other planes that the
@@ -7990,18 +8002,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"We'll figure it out as the problems arise," Franco said, to which
           Anibal gave him a sympathetic look.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal was surprised by the maturity with which Franco had taken on
           this whole problem, considering that the young priest had just turned
@@ -8011,26 +8023,26 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-What are we going to call him in the meantime? - asked Anibal - we
           have to call him something, we won't call him "boy" forever.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Good point - Franco said thoughtfully - do you have any ideas?</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Let's call him Anibal, I like my name - said Anibal, to which Franco
           couldn't help but laugh and at the same time throw him an
@@ -8038,24 +8050,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-No, let's think of something new.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-You have more names in mind, I mean, you know the Bible backwards
           and forwards, there are thousands of names you can give it.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Well, we'll call him Mateo, because it means man of God, - said
           Franco after some thought - plus he came to us in a unique way, and we
@@ -8063,9 +8075,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I don't like it, Anibal the second would have been better - Anibal
           grumbled, - but you know more about these things, so it's better that
@@ -8073,13 +8085,13 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a id="c13">XIII</a>
+      <a role="button" id="c13">XIII</a>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >A couple of days had passed relatively calmly in Mateo's life, even
           though his routine had been definitely altered with the arrival of
@@ -8092,9 +8104,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >In a way, Mateo needed a partner to share the tasks with, now that he
           had more time for himself, he spent time walking around the
@@ -8110,9 +8122,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >That afternoon everything was quiet and as usual, silence traveled
           through the street without anyone interrupting it, everything was
@@ -8122,9 +8134,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-This heat is not normal - commented Mateo - I have lived here all my
           life and this heat, I know it is not normal - he said while he wiped
@@ -8133,9 +8145,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I can't tell you anything, all this is still new to me; for me, who
           is from the south, feeling the heat is almost a blessing - replied
@@ -8144,9 +8156,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >From the horizon a strong and large curtain of smoke began to rise,
           after a while the smoke had completely covered the sun, making
@@ -8154,21 +8166,21 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-A forest fire - said Mateo.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-It's normal with this heat - Vilu replied.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Shouldn't you be doing something? I mean, you're a druid and you're
           supposed to protect nature and all that? - asked Mateo, who was
@@ -8176,9 +8188,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I am not a protector of nature per se, I am a communicator and a
           link between it; furthermore, forest fires can occur on their own with
@@ -8188,42 +8200,42 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-But there are many fires here caused by humans, directly and
           indirectly - said Mateo.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's still hard to do anything, I'm not strong enough to control the
           fire - said Vilu.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"Is fire difficult to control?" Mateo asked, interested.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-A lot, fire is pure energy, therefore a large amount of it is
           required to be able to control it.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The conversation was interrupted by the sound of the door being
           knocked on violently, and Mateo immediately got up to pull it open as
@@ -8231,9 +8243,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Martina Marpas appeared from behind the door with a smile and
           sunglasses, in her hand she held the keys to the car that was right
@@ -8241,27 +8253,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Mateo, I came to bother you about the bonsai - said Martina with her
           kind voice.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Oh yes, here I have it, come in, - said Mateo inviting Martina to
           come in.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I can't stay long, I have to go to the fire site, I need to take
           photos for the annual project of an environmental impact analysis
@@ -8269,9 +8281,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo picked up a bonsai in the middle of the budding process, the
           broken branches had almost completely healed and the bonsai was
@@ -8279,9 +8291,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Martina was about to say goodbye when the Chilote fox appeared on the
           scene out of nowhere, wagging his tail, with his tongue hanging out
@@ -8291,51 +8303,51 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-And who is this beauty? - said Martina, caressing her head.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- It's a friend's dog - Mateo answered with an obviously
           uncomfortable face.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- It seems like a very rare breed, what is it? - Martina asked,
           looking at Mateo.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Mateo after a few seconds of thinking about it said:</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal"><span>-Snauser Retriever.</span></p>
+      <p className="MsoNormal"><span>-Snauser Retriever.</span></p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-It's very cute and tender - Martina replied.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's such a sweetheart, - said Mateo with an ironic smile on his
           face, - Do you have to go photograph the fire areas? - asked Mateo
@@ -8343,9 +8355,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Just to the areas that have already burned, those that are still
           burning are closed, would you like to go with me? - Martina asked
@@ -8353,18 +8365,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Before Mateo could say his classic "no", Martina pulled a small red
           cloth bag out of her purse and handed it to Mateo.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I forgot, I wanted to give this to you, they are rare seeds that I
           have collected around here, I think you can put them to better use
@@ -8372,9 +8384,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The image of Martina giving him the seeds flashed through Mateo's
           memory, along with the image of the dream that was still fresh in his
@@ -8383,9 +8395,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I'll go with you, let me close the kitchen door - Mateo said this as
           he ran to the back of the house to close the door leading to the
@@ -8393,24 +8405,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >As he passed Mo's fish tank, he heard a phrase that froze him for a
           thousandth of a second.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Be careful where you go, Mateo - said the frog.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo knew that in that circumstance he couldn't establish a
           discussion table with a frog, so he decided to act as if he didn't
@@ -8418,9 +8430,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >As he was leaving, he realized that he couldn't move forward because
           Vilu was biting his pants on the calves. He knew what Vilu meant by
@@ -8428,27 +8440,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Can I take the dog? - asked Mateo, - because if I leave him alone
           he can escape.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Martina thought about it for a moment, but when she saw the fox-dog's
           tender face she couldn't help but say yes.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo left the door closed and Martina started her car, a typical
           white four-door compact city car; Mateo sat in the passenger seat and
@@ -8456,9 +8468,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The journey was not very long, only half an hour by car, and from the
           back window Vilu's head could be seen looking out like a fox, with his
@@ -8472,9 +8484,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Everyone noticed the proximity of the fire with the smoke that was
           present and the strong smell of burnt wood that was easily perceived.
@@ -8483,9 +8495,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >They chose a good place to park, in the shade of a eucalyptus tree
           that stood triumphant for having survived the fire. They went a few
@@ -8498,9 +8510,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The three travelers could not help but gasp at the sight of such a
           trail of destruction. The fire was certainly no longer there, but its
@@ -8511,9 +8523,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo stood, staring at the scene, completely paralyzed, whatever he
           had previously thought about a forest fire had been completely
@@ -8523,9 +8535,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Suddenly, in the background of Mateo's vision, he could make out a
           familiar figure; it was a feline shape that was looking at him from
@@ -8533,9 +8545,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"I'll be right back," said Mateo, walking quickly towards the strange
           figure, leaving no room for any response from Martina who just watched
@@ -8543,9 +8555,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >When Mateo was close to the feline, it moved, as if urging him to
           follow it. Mateo's curiosity was totally aroused, the closer he got he
@@ -8556,18 +8568,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Where are you going? - asked Vilu- it seems like you are looking for
           something.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-A couple of nights ago I had a dream, in which a feline figure
           appeared before me. Many things have happened today that are very
@@ -8576,18 +8588,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Wait, a dream? - Vilu suddenly became alarmed - a feline figure?
           Stop, Mateo.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo stopped but they were already in a clearing in what remained of
           the forest, in the center of which was that majestic feline form
@@ -8595,9 +8607,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The scene stopped for a moment, Mateo could suddenly remember how the
           dream ended, which terrified him very quickly. The feline approached
@@ -8605,44 +8617,44 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-You're Mateo, aren't you? - the feline suddenly spoke.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"Who wants to know?" Mateo replied.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Just answer," said the feline, crouching on its front paws.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Idiot, you brought us into a trap - Vilu shouted.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-How can this be a trap, if I dreamed it?- asked Mateo, totally
           convinced.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Druids can manipulate dreams, well, not all of them, but some can
           predict the future or have visions or something like that, I don't
@@ -8652,15 +8664,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-I didn't know - said Mateo.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >At that moment the feline lunged at Mateo but before reaching its
           victim, it was intercepted by the fox, who lunged at it, knocking it
@@ -8668,48 +8680,48 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The feline immediately stood up and lunged at the fox, who sprang
           back but was unable to avoid being scratched on the chest.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-A wizard, I hadn't considered this - said the feline.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-It's an ocelot, Mateo, do something - shouted Vilu as he
           retreated.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>Mateo was in shock, he didn't know what to do.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I know you have a bond with Anibal,- said the feline as he
           approached Mateo - I want to see him.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo concentrated, stood on his feet and began to gather everything
           he could to defend himself but strangely he couldn't do
@@ -8717,18 +8729,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Idiot, what roots are you going to move in a dead forest?" shouted
           Vilu, who lunged at the ocelot again.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo was motionless, paralyzed in his mind, unable to solve the
           problem of what to do in a situation like this. It was true, he was
@@ -8744,9 +8756,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           > Vilu took advantage of those seconds to transform into a human and
           grab a stick from the ground, running towards the ocelot, but the
@@ -8760,9 +8772,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Once in the skies, the wizard had to come up with a quick strategy.
           He knew he couldn't leave Mateo alone with the feline, so he
@@ -8772,9 +8784,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The feline only saw that small birds that were very fast and reacted
           very well to its claws were surrounding and pecking it. The ocelot
@@ -8785,24 +8797,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The surprised druid managed to step aside, and the blow shook the
           earth and ashes of the place.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Mateo, react! I can't do this without you! - Vilu shouted.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo began to hear voices inside, voices from his past, he knew
           there was something that would be useful to him, something to
@@ -8810,18 +8822,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-You brought me to barren land to fight - Mateo said suddenly - but
           what you don't know is that Anibal was a druid of the earth.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo began to dig a hole in the ground, first with his foot and
           then, when he had cleared away the ashes, he raised his right hand,
@@ -8831,9 +8843,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >With his eyes closed he began to concentrate, the earth began to
           tremble slightly. For his part, Vilu was still trying to get away from
@@ -8842,9 +8854,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >At the last moment, Vilu stepped in his fox form, as a shield against
           Mateo. He knew that whatever Mateo was doing, he was in a vulnerable
@@ -8855,9 +8867,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >He jumped hard towards the fox, but at the moment he should have
           fallen on his prey, a great blow lifted him from the ground, it was a
@@ -8872,9 +8884,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >This had turned against the ocelot druid, the hand grew and moved
           faster as Mateo concentrated. Then the feline knew that he had to
@@ -8888,18 +8900,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-You definitely have Anibal's line,- said the feline voice very
           determinedly - but I did not come here to be defeated so easily.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The ocelot closed its eyes and in an instant everything around them
           turned dark green with white flashes, and thousands of voices and
@@ -8907,18 +8919,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-These are the voices of the ancestors of these lands, and the animal
           ancestors and the ancestors of the trees, listen to their cries.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo completely lost his concentration, pulling his arm out of the
           ground to cover his ears that couldn't stop hearing the loud noise
@@ -8927,27 +8939,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-We will see each other again, young Mateo, because you will look for
           me - said the ocelot.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-What do you think I could need from you? - shouted Mateo - you want
           to kill me.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-You're wrong, I just wanted to test you - said the feline that could
           be heard in Mateo and Vilu's minds at that point. - I know who killed
@@ -8955,15 +8967,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Who? Tell me! - shouted Mateo.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >But the moment he said it, everything had returned to normal. Mateo
           had tears in his eyes, from anger and sorrow mixed together. When he
@@ -8972,15 +8984,15 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"That's no ordinary druid," Vilu said as he stood up.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo remained silent, many things were going through his head, and
           they were still going through when his taciturn reflection was broken
@@ -8989,19 +9001,19 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-What are you? - between screams and sobs.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a id="c14">XIV</a>
+      <a role="button" id="c14">XIV</a>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Don't touch your bandages", "don't scratch that", "don't play with
           the plate" were phrases that flooded Anibal's house at that time, they
@@ -9015,9 +9027,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >A couple of weeks had passed, Mateo had stabilized, Anibal had
           unexpectedly cured his eyes with chamomile compresses, but he had to
@@ -9028,9 +9040,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo spent all day sitting on a cushion in the corner of the living
           room, talking sporadically, but when he did talk he did so in great
@@ -9042,66 +9054,66 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Do you like tomatoes?" asked Anibal as he prepared an improvised
           salad in what still promised to be a kitchen.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>-Yes - Mateo said in a very soft tone of voice.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Here you go.- Anibal handed him a deep plate with several slices of
           tomatoes and an improvised spoon.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal sat down on the fruit box nearby and took the opportunity to
           eat from his own plate of tomatoes.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Tell me, Mateo, what do you remember before what happened in the
           church?</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>After swallowing a little, Mateo replied:</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I don't know, I can only remember spots and blurred silhouettes on a
           white background.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal remained silent for a moment, watching the boy and thinking
           about Minmenio, the memory-eating bicho, and how it had devoured all
@@ -9115,27 +9127,27 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- Today you must take your medicine Mateo, don't forget - said
           Anibal.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >"Okay," Mateo said very subtly, as if holding back his pain, because
           the remedy or medicine for the bichos was quite unpleasant.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Medicines for certain bichos were based on flavors, for example,
           giving something a very bitter or very sweet taste, which did not
@@ -9143,9 +9155,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Other medicines were more traditional and used for their properties.
           Mint and chamomile were Anibal's favorites, but he could never abandon
@@ -9154,9 +9166,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo was given a little ball of something sticky, brown, wrapped in
           green leaves. Since he couldn't see them, he felt them with his tongue
@@ -9169,9 +9181,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Although Mateo was sadly undergoing a rather harsh treatment,
           especially for a child of his age, he was handling it quite well. But
@@ -9183,9 +9195,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >It was a Monday when the last malicious bicho came out. It was late,
           around three in the morning, and Anibal had woken up, alerted by
@@ -9200,9 +9212,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Without warning, a crystalline substance began to come out of the
           child's eyes, mouth and nose, like a shapeless, viscous and very shiny
@@ -9224,9 +9236,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The slimy material began to gather and cling to the wall. Anibal
           sensed that something worse could happen, so he immediately went to
@@ -9238,9 +9250,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo's body remained on the ground, unconscious and with some small
           involuntary movements that made it seem like he was alive. But the
@@ -9251,9 +9263,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The moment was tense, Anibal knew that any skill that required his
           elemental energy and druid ability would awaken the bicho's basic
@@ -9266,9 +9278,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Without much warning, the creature launched itself at Anibal in a
           rather liquid form, moving from one place in the room to another
@@ -9286,9 +9298,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The druid slammed his staff against the window, trying to scare the
           bicho out of there, but no, the parasite had already found prey, and
@@ -9300,9 +9312,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal was scared to death, the bicho had survived and because of its
           consistency he knew he couldn't do too many spells to destroy it.
@@ -9316,9 +9328,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal, who had one hand holding his staff and the other with two
           fingers pointing at the beast, knew that using fire was a privilege
@@ -9332,9 +9344,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >In an instant, Anibal detonated the area where his fingers were
           pointing, as if it were a gun, breaking the floorboards. But
@@ -9348,9 +9360,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The bicho had already shrunk to more than half its original size, but
           it didn't seem to want to give up. It abruptly launched itself at
@@ -9363,9 +9375,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Many things went through Anibal's mind, among them, why he hadn't
           asked Franco for more help in these things, he really didn't know that
@@ -9374,9 +9386,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >At the last moment, when the bicho was almost reaching Anibal's eye,
           Mateo stood up and stared at Anibal. When he noticed the situation,
@@ -9394,9 +9406,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >When this was over, Mateo collapsed to the ground and Anibal ran to
           help him, taking his small, light head with his left hand and throwing
@@ -9405,9 +9417,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-I'm sorry for getting so angry, I didn't mean to - and with these
           words Mateo fell asleep, sleeping deeply, but in a different way, with
@@ -9415,18 +9427,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >These words fell like water on Anibal, who realized that Minmenio was
           reacting in some strange way in demand of Mateo's will.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal couldn't sleep that night, thinking about the phenomena that
           he, being a world-famous druid, still didn't understand. He knew that
@@ -9438,9 +9450,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The next morning was unexpectedly calm, the day dawned somewhat cold
           and with a white curtain of clouds that made for a cool and pleasant
@@ -9449,9 +9461,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Mateo could now use his eyes again and was happy about that, and he
           could also express his joy by playing in the yard under the gaze of
@@ -9464,9 +9476,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Every partial improvement seemed to be latent every minute of the
           boy's life, but Anibal was still too curious and alarmed by the
@@ -9480,9 +9492,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >The relationship between the druid and the boy was becoming closer,
           inevitably, perhaps because of all the adversities they went through
@@ -9495,9 +9507,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Everything began to blur and at the same time to take shape in an
           even larger landscape, one afternoon, almost at dusk, when the sky was
@@ -9510,9 +9522,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >And at that moment, Mateo pointed with his finger at the top of the
           hills that could be seen from where they were, and said to
@@ -9520,18 +9532,18 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >- The snake is sleeping on the top of that hill, Anibal - he said
           while smiling happily.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal didn't understand the comment very well, but he decided not to
           let it go unnoticed. He quickly approached the boy's position and
@@ -9540,24 +9552,24 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span>"What snake are you talking about, Mateo?" asked Anibal.</span>
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-That one, the big white snake, that's there on that hill - Mateo
           shouted in wonder.</span
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >Anibal was tempted to dismiss this as just another crazy idea from a
           child and his imagination, but he decided to focus a little more. By
@@ -9572,9 +9584,9 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >This vision immediately disturbed Anibal. He was shocked not only by
           the sight of a giant snake, which was not perceptible to the common
@@ -9591,16 +9603,16 @@ const Druids = () => {
         >
       </p>
 
-      <p class="MsoNormal"><span>&nbsp;</span></p>
+      <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <p class="MsoNormal">
+      <p className="MsoNormal">
         <span
           >-Mateo, I think your stay here will be a little longer than
           expected.</span
         >
       </p>
     </div>
-    <p class="MsoNormal">
+    <p className="MsoNormal">
       <span> To be continued...</span>
     </p>
  
