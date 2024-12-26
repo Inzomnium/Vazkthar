@@ -13,13 +13,18 @@ const DruidsContainer = styled.div`
   font-family: 'Georgia', serif;
   line-height: 1.6;
 
-  h1, h2, h3, h4 {
+ h2, h3, h4 {
     margin-top: 2rem;
     font-family: 'Permanent Marker', cursive;
     color: #333;
   }
-  .text-container a {
-  font-family: 'Permanent Marker', cursive;
+    h1 {
+    text-align: center;
+    font-size: 3vw;
+    margin: 0 0 0.5em;
+    border-bottom: 4px solid black;
+    }
+  .text-container span {
     text-align: center;
     display: block;
     font-size: 2vw;
@@ -28,6 +33,14 @@ const DruidsContainer = styled.div`
     margin-bottom: 1rem;
     text-align: justify;
   }
+  .footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+}
 `;
 
 const Druids = () => {
@@ -61,11 +74,11 @@ const Druids = () => {
         <ChapterMenu/>
 
      <div className="text-container">
-  
+      <h1>Druids</h1>
 
 
     <div className="WordSection1">
-      <a role="button" id="c1">I</a>
+      <span role="button" id="c1">I</span>
 
       <p className="MsoNormal">&nbsp;</p>
 
@@ -440,7 +453,7 @@ const Druids = () => {
 
       <p className="MsoNormal">&nbsp;</p>
 
-      <a role="button" id="c2">II</a>
+      <span role="button" id="c2">II</span>
 
       <p className="MsoNormal">&nbsp;</p>
 
@@ -727,7 +740,7 @@ const Druids = () => {
 
       <p className="MsoNormal">&nbsp;</p>
 
-      <a role="button" id="c3">III</a>
+      <span role="button" id="c3">III</span>
 
       <p className="MsoNormal">&nbsp;</p>
 
@@ -1083,7 +1096,7 @@ const Druids = () => {
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a role="button" id="c4">IV</a>
+      <span role="button" id="c4">IV</span>
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
@@ -1659,7 +1672,7 @@ const Druids = () => {
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a role="button" id="c9">IX</a>
+      <span role="button" id="c9">IX</span>
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
@@ -2379,7 +2392,7 @@ const Druids = () => {
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
-       <a role="button" id="c5">V</a>
+       <span role="button" id="c5">V</span>
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
@@ -3133,7 +3146,7 @@ const Druids = () => {
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
-       <a role="button" id="c6">VI</a>
+       <span role="button" id="c6">VI</span>
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
@@ -3776,7 +3789,7 @@ const Druids = () => {
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a role="button" id="c7">VII</a>
+      <span role="button" id="c7">VII</span>
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
@@ -4378,7 +4391,7 @@ const Druids = () => {
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a role="button" id="c8">VIII</a>
+      <span role="button" id="c8">VIII</span>
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
@@ -5150,7 +5163,7 @@ const Druids = () => {
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a role="button" id="c10">X</a>
+      <span role="button" id="c10">X</span>
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
@@ -6107,7 +6120,7 @@ const Druids = () => {
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a role="button" id="c11">XI</a>
+      <span role="button" id="c11">XI</span>
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
@@ -7078,7 +7091,7 @@ const Druids = () => {
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a role="button" id="c12">XII</a>
+      <span role="button" id="c12">XII</span>
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
@@ -8087,7 +8100,7 @@ const Druids = () => {
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a role="button" id="c13">XIII</a>
+      <span role="button" id="c13">XIII</span>
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
@@ -9009,7 +9022,7 @@ const Druids = () => {
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
-      <a role="button" id="c14">XIV</a>
+      <span role="button" id="c14">XIV</span>
 
       <p className="MsoNormal"><span>&nbsp;</span></p>
 
@@ -9615,9 +9628,14 @@ const Druids = () => {
     <p className="MsoNormal">
       <span> To be continued...</span>
     </p>
- 
-</div>
 
+</div>
+<div className="footer">
+  <p>
+    © 2010, Vakzthar. All Rights Reserved.  
+    This story is currently incomplete. Written in 2010, any reproduction, distribution, or adaptation is prohibited without the author's permission.
+  </p>
+</div>
     </DruidsContainer>
   );
 };
