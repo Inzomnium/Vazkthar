@@ -110,8 +110,9 @@ const Menu = () => {
               <li><Link to="/texts/historias-inconclusas">Historias Inconclusas</Link></li>
             </ul>
           </li>
-          <li><Link to="/texts/poesia">Poesía</Link></li>
+          <li><Link to="/texts/poesia">Poetry</Link></li>
           <li><Link to="/texts/otros">Otros Textos</Link></li>
+          <li><Link to="/">Home</Link></li>
         </MenuDropdown>
       )}
     </MenuContainer>

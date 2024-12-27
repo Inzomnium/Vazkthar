@@ -3,12 +3,15 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import ChapterMenu from '../../../components/text-tools/ChaptersMenu';
+import VineAnimation from '../../../components/VineAnimation'
+
 
 const DruidsContainer = styled.div`
   padding: 2rem;
   max-width: 800px;
   margin: 2rem auto;
-  background-color: #fff;
+  background-color: transparent;
+  position: relative;
   color: #202020;
   font-family: 'Georgia', serif;
   line-height: 1.6;
@@ -53,6 +56,7 @@ const DruidsContainer = styled.div`
 
 const Druids = () => {
 
+
   useEffect(() => {
     const lastChapter = localStorage.getItem('lastChapter');
     if (lastChapter) {
@@ -81,8 +85,12 @@ const Druids = () => {
       </Helmet>
         <ChapterMenu/>
 
+     <VineAnimation />
+
+
      <div className="text-container">
       <h1>Druids</h1>
+
      
 
     <div className="WordSection1">

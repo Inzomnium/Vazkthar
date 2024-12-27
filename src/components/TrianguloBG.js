@@ -6,8 +6,9 @@ import i0 from '../assets/Images/bgs/0.webp'
 import i1 from '../assets/Images/bgs/1.webp'
 import i2 from '../assets/Images/bgs/2.webp'
 import i3 from '../assets/Images/bgs/3.webp'
+import i4 from '../assets/Images/paintings/priestess.webp'
 
-const images = [i0, i1, i2, i3];
+const images = [i0, i1, i2, i3, i4];
 // Función para generar una posición aleatoria
 const getRandomBackgroundPosition = () => {
   const x = Math.floor(Math.random() * 100);
@@ -19,7 +20,7 @@ function getRandomAniDur() {
   return Math.floor(Math.random() * (40 - 10 + 1)) + 65;
 }
 function getRandomBGNumber() {
-  return Math.floor(Math.random() * 4); // Número aleatorio entre 0 y 3
+  return Math.floor(Math.random() * 5); // Número aleatorio entre 0 y 5
 }
 const TriangleBackground = () => {
   const [dimensions, setDimensions] = useState({ rows: 0, cols: 0 });
