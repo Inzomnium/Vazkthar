@@ -7,33 +7,33 @@ const GlitchEffect = ({ images, width = "400px", height = "500px" }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const rotateImages = useCallback(() => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+    const step = 2; // 🔥 Cambia de imagen cada 2 posiciones
+    setActiveIndex((prevIndex) => (prevIndex + step) % images.length);
   }, [images.length]);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const glitchElement = document.querySelector(".glitch-container");
+    setTimeout(() => {
+      const glitchElement = document.querySelector(".glitch-container");
 
-    if (glitchElement) {
-      ScrollTrigger.create({
-        trigger: glitchElement,
-        start: "top center",
-        end: "bottom center",
-        scrub: 0.5, // Responde de forma ágil pero sin locura
-        onUpdate: (self) => {
-          if (self.direction !== 0) {
-            rotateImages();
-          }
-        },
-        scroller: ".shop-scroller"
-      });
-    }
-
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, [rotateImages]);
+      if (glitchElement) {
+        console.log("🔥 ScrollTrigger activado correctamente.");
+        ScrollTrigger.create({
+          trigger: glitchElement,
+          start: "top 80%", // 🔥 Ajustamos la zona de activación
+          end: "bottom 20%",
+          scroller: ".shop-scroller",
+          scrub: false, // 🚨 Desactivamos el scrub para evitar la suavidad
+          onUpdate: (self) => {
+            if (self.direction !== 0) {
+              rotateImages(); // 🔥 Cambia la imagen en cada pequeño scroll
+            }
+          },
+        });
+      }
+    }, 500);
+  }, [rotateImages]); // ✅ Agregamos rotateImages como dependencia
 
   return (
     <GlitchContainer className="glitch-container" style={{ width, height }}>

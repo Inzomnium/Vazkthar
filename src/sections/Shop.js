@@ -4,6 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import styled from "styled-components";
 import Modal from "../components/Modal";
 
+import imgbg from "../assets/Images/bgs/2.webp";
 import img1 from "../assets/Images/paintings/dusk.webp";
 import img2 from "../assets/Images/paintings/parentsandchild.webp";
 import img3 from "../assets/Images/paintings/priestess.webp";
@@ -183,7 +184,7 @@ const Shop = () => {
   }, []);
 
   return (
-    <Section ref={ref} id="shop">
+    <Section ref={ref} id="shop" style={{ backgroundImage: `url(${imgbg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
       <Title data-scroll data-scroll-speed="-1">
         My Art
       </Title>
