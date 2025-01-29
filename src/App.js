@@ -56,6 +56,7 @@ function App() {
             tablet: { smooth: true },
           }}
           containerRef={containerRef}
+          watch={[]}
         >
           <AnimatePresence>
             {loaded ? null : <Loader />}

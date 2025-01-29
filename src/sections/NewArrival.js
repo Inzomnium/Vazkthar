@@ -12,14 +12,10 @@ const Section = styled.section`
   min-height: 100vh;
   width: 100vw;
   margin: 0 auto;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
-
-  /* background-color: yellow; */
 `;
 
 const Overlay = styled.div`
@@ -29,26 +25,9 @@ const Overlay = styled.div`
   transform: translate(-50%, -50%);
   width: 30vw;
   height: 90vh;
-
   box-shadow: 0 0 0 4vw ${(props) => props.theme.text};
   border: 3px solid ${(props) => props.theme.body};
   z-index: 11;
-
-  @media (max-width: 70em) {
-    width: 40vw;
-    height: 80vh;
-  }
-  @media (max-width: 64em) {
-    width: 50vw;
-    box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
-  }
-  @media (max-width: 48em) {
-    width: 60vw;
-  }
-  @media (max-width: 30em) {
-    width: 80vw;
-    height: 60vh;
-  }
 `;
 
 const Title = styled.h1`
@@ -61,13 +40,6 @@ const Title = styled.h1`
   top: 1rem;
   left: 5%;
   z-index: 11;
-
-  @media (max-width: 64em) {
-    font-size: ${(props) => props.theme.fontxxl};
-  }
-  @media (max-width: 48em) {
-    font-size: ${(props) => props.theme.fontxl};
-  }
 `;
 
 const Text = styled.div`
@@ -84,6 +56,7 @@ const Text = styled.div`
     display: none;
   }
 `;
+
 const Container = styled.div`
   position: absolute;
   top: 0%;
@@ -91,22 +64,10 @@ const Container = styled.div`
   transform: translate(-50%, 0);
   width: 25vw;
   height: auto;
-
-  /* width: 65%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media (max-width: 64em) {
-    width: 30vw;
-  }
-  @media (max-width: 48em) {
-    width: 40vw;
-  }
-  @media (max-width: 30em) {
-    width: 60vw;
-  }
 `;
 
 const Item = styled.div`
@@ -132,6 +93,10 @@ const Product = ({ img, title = "" }) => {
 };
 
 const NewArrival = () => {
+  useEffect(() => {
+    ScrollTrigger.refresh();
+    console.log("ScrollTrigger refreshed");
+  }, []);
   gsap.registerPlugin(ScrollTrigger);
 
   const ref = useRef(null);
@@ -139,45 +104,47 @@ const NewArrival = () => {
 
   useLayoutEffect(() => {
     if (!ref.current || !ScrollingRef.current) return;
-  
+
     let element = ref.current;
     let scrollingElement = ScrollingRef.current;
-  
+
     let t1 = gsap.timeline();
-  
+
     setTimeout(() => {
-      if (!element || !scrollingElement) return; // Verifica nuevamente antes de aplicar GSAP
-  
+      if (!element || !scrollingElement) return;
+
       t1.to(element, {
         scrollTrigger: {
           trigger: element,
           start: "top top",
           end: "bottom+=100% top-=100%",
-          scroller: ".shop-scroller",
+          scroller: "body", //  Revisión de scroller
           scrub: true,
           pin: true,
+          anticipatePin: 1, // Reduce flickers
         },
         ease: "none",
       });
-  
+
       t1.fromTo(
         scrollingElement,
-        { y: "0" },
+        { y: "0", opacity: 1 }, // Asegura que el contenido no se borre
         {
           y: "-100%",
+          opacity: 1, // Asegura visibilidad
           scrollTrigger: {
             trigger: scrollingElement,
             start: "top top",
             end: "bottom top",
-            scroller: ".shop-scroller",
+            scroller: "body", //  Revisión de scroller
             scrub: true,
           },
         }
       );
-  
+
       ScrollTrigger.refresh();
-    }, 1000);
-  
+    }, 500); // Reducimos el timeout para no retrasar la activación
+
     return () => {
       if (t1) t1.kill();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());

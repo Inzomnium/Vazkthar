@@ -1,9 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
-import img1 from "../assets/Images/1.webp";
-import img2 from "../assets/Images/2.webp";
-import img3 from "../assets/Images/3.webp";
+import img1 from "../assets/Images/bgs/2.webp";
+import img2 from "../assets/Images/aaa1.jpg";
+import img3 from "../assets/Images/aaa2.jpg";
+import GlitchEffect from "../components/GlitchEffect";
+
+
+
+
+
+const images = [
+  "/me/1.png",
+  "/me/2.png",
+  "/me/3.png",
+  "/me/4.png",
+  "/me/5.png",
+  "/me/6.png",
+  "/me/7.png",
+
+];
 
 const Section = styled.section`
   position: relative;
@@ -74,6 +90,7 @@ const Left = styled.div`
 const Right = styled.div`
   width: 50%;
   position: relative;
+  background-image
   img {
     width: 100%;
     height: auto;
@@ -132,8 +149,8 @@ const About = () => {
       <br />
       My work is a constant dialogue between reality and creativity — a canvas where chaos bleeds into color and imagination cracks the ordinary. Welcome to my world of visual storytelling.
       </Left>
-      <Right>
-        <img src={img1} alt="About Us" />
+      <Right style={{ backgroundImage: `url(${img1})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+      <GlitchEffect images={images}  />
         <img
           data-scroll
           data-scroll-speed="5"
