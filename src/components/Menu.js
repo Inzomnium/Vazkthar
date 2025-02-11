@@ -61,8 +61,18 @@ const MenuDropdown = styled.ul`
       color: #FFFFFF;
       text-decoration: none;
       display: block;
-    }
 
+      em {
+          font-size: 0.5em;
+          font-style: normal;
+          padding: 0.4em;
+          background: grey;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+            }
+    }
+    
     /* Submenú */
     ul {
       display: none;
@@ -77,6 +87,9 @@ const MenuDropdown = styled.ul`
       li {
         padding: 1rem;
         border-bottom: 1px solid #FFFFFF;
+        position:relative
+        
+        
 
         &:hover {
           background-color:rgb(34, 47, 233);
@@ -88,6 +101,12 @@ const MenuDropdown = styled.ul`
       display: block;
     }
   }
+    @media (max-width: 480px) { 
+    width:auto;
+    ul {
+    width:auto
+    }
+}
 `;
 
 const Menu = () => {
@@ -105,9 +124,9 @@ const Menu = () => {
           <li>
             <span>Stories</span>
             <ul>
-              <li><Link to="/texts/tales/druids">Druids</Link></li>
-              <li><Link to="/texts/historias-cortas">Historias Cortas</Link></li>
-              <li><Link to="/texts/historias-inconclusas">Historias Inconclusas</Link></li>
+              <li><Link to="/texts/tales/druids">Druids <em>Unfinished</em></Link></li>
+              <li><Link to="/texts/historias-cortas">-</Link></li>
+              <li><Link to="/texts/historias-inconclusas">-</Link></li>
             </ul>
           </li>
           <li><Link to="/texts/poesia">Poetry</Link></li>

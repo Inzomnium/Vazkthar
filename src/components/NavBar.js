@@ -145,7 +145,7 @@ const NavBar = () => {
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, y: 0 }}
         >
-          <Link to="/texts">My Texts</Link>
+          <Link to="/texts">Writings and Echoes</Link>
          
         </MenuItem>
       </MenuItems>

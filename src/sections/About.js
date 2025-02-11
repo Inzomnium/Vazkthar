@@ -144,7 +144,7 @@ const About = () => {
         About Me
       </Title>
       <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
-      I am an artist who explores the intersections between chaos, color, and imagination. Through vibrant patterns, abstract forms, and symbolic compositions, I create pieces that invite viewers to discover new meanings within the layers of color and texture. 
+      Hello, my name is Sebastian Cofre, and I am an artist who explores the intersections between chaos, color, and imagination. Through vibrant patterns, abstract forms, and symbolic compositions, I create pieces that invite viewers to discover new meanings within the layers of color and texture. 
       <br />
       <br />
       My work is a constant dialogue between reality and creativity — a canvas where chaos bleeds into color and imagination cracks the ordinary. Welcome to my world of visual storytelling.

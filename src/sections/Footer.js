@@ -144,7 +144,7 @@ const Footer = () => {
           <li onClick={() => handleScroll(".about")}>about</li>
           <li onClick={() => handleScroll("#shop")}>My Art</li>
          
-          <li><Link to="/texts">My Texts</Link></li>
+          <li><Link to="/texts">Writings and Echoes</Link></li>
           <li><Link to="/privacy-policy">Privacy Policy</Link></li> {/* Enlace agregado */}
         </ul>
         <Bottom>

@@ -11,10 +11,10 @@ import img3 from "../assets/Images/paintings/priestess.webp";
 import img4 from "../assets/Images/paintings/the world.webp";
 import img5 from "../assets/Images/paintings/Tango.webp";
 import img6 from "../assets/Images/paintings/elephant.webp";
-import img7 from "../assets/Images/7.webp";
-import img8 from "../assets/Images/8.webp";
-import img9 from "../assets/Images/9.webp";
-import img10 from "../assets/Images/10.webp";
+import img7 from "../assets/Images/paintings/thedodo.jpg";
+import img8 from "../assets/Images/paintings/mygodisthesun.jpg";
+import img9 from "../assets/Images/paintings/theinternalmechanic.jpg";
+import img10 from "../assets/Images/paintings/theloophole.jpg";
 import Product from "../components/Product";
 
 const Section = styled.section`
@@ -203,10 +203,10 @@ const Shop = () => {
         <Product img={img4} title="The World in my eyes" openModal={openModal} />
         <Product img={img5} title="Tango for one" openModal={openModal} />
         <Product img={img6} title="Elephants" openModal={openModal} />
-        <Product img={img7} title="Lorem" openModal={openModal} />
-        <Product img={img8} title="Lorem" openModal={openModal} />
-        <Product img={img9} title="Lorem" openModal={openModal} />
-        <Product img={img10} title="Lorem" openModal={openModal} />
+        <Product img={img7} title="The dodo" openModal={openModal} />
+        <Product img={img8} title="My god is the sun" openModal={openModal} />
+        <Product img={img9} title="The internal mechanic" openModal={openModal} />
+        <Product img={img10} title="The loophole" openModal={openModal} />
       </Right>
       <Modal img={modalData.img} title={modalData.title} showModal={modalData.show} closeModal={closeModal} />
     </Section>

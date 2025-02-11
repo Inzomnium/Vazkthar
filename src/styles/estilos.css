@@ -123,11 +123,11 @@
   font-family: "Permanent Marker", cursive;
   color: #fff;
   background-color: #202020;
-  font-size: 10vw;
+  font-size: 9vw;
   margin: 0;
   height: 22vh;
   line-height: 20vh;
-  width: 82vw;
+  width: 83vw;
   text-align: center;
 }
 
@@ -136,9 +136,10 @@
   display: block;
   background-color: #202020;
   padding: 5px 8px;
-  font-size: 2vw;
-  margin-top: -15px;
-  font-weight: 100
+  font-size: 1.3vw;
+  font-weight: 200;
+  width: 58vw;
+  text-align: center;
 }
 
 .chapter-menu {
@@ -167,9 +168,9 @@
   }
 
   .portada h3 {
-    font-size: 4vw; /* Reduce el tamaño de la fuente para el subtítulo */
-    padding: 5px 10px; /* Ajusta el padding del subtítulo */
-    margin-top: -10px; /* Ajusta el margen para evitar el espacio excesivo */
+    font-size: 5vw;
+    width: 90vw;
+    margin-top: 1em;
   }
 }
 
@@ -184,6 +185,6 @@
 
   .portada h3 {
     font-size: 5vw;
-    margin-top: -5px;
+  
   }
 }

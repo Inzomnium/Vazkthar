@@ -17,7 +17,9 @@ const Item = styled.div`
 
   h2 {
     text-align: center;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
+    font-weight: 300;
+    font-size: 1.3em;
   }
 `;
 
