@@ -26,7 +26,6 @@ const Section = styled.section`
   min-height: 100vh;
   width: 80vw;
   display: flex;
-
   margin: 0 auto;
 
   @media (max-width: 48em) {
@@ -62,6 +61,9 @@ const Left = styled.div`
   position: relative;
   z-index: 5;
   margin-top: 20%;
+  .mail{ 
+  color:red;
+    }
 
   @media (max-width: 64em) {
     width: 80%;
@@ -148,6 +150,7 @@ const About = () => {
       <br />
       <br />
       My work is a constant dialogue between reality and creativity — a canvas where chaos bleeds into color and imagination cracks the ordinary. Welcome to my world of visual storytelling.
+      Any contact or echoes you can reach me at <a className="mail" href="mailto:contact@vakzthar.com">contact@vakzthar.com</a>
       </Left>
       <Right style={{ backgroundImage: `url(${img1})`, backgroundSize: "cover", backgroundPosition: "center" }}>
       <GlitchEffect images={images}  />

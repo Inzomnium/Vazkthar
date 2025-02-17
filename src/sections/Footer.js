@@ -145,7 +145,7 @@ const Footer = () => {
           <li onClick={() => handleScroll("#shop")}>My Art</li>
          
           <li><Link to="/texts">Writings and Echoes</Link></li>
-          <li><Link to="/privacy-policy">Privacy Policy</Link></li> {/* Enlace agregado */}
+          <li><Link to="/privacy-policy">Privacy Policy</Link></li> 
         </ul>
         <Bottom>
           <span
@@ -154,7 +154,7 @@ const Footer = () => {
             data-scroll-direction="horizontal"
           >
             &copy; {new Date().getFullYear()}. All Rights Reserved.  
-            <Link to="/privacy-policy">Privacy Policy</Link> {/* Enlace agregado en los créditos */}
+            <Link to="/privacy-policy">Privacy Policy</Link>, Contact me at <a href="mailto:contact@vakzthar.com">contact@vakzthar.com</a>
           </span>
           <span
             data-scroll
