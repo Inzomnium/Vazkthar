@@ -1,15 +1,17 @@
-import { Configuration, OpenAIApi } from "openai";
+import OpenAI from "openai";
 
 export async function handler(event, context) {
   try {
+    // Extraemos el prompt del body
     const { prompt } = JSON.parse(event.body);
 
-    const configuration = new Configuration({
+    // Inicializamos la API de OpenAI usando el default export
+    const openai = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY,
     });
-    const openai = new OpenAIApi(configuration);
 
-    const response = await openai.createChatCompletion({
+    // Llamamos a la API de ChatGPT usando la nueva estructura
+    const response = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: prompt }],
     });
@@ -17,7 +19,7 @@ export async function handler(event, context) {
     return {
       statusCode: 200,
       body: JSON.stringify({
-        content: response.data.choices[0].message.content,
+        content: response.choices[0].message.content,
       }),
     };
   } catch (error) {
