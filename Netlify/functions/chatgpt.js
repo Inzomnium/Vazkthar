@@ -2,16 +2,16 @@ const { Configuration, OpenAIApi } = require("openai");
 
 exports.handler = async (event) => {
   try {
-    // Extraemos el prompt desde el body de la solicitud
+    // Extraemos el prompt del body
     const { prompt } = JSON.parse(event.body);
 
-    // Configuramos OpenAI con la API key desde las variables de entorno
+    // Configuramos OpenAI con la API key
     const configuration = new Configuration({
       apiKey: process.env.OPENAI_API_KEY,
     });
     const openai = new OpenAIApi(configuration);
 
-    // Llamamos a la API de ChatGPT
+    // Llamada a la API de ChatGPT
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: prompt }],
