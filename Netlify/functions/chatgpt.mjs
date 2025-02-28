@@ -1,17 +1,14 @@
-const { Configuration, OpenAIApi } = require("openai");
+import { Configuration, OpenAIApi } from "openai";
 
-exports.handler = async (event) => {
+export async function handler(event, context) {
   try {
-    // Extraemos el prompt del body
     const { prompt } = JSON.parse(event.body);
 
-    // Configuramos OpenAI con la API key
     const configuration = new Configuration({
       apiKey: process.env.OPENAI_API_KEY,
     });
     const openai = new OpenAIApi(configuration);
 
-    // Llamada a la API de ChatGPT
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: prompt }],
@@ -30,4 +27,4 @@ exports.handler = async (event) => {
       body: JSON.stringify({ error: error.message }),
     };
   }
-};
+}
