@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import Texts from './pages/Texts';
 import './styles/estilos.css'
+import Memory from './pages/memory/memory';
 import ErrorBoundary from "./components/ErrorBoundary";
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Druids from './pages/Texts/Story/Druids';
@@ -20,7 +21,7 @@ ReactDOM.render(
 
         <Route path="/texts/tales/druids" element={<Druids />} />
 
-
+        <Route path="/memory" element={<Memory />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
       </Routes>
