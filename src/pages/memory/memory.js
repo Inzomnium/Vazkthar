@@ -7,7 +7,7 @@ function Memory() {
   useEffect(() => {
     const code = searchParams.get("code");
     if (code) {
-      fetch("/.netlify/functions/google-auth", {
+      fetch("/.netlify/functions/GoogleAuth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code }),
@@ -15,13 +15,20 @@ function Memory() {
         .then((res) => res.json())
         .then((data) => {
           console.log("Tokens recibidos:", data);
-          alert("Autenticación exitosa");
+          alert("Autenticación Exitosa");
           window.location.href = "/";
-        });
+        })
+        .catch((err) => console.error("Error autenticando:", err));
     }
   }, [searchParams]);
 
-  return <div>Autenticando Google Docs...</div>;
+  return (
+    <div>
+      <h1>Memoria Extendida</h1>
+      <p>Esperando autenticación con Google...</p>
+    </div>
+  );
 }
 
 export default Memory;
+
