@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './App';
-import Texts from './pages/Texts';
-import './styles/estilos.css'
-import Memory from './pages/memory/memory';
+import Landing from './pages/Landing';
+import Vakzthari from './pages/Vakzthari';
+import LoveLetters from './pages/LoveLetters';
+import Archive from './pages/Archive';
+import About from './pages/About';
+import Texts from './pages/Texts'
 import ErrorBoundary from "./components/ErrorBoundary";
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import Druids from './pages/Texts/Story/Druids';
 // import reportWebVitals from './reportWebVitals';
 
 
@@ -16,13 +16,15 @@ ReactDOM.render(
     <BrowserRouter>
     <ErrorBoundary>
      <Routes>
-        <Route path="/" element={<App />} />
+        
+      
+        <Route path="/" element={<Landing />} />
         <Route path="/texts" element={<Texts />} />
-
-        <Route path="/texts/tales/druids" element={<Druids />} />
-
-        <Route path="/memory" element={<Memory />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/vakzthari" element={<Vakzthari />} />
+        <Route path="/love-letters" element={<LoveLetters />} />
+        <Route path="/archive" element={<Archive />} />
+        <Route path="/about" element={<About />} />
+       
 
       </Routes>
     </ErrorBoundary>
