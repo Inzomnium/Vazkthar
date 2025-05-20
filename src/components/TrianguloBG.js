@@ -2,10 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/TriangleBg.css'
 
-import i0 from '../assets/Images/bgs/0.webp'
-import i1 from '../assets/Images/bgs/1.webp'
-import i2 from '../assets/Images/bgs/2.webp'
-import i3 from '../assets/Images/bgs/3.webp'
+import i0 from '../assets/Images/bgs/a1.webp'
+import i1 from '../assets/Images/bgs/a2.webp'
+import i2 from '../assets/Images/bgs/a3.webp'
+import i3 from '../assets/Images/bgs/a4.webp'
 import i4 from '../assets/Images/paintings/priestess.webp'
 
 const images = [i0, i1, i2, i3, i4];

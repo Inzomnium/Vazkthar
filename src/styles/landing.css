@@ -1,63 +1,94 @@
 @import url('https://fonts.cdnfonts.com/css/whois');
 
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Georgia', serif;
-    background-color: #0e0e0e;
-    color: #e0e0e0;
-  }
-  
-  .landing-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background-color: #0e0e0e;
+  color: #e0e0e0;
+}
+
+.landing-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+}
+
+.title {
+  font-family: "Permanent Marker", cursive;
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  background: black;
+  padding: 0 0.5em;
+  line-height: 1.3em;
+}
+
+.manifesto {
+  font-family: 'Whois', sans-serif;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin-bottom: 2rem;
+  background: black;
+  padding: 0.2em 1em;
+}
+
+.links a {
+  font-family: 'Whois', sans-serif;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  margin: 0.3rem 0;
+  background: white;
+  padding: 3px 8px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #6200cb;
+}
+
+/* ----------------------------------
+   Responsive adjustments
+---------------------------------- */
+
+@media (max-width: 768px) {
   .title {
-    font-family: "Permanent Marker", cursive;
-    font-size: 6rem;
-    margin-bottom: 1rem;
-    color: #fff;
-    background: #353535;
-    padding: 0 0.5em;
-    width: 100%;
-    line-height: 1.3em;
+    font-size: 3.5rem;
+    padding: 0.3em 0.5em;
   }
-  
+
   .manifesto {
-    font-family: Whois, sans-serif;
-    font-size: 1.2rem;
-    opacity: 0.7;
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    opacity: 0.7;
-    margin-bottom: 2rem;
-    background: black;
-    padding: 0.2em 1em;
+    font-size: 1rem;
+    padding: 0.2em 0.8em;
   }
-  
+
   .links a {
-    font-family: Whois, sans-serif;
-    display: block;
-    color: #bbb;
-    text-decoration: none;
-    margin: 0.3rem 0;
-    transition: color 0.3s ease;
-    background: white;
-    padding: 3px 8px;
-    color: #000;
+    font-size: 1rem;
+    padding: 6px 12px;
   }
-  
-  .links a:hover {
-    color: #6200cb;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.5rem;
+    line-height: 1.2em;
   }
-  
+
+  .manifesto {
+    font-size: 0.9rem;
+  }
+
+  .links a {
+    font-size: 0.9rem;
+  }
+}
