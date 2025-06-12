@@ -8,11 +8,14 @@ import Archive from './pages/Archive';
 import About from './pages/About';
 import Texts from './pages/Texts'
 import ErrorBoundary from "./components/ErrorBoundary";
+import Gallery from './pages/Gallery';
+import { HelmetProvider } from 'react-helmet-async';
 // import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
   <React.StrictMode>
+     <HelmetProvider>
     <BrowserRouter>
     <ErrorBoundary>
      <Routes>
@@ -23,12 +26,13 @@ ReactDOM.render(
         <Route path="/vakzthari" element={<Vakzthari />} />
         <Route path="/love-letters" element={<LoveLetters />} />
         <Route path="/archive" element={<Archive />} />
-        <Route path="/about" element={<About />} />
-       
+        <Route path="/about" element={<About />} />        
+        <Route path="/gallery" element={<Gallery />} />
 
       </Routes>
     </ErrorBoundary>
     </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

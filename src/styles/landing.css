@@ -56,6 +56,20 @@ body, html {
 .links a:hover {
   color: #6200cb;
 }
+.gallery-link button {
+    border: 1px solid rgb(78, 78, 78);
+    font-size: 1em;
+    color: #061211;
+    font-weight: 100;
+    font-family: "Permanent Marker", cursive;
+    padding: 0.6em 1em 0.7em;
+    transition: 0.4s all ease;
+}
+.gallery-link button:hover {
+    background-color: #536e7a;
+    color: #f0f0f0;
+    border-color: white;
+}
 
 /* ----------------------------------
    Responsive adjustments
