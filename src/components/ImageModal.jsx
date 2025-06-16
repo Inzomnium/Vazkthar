@@ -15,10 +15,12 @@ const ImageModal = ({ work, onClose }) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-wrapper">
         <img src={work.image} alt={work.title} className="modal-image" />
         <div className="modal-text">
           <h2>{work.title}</h2>
           {work.caption && <p>{work.caption}</p>}
+        </div>
         </div>
         <button className="modal-close" onClick={onClose}>×</button>
       </div>

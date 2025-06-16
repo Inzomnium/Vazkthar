@@ -27,7 +27,7 @@ ReactDOM.render(
         <Route path="/love-letters" element={<LoveLetters />} />
         <Route path="/archive" element={<Archive />} />
         <Route path="/about" element={<About />} />        
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery/:slug?" element={<Gallery />} />
 
       </Routes>
     </ErrorBoundary>
