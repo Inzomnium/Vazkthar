@@ -11,9 +11,9 @@ function Landing() {
         <button>Gallery of Visions - Digital Art</button>
         </Link>
       <div className="links">
-        <a href="https://instagram.com/vakzthar?utm_source=vakzthar_landing&utm_medium=web&utm_campaign=launch_landing_2025" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://instagram.com/vakzthar?utm_source=vakzthar_landing&utm_medium=web&utm_campaign=launch_landing_2025" target="_blank" rel="me noreferrer">Instagram</a>
         <a href="https://thevakztharimachine.substack.com/?utm_source=vakzthar_landing&utm_medium=web&utm_campaign=launch_landing_2025" target="_blank" rel="noopener noreferrer">The Vakzthari Machine <b>(Substack)</b></a>
-        <a href="https://instagram.com/vakzthari?utm_source=vakzthar_landing&utm_medium=web&utm_campaign=launch_landing_2025" target="_blank" rel="noopener noreferrer">The Vakzthari Machine <b>(Instagram)</b></a>
+        <a href="https://instagram.com/vakzthari?utm_source=vakzthar_landing&utm_medium=web&utm_campaign=launch_landing_2025" target="_blank" rel="author noopener noreferrer">The Vakzthari Machine <b>(Instagram)</b></a>
         <a
   href="mailto:contact@vakzthar.com?subject=Transmission%20Request"
   className="contact-button"
