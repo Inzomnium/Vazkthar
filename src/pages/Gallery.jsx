@@ -86,6 +86,14 @@ const Gallery = () => {
       {selectedWork && (
         <ImageModal work={selectedWork} onClose={handleCloseModal} />
       )}
+        {/* Fallback estático para Googlebot */}
+      {selectedWork && (
+        <div style={{ display: 'none' }} aria-hidden="true">
+          <h2>{selectedWork.title}</h2>
+          {selectedWork.caption && <p>{selectedWork.caption}</p>}
+          <img src={selectedWork.image} alt={selectedWork.title} />
+        </div>
+      )}
     </div>
   );
 };
