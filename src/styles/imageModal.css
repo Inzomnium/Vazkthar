@@ -15,7 +15,7 @@
 
 .modal-content {
   position: relative;
-  max-width: 90%;
+  max-width: 90vw;
   max-height: 90%;
   background: #fff1b9;
   padding: 1em;
@@ -31,9 +31,16 @@
 }
 
 .modal-text {
-  padding: 1rem;
-  color: #212020;
-  font-family: "Permanent Marker", cursive;
+    padding: 0.1rem;
+    color: #212020;
+    font-family: "Permanent Marker", cursive;
+    position: relative;
+    transform: rotate(-0.4deg);
+    margin-top: -2.2px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    box-sizing: border-box; 
+    
 }
 .modal-text::after {
     content: '';
@@ -41,23 +48,77 @@
     height: 50px;
     background: url('../assets/Svgs/logovakzthar.svg') no-repeat transparent;
     position: absolute;
-    right: 7px;
-    bottom: 8%;
+    right: -30px;
+    top: 0;
     transform: rotate(15deg);
-    opacity: 0.5;
+    opacity: 0.1;
 }
 .modal-text h2 {
   margin: 0;
   font-size: 1.2rem;
   color: #212020;
+  position: relative;
 }
 .modal-text p{
   margin: 0;
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: "Syne Mono", monospace;
   font-size: 0.85em;
   font-weight: 300;
+  word-wrap: break-word; /* También funciona con overflow-wrap */
+  overflow-wrap: break-word;
+  word-break: break-word; /* Para palabras largas */
+  hyphens: auto; 
+}
+.modal-text p.caption {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 0.95em;
 }
 
+.modal-text .technique {
+    font-family: "Syne Mono", monospace;
+    transform: rotate(-0.2deg);
+    word-break: break-all;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.modal-text .year {
+    font-family: "Syne Mono", monospace;
+    right: 4px;
+    font-size: 0.8em;
+    bottom: 0;
+    font-weight: 600;
+    transform: rotate(-0.4deg);
+    position: absolute;
+    top: 12px;
+}
+  .modal-text p {
+  position: relative;
+}
+.modal-text p::after {
+    content: '';
+    width: 79px; 
+    position: absolute;
+    border: 1px dashed black;
+    border-width: 0 0 1px 0;
+    left: 0;
+    bottom: -1px;
+}
+.modal-text h2::after{
+    content: '';
+    width: 22px;
+    position: absolute;
+    border-bottom: 0.5px dashed black;
+    left: 0;
+    bottom: -1px;
+}
+.modal-text .technique::after{
+width: 33px;
+}
+.modal-text .year::after {
+width: 21px;
+}
 .modal-close {
   position: absolute;
   top: 0;
@@ -69,7 +130,6 @@
   cursor: pointer;
   padding: 0.5rem 1rem;
 }
-
 .modal-close:hover {
   color: #fff;
 }

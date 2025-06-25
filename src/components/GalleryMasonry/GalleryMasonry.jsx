@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
 import works from '../../data/works';
 import '../../styles/GalleryMasonry.css';
 
 const GalleryMasonry = ({ setSelectedWork }) => {
-  const navigate = useNavigate();
+ 
   const breakpointColumnsObj = {
     default: 3,
     1100: 2,
@@ -20,7 +20,7 @@ const GalleryMasonry = ({ setSelectedWork }) => {
     }
     return Array.from(indices);
   };
-
+ 
   const highlightedIndices = useMemo(() => getRandomIndices(8, works.length), []);
 
   return (
@@ -34,19 +34,17 @@ const GalleryMasonry = ({ setSelectedWork }) => {
           className={`grid-item ${highlightedIndices.includes(index) ? 'double-height' : ''}`}
           key={index}
         >
-          <div
-                className="image-container"
-                onClick={() => {
-                                setSelectedWork(work);
-                                navigate(`/gallery/${work.slug}`);
-                                              }}
-                                              >
-            <img src={work.image} alt={work.title} />
-            <div className="caption-glitch">
-              <strong>{work.title}</strong>
-              {work.caption && <div>{work.caption}</div>}
-            </div>
-          </div>
+          <Link
+  to={`/gallery/${work.slug}`}
+  className="image-container"
+  onClick={() => setSelectedWork(work)}
+>
+  <img src={work.image} alt={work.title} />
+  <div className="caption-glitch">
+    <strong>{work.title}</strong>
+    {work.caption && <div>{work.caption}</div>}
+  </div>
+</Link>
         </div>
       ))}
     </Masonry>

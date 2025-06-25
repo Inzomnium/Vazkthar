@@ -18,9 +18,11 @@ const ImageModal = ({ work, onClose }) => {
         <div className="modal-wrapper">
         <img src={work.image} alt={work.title} className="modal-image" />
         <div className="modal-text">
-          <h2>{work.title}</h2>
-          {work.caption && <p>{work.caption}</p>}
-        </div>
+  <h2>{work.title}</h2>
+  {work.caption && <p className='caption'>{work.caption}</p>}
+  {work.technique && <p className='technique'>{work.technique}</p>}
+  {work.year && <p className='year'>{work.year}</p>}
+</div>
         </div>
         <button className="modal-close" onClick={onClose}>×</button>
       </div>

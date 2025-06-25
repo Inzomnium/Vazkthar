@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/whois');
+
 
 body, html {
   margin: 0;
@@ -34,7 +34,7 @@ body, html {
 }
 
 .manifesto {
-  font-family: 'Whois', sans-serif;
+ font-family: "Syne Mono", monospace;
   font-size: 1.2rem;
   opacity: 0.7;
   margin-bottom: 2rem;
@@ -43,7 +43,7 @@ body, html {
 }
 
 .links a {
-  font-family: 'Whois', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   display: block;
   color: #000;
   text-decoration: none;

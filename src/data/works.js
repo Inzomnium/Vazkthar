@@ -1,14 +1,20 @@
 const importAll = (r) =>
   r.keys().map((key) => {
     const fileName = key.replace('./', '');
-    const baseName = fileName.replace(/\.(jpg|jpeg|png|webp)$/, '');
+    const baseName = fileName.replace(/\.(jpg|jpeg|png|webp)$/i, '');
 
-    let rawTitle = baseName;
-    let rawCaption = '';
+    // Extraer número de orden desde cualquier parte del nombre
+    const orderMatch = baseName.match(/\[\[(\d+)\]\]/);
+    const rawOrder = orderMatch ? orderMatch[1] : null;
 
-    if (baseName.includes('&&')) {
-      [rawTitle, rawCaption] = baseName.split('&&');
-    }
+    // Eliminar el [[n]] del baseName antes de hacer splits
+    const cleanedBaseName = baseName.replace(/\[\[(\d+)\]\]/, '').trim();
+
+    // Separaciones por delimitadores definidos
+    const [titlePart, rest1 = ''] = cleanedBaseName.split('&&');
+    const [captionPart, rest2 = ''] = rest1.split('---');
+    const [techniquePart, rest3 = ''] = rest2.split('___');
+    const [yearPart] = rest3.split('##');
 
     const format = (str) =>
       str
@@ -19,18 +25,39 @@ const importAll = (r) =>
     const generateSlug = (str) =>
       str
         .toLowerCase()
-        .replace(/[-_\s]+/g, '-')       // reemplaza espacios y guiones bajos por guion
-        .replace(/[^a-z0-9-]/g, '')     // elimina caracteres no válidos
-        .replace(/-+/g, '-')            // evita guiones repetidos
-        .replace(/^-|-$/g, '');         // elimina guiones al inicio/fin
+        .replace(/[-_\s]+/g, '-')
+        .replace(/[^a-z0-9-]/g, '')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
 
     return {
       image: r(key),
-      title: format(rawTitle),
-      caption: rawCaption ? format(rawCaption) : '',
-      slug: generateSlug(rawTitle),
+      title: format(titlePart),
+      caption: captionPart ? format(captionPart) : '',
+      technique: techniquePart ? format(techniquePart) : '',
+      year: yearPart ? yearPart.trim() : '',
+      slug: generateSlug(titlePart),
+      order: rawOrder ? parseInt(rawOrder, 10) : null,
     };
   });
 
-const works = importAll(require.context('../img/', false, /\.(jpg|jpeg|png|webp)$/));
+// Orden por número explícito primero, luego por título
+const works = importAll(require.context('../img/', false, /\.(jpg|jpeg|png|webp)$/))
+  .sort((a, b) => {
+    const aOrder = a.order !== null ? a.order : Infinity;
+    const bOrder = b.order !== null ? b.order : Infinity;
+    return aOrder - bOrder || a.title.localeCompare(b.title);
+  });
+
+console.table(
+  works.map((w) => ({
+    Title: w.title,
+    Caption: w.caption,
+    Technique: w.technique,
+    Year: w.year,
+    Order: w.order,
+    Slug: w.slug,
+  }))
+);
+
 export default works;
