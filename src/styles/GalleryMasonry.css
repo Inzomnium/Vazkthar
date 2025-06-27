@@ -154,11 +154,7 @@
         max-width: 96%;
         padding: 1%;
     }
-    .modal-content .modal-text::after {
-      transform: rotate(0);
-      right: -8px;
-      bottom: 2.5%;
-      opacity: 0.15;
-    }
+    
+
 }
 

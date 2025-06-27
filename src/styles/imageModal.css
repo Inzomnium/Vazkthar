@@ -143,3 +143,31 @@ width: 21px;
   from { transform: scale(0.95); opacity: 0.7; }
   to { transform: scale(1); opacity: 1; }
 }
+
+@media screen and (max-width: 768px) {
+    .modal-text h2 {
+      line-height: 1.1em;
+      font-size: 1em;
+    }
+    .modal-text p.caption  {
+      font-size: 0.8em;
+      margin: 2px 0 3px;
+    }
+    .modal-text .year {
+        bottom: -6px;
+        top: auto;
+        z-index: 9999;
+        padding: 2px;
+        font-size: 0.7em;
+        right: -3px;
+    }
+    .modal-text .technique {
+          margin: 0 0 4px;
+    }
+    .modal-content .modal-text::after {
+      transform: rotate(0);
+      right: -8px;
+      bottom: 2.5%;
+      opacity: 0.15;
+    }
+}
