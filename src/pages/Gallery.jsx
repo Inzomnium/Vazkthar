@@ -40,7 +40,10 @@ const Gallery = () => {
   };
 
   return (
-    <div style={{ padding: '2rem' }}>
+    <div style={{ 
+      padding: '2rem',
+      background: "#1a1a1a"
+    }}>
       <Helmet>
         <title>
           {selectedWork
@@ -96,6 +99,13 @@ const Gallery = () => {
     <img src={selectedWork.image} alt={selectedWork.title} />
   </div>
 )}
+    <footer>
+      <p>© 2025 <Link to="/">The Vakzthar</Link> — <span>All rights reserved.</span></p>
+      <p><span>Follow me on instagram <Link 
+      to="https://www.instagram.com/vakzthar?utm_source=vakzthar_landing&utm_medium=web&utm_campaign=launch_landing_2025"
+      target='_blank'
+      >@Vakzthar</Link></span></p>
+    </footer>
     </div>
   );
 };

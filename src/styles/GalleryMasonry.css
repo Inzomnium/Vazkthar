@@ -1,9 +1,12 @@
 #root > div {
   padding: 0!important;
 }
+header {
+  background-color: #f0f0f0;
+}
 .tituloGal {
     font-family: "Kumbh Sans", sans-serif;
-    color: black;
+    color: #1a1a1a;
     font-weight: 200;
     padding: 0.4em 1em 0.6em;
     font-size: 2.5em;
@@ -37,13 +40,12 @@
   transition: transform 0.3s ease;
 }
 .double-height img {
-  height: 600px; /* o cualquier valor que altere visualmente el layout */
+  height: 600px;
   object-fit: cover;
 }
 .image-container:hover img {
-  transform: scale(1.02);
+  transform: scale(1.02) rotate(0.5deg);
 }
-
 .caption-glitch {
   position: absolute;
   bottom: 12px;
@@ -57,27 +59,38 @@
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
 }
-
 .image-container:hover .caption-glitch {
   opacity: 1;
   animation: glitch 0.3s steps(2, end) 1;
 }
-.home-btn button {
+.home-btn {
     border: 1px solid rgb(78, 78, 78);
     position: absolute;
     right: 5vw;
     font-size: 1em;
     top: 22.4px;
     color: #061211;
-    font-weight: 100;
-    font-family: "Permanent Marker", cursive;
+    font-weight: 100;   
     padding: 0.6em 1em 0.7em;
     transition: 0.4s all ease;
+        background: #fff1b9;
+            transform: rotate(0.5deg);
 }
-.home-btn button:hover {
+.home-btn button {
+  border: none ;
+  background: none;
+  font-family: "Syne Mono", monospace;
+      transform: rotate(-1.5deg);
+}
+.home-btn:hover {
     background-color: #536e7a;
     color: #f0f0f0;
     border-color: white;
+    transform: rotate(0deg);
+}
+.home-btn:hover  button{
+  color: #fff1b9;
+  transform: rotate(0deg);
 }
 .scroll-to-top {
   position: fixed;
@@ -96,16 +109,30 @@
   pointer-events: none;
   transition: opacity 0.3s ease, background 0.2s ease;
 }
-
 .scroll-to-top:hover {
   background-color: #222;
 }
-
 .scroll-to-top.visible {
   opacity: 1;
   pointer-events: all;
 }
-
+footer {
+    background: #1a1a1a;
+    max-width: 100%;
+    padding: 1em;
+    text-align: center;
+    border-top: 1px solid #323232;
+    margin-top: 10px;
+}
+footer p {
+  font-family: "Permanent Marker", cursive;
+}
+footer a {
+  color: aquamarine;
+}
+footer p span{
+  font-family: "Syne Mono", monospace;
+}
 @keyframes glitch {
   0% {
     transform: translate(0, 0);
@@ -146,9 +173,6 @@
     }
     .tituloGal {
         padding: 0.7em 1em 0.7em;
-    }
-    .tituloGal b {
-
     }
     .modal-overlay .modal-content {
         max-width: 96%;
