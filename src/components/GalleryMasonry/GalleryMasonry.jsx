@@ -21,7 +21,7 @@ const GalleryMasonry = ({ setSelectedWork }) => {
     return Array.from(indices);
   };
  
-  const highlightedIndices = useMemo(() => getRandomIndices(8, works.length), []);
+  const highlightedIndices = useMemo(() => getRandomIndices(10, works.length), []);
 
   return (
     <Masonry

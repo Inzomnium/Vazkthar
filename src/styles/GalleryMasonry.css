@@ -178,7 +178,9 @@ footer p span{
         max-width: 96%;
         padding: 1%;
     }
-    
+    .double-height img {
+  height: 400px;
+    }
 
 }
 
