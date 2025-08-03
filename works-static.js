@@ -1,5 +1,11 @@
 module.exports = [
   {
+    "slug": "a-beautiful-mess"
+  },
+  {
+    "slug": "a-crowded-place-where-everyone-is-alone"
+  },
+  {
     "slug": "a-men-is-a-boy-with-a-thicker-helmet"
   },
   {
@@ -27,6 +33,12 @@ module.exports = [
     "slug": "an-ode-to-cats-006"
   },
   {
+    "slug": "beautiful-atrocities"
+  },
+  {
+    "slug": "castle-in-the-fog"
+  },
+  {
     "slug": "conditions-to-bloom-in-rust-003"
   },
   {
@@ -34,6 +46,12 @@ module.exports = [
   },
   {
     "slug": "conditions-to-bloom-in-rust-007"
+  },
+  {
+    "slug": "conditions-to-bloom-in-silence"
+  },
+  {
+    "slug": "conditions-to-bloom-in-sweetness"
   },
   {
     "slug": "conditions-to-bloom-in-the-ashes"
@@ -75,7 +93,13 @@ module.exports = [
     "slug": "diablada-chilena"
   },
   {
+    "slug": "entity777"
+  },
+  {
     "slug": "erosion-of-id"
+  },
+  {
+    "slug": "everything-blooms-from-a-swamp"
   },
   {
     "slug": "flowers-over-missiles"
@@ -99,7 +123,13 @@ module.exports = [
     "slug": "overseer-of-thy-algorithm-overlords-domains"
   },
   {
+    "slug": "picnic-at-the-park-on-a-sunday-afternoon"
+  },
+  {
     "slug": "reaper-of-thy-algorithm-overlords-domains"
+  },
+  {
+    "slug": "scratches-in-the-fog"
   },
   {
     "slug": "sentry-of-thy-algorithm-overlords-domains"
@@ -108,10 +138,16 @@ module.exports = [
     "slug": "signal-async"
   },
   {
+    "slug": "signals-in-the-mist"
+  },
+  {
     "slug": "skulls-and-checks"
   },
   {
     "slug": "sower-of-thy-algorithm-overlords-domains"
+  },
+  {
+    "slug": "stand-by"
   },
   {
     "slug": "the-1st-seal-or-the-core-pulse"
@@ -126,7 +162,13 @@ module.exports = [
     "slug": "the-4th-seal-or-the-crown-of-silence"
   },
   {
+    "slug": "the-begin-of-a-grimoire"
+  },
+  {
     "slug": "the-blind-march-of-progress"
+  },
+  {
+    "slug": "the-glitched-queen"
   },
   {
     "slug": "the-harvester-of-the-fog"
@@ -153,10 +195,16 @@ module.exports = [
     "slug": "the-immortality-the-permanent-memories"
   },
   {
+    "slug": "the-juan-fernndez-firecrown"
+  },
+  {
     "slug": "the-last-ride-of-the-vakzthari"
   },
   {
     "slug": "the-listener-wears-the-crown-of-silence"
+  },
+  {
+    "slug": "the-sadness-that-they-ignore"
   },
   {
     "slug": "the-self-view"
@@ -174,10 +222,43 @@ module.exports = [
     "slug": "the-vakzthari-operator"
   },
   {
+    "slug": "the-wild-came-to-visit-last-night"
+  },
+  {
     "slug": "there-are-flowers-in-the-interference"
   },
   {
     "slug": "to-let-it-all-out"
+  },
+  {
+    "slug": "to-miss-and-to-remember-part-2"
+  },
+  {
+    "slug": "to-miss-and-to-remember-part-3"
+  },
+  {
+    "slug": "to-miss-and-to-remember-part-4"
+  },
+  {
+    "slug": "to-miss-and-to-remember"
+  },
+  {
+    "slug": "to-miss-something-beyond-this-reality-blending-textures-over-ai-generated-images-on-adobe-photoshop-jun202510"
+  },
+  {
+    "slug": "transmission-delayed"
+  },
+  {
+    "slug": "transmission-on-time"
+  },
+  {
+    "slug": "we-all-came-from-a-godess"
+  },
+  {
+    "slug": "what-you-hide-and-what-you-show-blending-textures-over-ai-generated-images-on-adobe-photoshop-jun20258"
+  },
+  {
+    "slug": "your-silence-is-the-priviledge-of-the-idiots-that-only-speaks-blending-textures-over-ai-generated-images-on-adobe-photoshop-jun20254jpg"
   },
   {
     "slug": "zoology-from-the-dream-world"
