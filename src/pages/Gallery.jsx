@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import GalleryMasonry from '../components/GalleryMasonry/GalleryMasonry';
 import { Helmet } from 'react-helmet-async';
 import works from '../data/works';
