@@ -31,8 +31,15 @@ body, html {
   background: black;
   padding: 0 0.5em;
   line-height: 1.3em;
+  position: relative;
 }
-
+.title span {
+    font-family: "Kumbh Sans", sans-serif;
+    position: absolute;
+    opacity: 0.6;
+    font-size: 11px;
+    bottom: -40px;
+}
 .manifesto {
  font-family: "Syne Mono", monospace;
   font-size: 1.2rem;
@@ -41,29 +48,35 @@ body, html {
   background: black;
   padding: 0.2em 1em;
 }
-
+.links h2 {
+  font-family: "Permanent Marker", cursive;
+  background: black;
+  padding: 0 0.5em;
+  line-height: 1.3em;
+}
 .links a {
   font-family: "Kumbh Sans", sans-serif;
   display: block;
-  color: #000;
+  background-color: #536e7a;
   text-decoration: none;
   margin: 0.3rem 0;
-  background: white;
+  color: white;
   padding: 3px 8px;
   transition: color 0.3s ease;
 }
 
 .links a:hover {
-  color: #6200cb;
+  color: black;
 }
 .gallery-link button {
-    border: 1px solid rgb(78, 78, 78);
+    border: 0;
     font-size: 1em;
     color: #061211;
-    font-weight: 100;
-    font-family: "Permanent Marker", cursive;
+    font-weight: 700;
+    font-family: "Kumbh Sans", sans-serif;
     padding: 0.6em 1em 0.7em;
     transition: 0.4s all ease;
+    margin: 2px 0;
 }
 .gallery-link button:hover {
     background-color: #536e7a;

@@ -4,6 +4,8 @@ import GalleryMasonry from '../components/GalleryMasonry/GalleryMasonry';
 import { Helmet } from 'react-helmet-async';
 import works from '../data/works';
 import ImageModal from '../components/ImageModal';
+import NavBar2 from '../components/Navbar2';
+import Footer from '../components/footer';
 
 const Gallery = () => {
   const { slug } = useParams();
@@ -70,9 +72,7 @@ const Gallery = () => {
         <h1 className="tituloGal">
           The Vakzthar Visions – <b>Digital Art</b>
         </h1>
-        <Link to="/" className="home-btn">
-          <button>Home</button>
-        </Link>
+        <NavBar2 />
       </header>
 
       <GalleryMasonry setSelectedWork={setSelectedWork} />
@@ -99,13 +99,7 @@ const Gallery = () => {
     <img src={selectedWork.image} alt={selectedWork.title} />
   </div>
 )}
-    <footer>
-      <p>© 2025 <Link to="/">The Vakzthar</Link> — <span>All rights reserved.</span></p>
-      <p><span>Follow me on instagram <Link 
-      to="https://www.instagram.com/vakzthar?utm_source=vakzthar_landing&utm_medium=web&utm_campaign=launch_landing_2025"
-      target='_blank'
-      >@Vakzthar</Link></span></p>
-    </footer>
+ <Footer />
     </div>
   );
 };

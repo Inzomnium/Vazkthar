@@ -1,0 +1,35 @@
+.nav-container {
+    width: 100%;
+    background: #607d8b29;
+}
+.navbar2 {
+    font-family: "Kumbh Sans", sans-serif;
+    display: flex;
+    margin-left: auto;
+    width: max-content;
+}
+.navbar2 .boton {
+    color: black;
+    padding: 0.3rem 0.5em;
+    margin: 0 0.1em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all ease 0.5s;
+    position: relative;
+}
+.navbar2 .boton:after {  
+    content: " ";
+    position: absolute;
+    background-color: #909090;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    transition: all ease 0.5s;
+    opacity: 0;
+}
+.navbar2 .active:after,
+.navbar2 .boton:hover:after{
+    opacity: 1;
+}

@@ -1,0 +1,17 @@
+footer {
+    background: #1a1a1a;
+    max-width: 100%;
+    padding: 1em;
+    text-align: center;
+    border-top: 1px solid #323232;
+    margin-top: 10px;
+}
+footer p {
+  font-family: "Permanent Marker", cursive;
+}
+footer a {
+  color: #bbbbbb}
+  
+footer p span{
+  font-family: "Syne Mono", monospace;
+}
