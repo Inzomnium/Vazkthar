@@ -72,8 +72,7 @@ export default function About() {
         "birthPlace": "Chile",
         "birthDate": "1981",
         "description": "Visual artist, narrative designer, and creator of symbolic methods and mythopoethic works, based in Málaga, Spain.",
-        "jobTitle": "Visual Artist & Narrative Designer",
-        "image": "https://vakzthar.com/img/vakzthar-og.jpg",
+        "jobTitle": "Visual Artist & Narrative Designer",       
         "sameAs": [
           "https://instagram.com/vakzthar",
           "https://vakzthar.com",
