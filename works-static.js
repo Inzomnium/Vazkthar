@@ -126,9 +126,6 @@ module.exports = [
     "slug": "picnic-at-the-park-on-a-sunday-afternoon"
   },
   {
-    "slug": "reaper-of-thy-algorithm-overlords-domains"
-  },
-  {
     "slug": "scratches-in-the-fog"
   },
   {
@@ -228,6 +225,9 @@ module.exports = [
     "slug": "there-are-flowers-in-the-interference"
   },
   {
+    "slug": "thy-algorithm-overlords-domains"
+  },
+  {
     "slug": "to-let-it-all-out"
   },
   {
@@ -243,7 +243,7 @@ module.exports = [
     "slug": "to-miss-and-to-remember"
   },
   {
-    "slug": "to-miss-something-beyond-this-reality-blending-textures-over-ai-generated-images-on-adobe-photoshop-jun202510"
+    "slug": "to-miss-something-beyond-this-reality-blending-textures-over-ai-generated-images-on-adobe-photoshop-2025-0610"
   },
   {
     "slug": "transmission-delayed"
@@ -255,10 +255,10 @@ module.exports = [
     "slug": "we-all-came-from-a-godess"
   },
   {
-    "slug": "what-you-hide-and-what-you-show-blending-textures-over-ai-generated-images-on-adobe-photoshop-jun20258"
+    "slug": "what-you-hide-and-what-you-show-blending-textures-over-ai-generated-images-on-adobe-photoshop-2025-068"
   },
   {
-    "slug": "your-silence-is-the-priviledge-of-the-idiots-that-only-speaks-blending-textures-over-ai-generated-images-on-adobe-photoshop-jun20254jpg"
+    "slug": "your-silence-is-the-priviledge-of-the-idiots-that-only-speaks-blending-textures-over-ai-generated-images-on-adobe-photoshop-2025-064"
   },
   {
     "slug": "zoology-from-the-dream-world"

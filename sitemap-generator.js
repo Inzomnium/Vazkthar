@@ -15,6 +15,7 @@ const BASE_URL = 'https://vakzthar.com';
     // Rutas estáticas
     sitemap.write({ url: '/', changefreq: 'monthly', priority: 1.0 });
     sitemap.write({ url: '/gallery', changefreq: 'weekly', priority: 0.9 });
+    sitemap.write({ url: '/about', changefreq: 'weekly', priority: 0.9 });
 
     // Rutas dinámicas para cada imagen
     works.forEach(work => {
