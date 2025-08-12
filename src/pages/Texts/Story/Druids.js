@@ -80,7 +80,7 @@ const Druids = () => {
         <meta name="description" content="Read the story of Druids, a fantasy tale by Vakzthar." />
         <meta property="og:title" content="Druids - Vakzthar Texts" />
         <meta property="og:description" content="An epic fantasy tale full of adventure and magic." />
-        <meta property="og:image" content="https://vakzthar.com/static/media/druids.1d62ac8b16048a7fb8c4.jpg" />
+        <meta property="og:image" content="https://vakzthar.com/imgz/vkz.jpg" />
         <meta property="og:url" content="https://www.vakzthar.com/texts/tales/druids" />
       </Helmet>
         <ChapterMenu/>

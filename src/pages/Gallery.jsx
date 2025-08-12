@@ -66,6 +66,91 @@ const Gallery = () => {
             <meta property="og:url" content={`https://vakzthar.com/gallery/${selectedWork.slug}`} />
           </>
         )}
+     {/* === JSON-LD cuando hay una obra seleccionada === */}
+{selectedWork && (
+  <>
+    <script type="application/ld+json">
+      {JSON.stringify((() => {
+        const absImage = `https://vakzthar.com${selectedWork.image}`;
+        const imageUrl = encodeURI(absImage);
+        const encodingFormat = selectedWork.image.toLowerCase().endsWith('.png')
+          ? 'image/png'
+          : 'image/jpeg';
+
+        return {
+          "@context": "https://schema.org",
+          "@type": "VisualArtwork",
+          "name": selectedWork.title,
+          "description": selectedWork.caption || "A Createchnic vision from the Vakzthar archive.",
+          "creator": {
+            "@type": "Person",
+            "name": "Sebastián Leonardo Cofré Barrientos",
+            "alternateName": "Vakzthar[11]"
+          },
+          "genre": ["Mythopoethic digital art", "Createchnics", "Contemporary visual narratives", "Visions from the Vakzthar[11]"],
+          "keywords": ["Vakzthar", "digital art", "Partially AI-assisted visual art", "Mythopoethics", "Visual storytelling", "Visual Createchnics"],
+          "artform": "Digital Art",
+          "artMedium": selectedWork.technique || "Mixed digital technique",
+          "dateCreated": selectedWork.year || "2025-01", // ISO YYYY-MM si es posible
+          "inLanguage": "en",
+          "url": `https://vakzthar.com/gallery/${selectedWork.slug}`,
+          "mainEntityOfPage": `https://vakzthar.com/gallery/${selectedWork.slug}`,
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "name": "The Vakzthar – Visual Art Gallery",
+            "url": "https://vakzthar.com/gallery"
+          },
+          "image": {
+            "@type": "ImageObject",
+            "contentUrl": imageUrl,
+            "encodingFormat": encodingFormat,
+            "height": 1300,
+             "width": 1300,
+            "caption": selectedWork.caption || selectedWork.title,
+            "creditText": "Vakzthar[11] — Sebastián Leonardo Cofré Barrientos"
+            // "license": "https://vakzthar.com/license" // opcional si tienes una URL de licencia
+          }
+        };
+      })())}
+    </script>
+
+    {/* Breadcrumbs para la obra */}
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Gallery",
+            "item": "https://vakzthar.com/gallery"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": selectedWork.title,
+            "item": `https://vakzthar.com/gallery/${selectedWork.slug}`
+          }
+        ]
+      })}
+    </script>
+  </>
+)}
+
+{/* === JSON-LD cuando NO hay obra seleccionada (listado) === */}
+{!selectedWork && (
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "The Vakzthar – Visual Art Gallery",
+      "url": "https://vakzthar.com/gallery",
+      "inLanguage": "en",
+      "description": "A collection of digital artworks and mythopoethic transmissions by Vakzthar[11]."
+    })}
+  </script>
+)}
       </Helmet>
 
       <header>

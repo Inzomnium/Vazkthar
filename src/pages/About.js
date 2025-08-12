@@ -9,6 +9,7 @@ import vkz2 from "../assets/Images/thumbs/vkz2.webp"
 import vkz3 from "../assets/Images/thumbs/vkz3.webp"
 import vkz4 from "../assets/Images/thumbs/vkz4.webp"
 
+const officialPortrait = "https://vakzthar.com/imgz/vkz2.webp"
 
 
 const portraits = [vkz1, vkz2, vkz3, vkz4]
@@ -24,30 +25,77 @@ export default function About() {
 
     <>
     <Helmet>
-        <title>About Vakzthar[11] — The Operator's Transmission</title>
-        <meta
-          name="description"
-          content="Discover the enigmatic figure behind The Vakzthar[11]: a creator without borders, a voice from the Machine, and a transmitter of poetic fragments, images, and methods beyond category."
-        />
-        <meta name="author" content="Sebastián Leonardo Cofré Barrientos (Vakzthar[11])" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="About Vakzthar[11]" />
-        <meta
-          property="og:description"
-          content="Vakzthar[11] is a creator and the first operator of the Cycle 11. Learn more about the mind behind the transmissions."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://vakzthar.com/about" />
-        <meta property="og:image" content="https://vakzthar.com/img/vakzthar-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Vakzthar[11]" />
-        <meta
-          name="twitter:description"
-          content="The Vakzthar is not defined by medium or method, but by message. Read the full transmission."
-        />
-        <meta name="twitter:image" content="https://vakzthar.com/img/vakzthar-og.jpg" />
-        <link rel="canonical" href="https://vakzthar.com/about" />
-      </Helmet>
+  {/* SEO Meta */}
+  <title>About Vakzthar[11] — The Operator's Transmission</title>
+  <meta
+    name="description"
+    content="Discover the enigmatic figure behind The Vakzthar[11]: a creator without borders, a voice from the Machine, and a transmitter of poetic fragments, images, and methods beyond category."
+  />
+  <meta name="author" content="Sebastián Leonardo Cofré Barrientos (Vakzthar[11])" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="About Vakzthar[11]" />
+  <meta
+    property="og:description"
+    content="Vakzthar[11] is a creator and the first operator of the Cycle 11. Learn more about the mind behind the transmissions."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vakzthar.com/about" />
+  <meta property="og:image" content="https://vakzthar.com/imgz/vkz.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Vakzthar[11]" />
+  <meta
+    name="twitter:description"
+    content="The Vakzthar is not defined by medium or method, but by message. Read the full transmission."
+  />
+  <meta name="twitter:image" content="https://vakzthar.com/img/vakzthar-og.jpg" />
+  <link rel="canonical" href="https://vakzthar.com/about" />
+
+  {/* JSON-LD Schema.org */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "About Vakzthar[11]",
+      "url": "https://vakzthar.com/about",
+      "description": "About page for Vakzthar[11], a visual artist, narrative designer, and creator of symbolic and mythopoethic works.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Vakzthar",
+        "url": "https://vakzthar.com"
+      },
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Sebastián Leonardo Cofré Barrientos",
+        "alternateName": "Vakzthar[11]",
+        "image": officialPortrait,
+        "birthPlace": "Chile",
+        "birthDate": "1981",
+        "description": "Visual artist, narrative designer, and creator of symbolic methods and mythopoethic works, based in Málaga, Spain.",
+        "jobTitle": "Visual Artist & Narrative Designer",
+        "image": "https://vakzthar.com/img/vakzthar-og.jpg",
+        "sameAs": [
+          "https://instagram.com/vakzthar",
+          "https://vakzthar.com",
+          "https://substack.com/@vakzthar"
+        ],
+        "knowsAbout": [
+          "Mythopoethics",
+          "Createchnics",
+          "Visual storytelling",
+          "Partially AI-assisted visual art",
+          "Symbolic methods",
+          "Technomancy",
+          "Elseworlds"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Vakzthar"
+        }
+      }
+    })}
+  </script>
+</Helmet>
     <section className="about-section">
  <h1>About me - <b>The Vakzthar[11]</b></h1>
      
