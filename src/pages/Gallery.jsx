@@ -66,6 +66,15 @@ const Gallery = () => {
             <meta property="og:url" content={`https://vakzthar.com/gallery/${selectedWork.slug}`} />
           </>
         )}
+        {/* Canonical dinámico */}
+{selectedWork ? (
+  <link
+    rel="canonical"
+    href={`https://vakzthar.com/gallery/${selectedWork.slug}`}
+  />
+) : (
+  <link rel="canonical" href="https://vakzthar.com/gallery" />
+)}
      {/* === JSON-LD cuando hay una obra seleccionada === */}
 {selectedWork && (
   <>

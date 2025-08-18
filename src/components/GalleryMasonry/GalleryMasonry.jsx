@@ -39,7 +39,7 @@ const GalleryMasonry = ({ setSelectedWork }) => {
   className="image-container"
   onClick={() => setSelectedWork(work)}
 >
-  <img src={work.image} alt={work.title} />
+  <img loading="lazy" src={work.image} alt={work.title} />
   <div className="caption-glitch">
     <strong>{work.title}</strong>
     {work.caption && <div>{work.caption}</div>}

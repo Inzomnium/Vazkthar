@@ -9,6 +9,7 @@ import About from './pages/About';
 import Texts from './pages/Texts'
 import ErrorBoundary from "./components/ErrorBoundary";
 import Gallery from './pages/Gallery';
+import Manifesto from './pages/manifesto';
 import { HelmetProvider } from 'react-helmet-async';
 // import reportWebVitals from './reportWebVitals';
 
@@ -26,7 +27,8 @@ ReactDOM.render(
         <Route path="/vakzthari" element={<Vakzthari />} />
         <Route path="/love-letters" element={<LoveLetters />} />
         <Route path="/archive" element={<Archive />} />
-        <Route path="/about" element={<About />} />        
+        <Route path="/about" element={<About />} />  
+        <Route path='/manifesto' element={<Manifesto />} />      
         <Route path="/gallery/:slug?" element={<Gallery />} />
 
       </Routes>

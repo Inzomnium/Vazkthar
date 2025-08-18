@@ -119,6 +119,7 @@ export default function About() {
  
       <div className="about-image">
         <img
+          loading="lazy"
           src={portraits[randomIndex]}
           alt="Symbolic portrait of Vakzthar"
         />

@@ -243,7 +243,7 @@ module.exports = [
     "slug": "to-miss-and-to-remember"
   },
   {
-    "slug": "to-miss-something-beyond-this-reality-blending-textures-over-ai-generated-images-on-adobe-photoshop-2025-0610"
+    "slug": "to-miss-something-beyond-this-reality"
   },
   {
     "slug": "transmission-delayed"

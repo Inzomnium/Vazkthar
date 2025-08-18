@@ -21,6 +21,10 @@ const location = useLocation();
         to="/about"
          className={`boton ${location.pathname === "/about" ? "active" : ""}`}
         >About Vakzthar[11]</Link>
+         <Link 
+        to="/manifesto"
+         className={`boton ${location.pathname === "/manifesto" ? "active" : ""}`}
+        >Manifesto</Link>
   </nav>
   </div>
 
