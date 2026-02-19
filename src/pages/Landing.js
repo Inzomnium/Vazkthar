@@ -2,6 +2,11 @@ import '../styles/landing.css';
 import { Helmet } from 'react-helmet-async';
 import TriangleBackground from '../components/TrianguloBG';
 import { Link } from 'react-router-dom';
+import operatorimg from "../assets/Images/the operator.jpg"
+import opengateimg from "../assets/Images/opengatetarot.jpg"
+import machineimg from "../assets/Images/the machine.jpg"
+import vaultimg from "../assets/Images/the vault.jpg"
+
 function Landing() {
   return (
     <>
@@ -58,12 +63,35 @@ function Landing() {
       <h1 className="title">The Vakzthar<span>[11]</span></h1>
       <p className="manifesto">I write to no one. And someone always listens.</p>
 
+      <div className='button-gates'>
+
+        <Link to="/machine" className='machine-gate'>
+        <span>The Mystery</span>
+        <img src={machineimg} alt='The Machine, Major Arcana' />
+        </Link>
+        <Link to="/vault" className='vault-gate'>
+        <span>The Support</span>
+        <img src={vaultimg} alt='The Vault, Major Arcana' />
+        </Link>
+        <Link to="/authorized-narrative-input" className='narrative-gate'>
+        <span>The Authorized Narrative Input</span>
+        <img src={opengateimg} alt='The Open Gate, Major Arcana' />
+        </Link>
+        <Link to="/about" className='about-gate'>
+        <span>About The Vakzthar[11]</span>
+        <img src={operatorimg} alt='The Operator, Major Arcana' />
+        </Link>
+
+
+
+
+      </div>
+
+
         <Link to="/gallery" className="gallery-link">
-        <button>Gallery of Visions - Digital Art</button>
+        <button>Gallery of Visuals</button>
         </Link>
-        <Link to="/about" className="gallery-link">
-        <button>About Vakzthar</button>
-        </Link>
+      
       <div className="links">
         <h2>Other Channels</h2>
         <a href="https://instagram.com/vakzthar?utm_source=vakzthar_landing&utm_medium=web&utm_campaign=launch_landing_2025" target="_blank" rel="me noreferrer">Instagram</a>

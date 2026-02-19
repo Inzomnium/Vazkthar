@@ -10,6 +10,9 @@ import Texts from './pages/Texts'
 import ErrorBoundary from "./components/ErrorBoundary";
 import Gallery from './pages/Gallery';
 import Manifesto from './pages/manifesto';
+import Machine from './pages/Machine';
+import Vault from './pages/Vault';
+import AuthNarIn from './pages/AuthorizedNarrativeInput'
 import { HelmetProvider } from 'react-helmet-async';
 // import reportWebVitals from './reportWebVitals';
 
@@ -28,7 +31,10 @@ ReactDOM.render(
         <Route path="/love-letters" element={<LoveLetters />} />
         <Route path="/archive" element={<Archive />} />
         <Route path="/about" element={<About />} />  
-        <Route path='/manifesto' element={<Manifesto />} />      
+        <Route path='/manifesto' element={<Manifesto />} />  
+        <Route path='/machine' element={<Machine />} /> 
+        <Route path='/vault' element={<Vault />} /> 
+        <Route path='/authorized-narrative-input' element={<AuthNarIn />} /> 
         <Route path="/gallery/:slug?" element={<Gallery />} />
 
       </Routes>

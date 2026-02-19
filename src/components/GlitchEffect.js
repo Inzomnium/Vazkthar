@@ -21,13 +21,13 @@ const GlitchEffect = ({ images, width = "400px", height = "500px" }) => {
         console.log("🔥 ScrollTrigger activado correctamente.");
         ScrollTrigger.create({
           trigger: glitchElement,
-          start: "top 80%", // 🔥 Ajustamos la zona de activación
+          start: "top 80%", 
           end: "bottom 20%",
           scroller: ".shop-scroller",
           scrub: false, // 🚨 Desactivamos el scrub para evitar la suavidad
           onUpdate: (self) => {
             if (self.direction !== 0) {
-              rotateImages(); // 🔥 Cambia la imagen en cada pequeño scroll
+              rotateImages(); /
             }
           },
         });

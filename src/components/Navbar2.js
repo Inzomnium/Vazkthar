@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import "../styles/navbar2.css"; // Asegúrate de tener el CSS en este archivo o ajusta el import según tu estructura
-
+import "../styles/navbar2.css"; 
 export default function NavBar2() {
 
 const location = useLocation();

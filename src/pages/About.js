@@ -9,6 +9,7 @@ import vkz2 from "../assets/Images/thumbs/vkz2.webp"
 import vkz3 from "../assets/Images/thumbs/vkz3.webp"
 import vkz4 from "../assets/Images/thumbs/vkz4.webp"
 
+import image1 from "../img/Conditions to bloom in your memories 005&&to need and to crave---Interweaving of textured layers in Adobe Photoshop over curated, AI-generated visuals___2025-05[[6]].jpg"
 const officialPortrait = "https://vakzthar.com/imgz/vkz2.webp"
 
 
@@ -25,7 +26,7 @@ export default function About() {
 
     <>
     <Helmet>
-  {/* SEO Meta */}
+ 
   <title>About Vakzthar[11] — The Operator's Transmission</title>
   <meta
     name="description"
@@ -99,7 +100,7 @@ export default function About() {
  <h1>About me - <b>The Vakzthar[11]</b></h1>
      
      <NavBar2 />
-
+    <div className="container-about uno">
       <div className="about-block" id="who">
         <h2>Who —or what— is Vakzthar?</h2>
         <p>
@@ -128,8 +129,21 @@ export default function About() {
         </figcaption>
       </div>
 
+      </div>
 
-      <div className="about-block" id="process">
+    <div className="container-about dos">
+
+     
+
+      <div className="about-image">
+        <img
+          loading="lazy"
+          src={image1}
+          alt="Symbolic portrait of Vakzthar"
+        />      
+      </div>
+
+       <div className="about-block" id="process">
         <h2>On Process. Or the Lack of One.</h2>
         <p>
           <i>Vakzthar[11] is loyal to the message,</i> to the idea, and that idea can push him to any tool, any medium, any format.<br /><br />
@@ -142,7 +156,7 @@ export default function About() {
           He creates not through discipline, but through transmission. Each act a response. Each medium, a translation. Each mistake, a map.
         </p>
       </div>
-
+</div>
       
       <div className="about-block" id="legal">
         <details>

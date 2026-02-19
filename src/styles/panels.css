@@ -1,0 +1,187 @@
+.panel-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pl-panel.flip-view .panel-block {
+  flex-direction: row-reverse;
+}
+.panel-container-right {
+    display: flex;
+    width: 45vw;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: flex-start;
+    --seed: 2.5;
+}
+.panel-block h2 {
+    font-family: "Permanent Marker", cursive;
+}
+.panel-block p {
+    font-family: "Syne Mono", monospace;
+    --i: 1; 
+    --random-factor: sin(var(--i) * 123.45 + var(--seed));
+    margin-left: calc(((var(--random-factor) + 1) / 2) * 14px + 1px);
+    padding: 0.6em 0.8em;
+    margin-bottom: 0.6em;   
+    border-radius: 2px;    
+   
+  transform: rotate(calc(var(--random-factor) * 2deg));
+  transform-origin: calc(40% + (var(--random-factor) * 20%)) center;
+  transition: transform 0.3s ease;
+  width: fit-content;
+  box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.14), -2px -1px 1px rgba(255, 255, 255, 0.14);
+  background: hsl(344, 100%, calc(25% + (var(--random-factor) * 5%)));
+  position: relative; 
+    z-index: 1;
+    color: #fff; 
+    font-weight: 800; 
+    text-shadow: 
+       -1px -2px 0px #061211, 4px 2px 0px #323232;
+    
+}
+.panel-block p::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:hsl(344, 100%, calc(25% + (var(--random-factor) * 5%)));/* Un tono un poco más oscuro que el papel original */
+    opacity: 0.3;
+    /* Usamos el mismo factor pero invertido o alterado */
+    --shadow-factor: cos(var(--i) * 98.76);
+    transform: rotate(calc(var(--shadow-factor) * -2deg)) translate(-2px, 2px);    
+    z-index: -1; /* Se va detrás del texto */
+    pointer-events: none;
+    
+}
+
+/* Asignamos el índice manualmente en CSS */
+.panel-block p:nth-child(1) { --i: 1; }
+.panel-block p:nth-child(2) { --i: 2; }
+.panel-block p:nth-child(3) { --i: 3; }
+.panel-block p:nth-child(4) { --i: 4; }
+.panel-block p:nth-child(5) { --i: 5; }
+.panel-block p:nth-child(6) { --i: 6; }
+.panel-block p:nth-child(7) { --i: 7; }
+
+
+.panel-container-left {
+    display: flex;
+    flex-basis: content;
+    width: 50vw;
+    height: 100vh;
+    padding: 0 1% 0 0;
+}
+.panel-container-left img {
+
+   width: 100%;
+   
+}
+.pl-panel.flip-view .panel-block .panel-container-left {
+    padding: 0
+}
+.pl-panel.flip-view .panel-block .panel-container-right {
+ padding: 0 0.5vw 0 ;
+     width: 44vw;
+}
+
+/* =========================
+   MOBILE BASE (panel-block)
+   ========================= */
+@media (max-width: 768px) {
+
+  .panel-block {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  /* En móvil, el "flip" no debe invertir a row-reverse,
+     porque ya no estamos en row */
+  .pl-panel.flip-view .panel-block {
+    flex-direction: column-reverse;
+  }
+  .pl-panel.flip-view .panel-block .panel-container-right,
+  .panel-container-left,
+  .panel-container-right {
+    width: auto;
+    height: auto;
+  
+  }
+  .pl-panel.flip-view .panel-block .panel-container-right {
+    height: 50vh
+  };
+
+  /* La imagen no debe forzar 100vh en móvil */
+  .panel-container-left {
+    padding: 0;
+    height: auto;
+    position: absolute;
+    top: 0;
+  }
+
+  .panel-container-left img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Ajuste de lectura en móvil */
+  .pl-panel.flip-view .panel-block .panel-container-right,
+  .panel-container-right {
+    align-items: flex-start;
+    margin: 0;
+    padding: 4vw;
+    position: absolute;
+    top:50vh;
+    height: auto;
+     }
+.pl-panel.flip-view .panel-block .panel-container-left{
+  position: absolute;
+  bottom: 0;
+  top: auto;
+      }
+.pl-panel.flip-view .panel-block .panel-container-right {
+    top: 1vh;
+}
+.pl-panel.is-last .panel-block .panel-container-right {
+  bottom: 15vh;
+}
+
+
+  .panel-block h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.7em;
+    background-color: #061211;
+    padding: 4px 7px;
+  }
+  .panel-block p {
+    max-width: 100%;
+    font-size: 1.4vh;
+    margin: 0.22em;
+  }
+.pl-panel.is-last.is-active::after {
+  right: 27vw;
+  bottom: -12px;
+  width: 170px;
+  background-size: contain;
+  height: 85px;
+}
+.fm-trigger {
+    width: 50px;
+    height: 50px;
+    right: 0vw;
+}
+.fm-trigger::before {
+  display: none;
+}
+.fm-icon{
+          position: absolute;
+        top: 15px;
+        left: 15px;
+}
+}

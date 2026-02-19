@@ -33,3 +33,10 @@
 .navbar2 .boton:hover:after{
     opacity: 1;
 }
+
+@media screen and (max-width: 768px) { 
+.nav-container {
+    overflow: auto;
+
+}
+}
