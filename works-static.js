@@ -1,5 +1,8 @@
 module.exports = [
   {
+    "slug": "a-beautiful-error"
+  },
+  {
     "slug": "a-beautiful-mess"
   },
   {
@@ -7,6 +10,18 @@ module.exports = [
   },
   {
     "slug": "a-men-is-a-boy-with-a-thicker-helmet"
+  },
+  {
+    "slug": "a-place-where-ravens-go"
+  },
+  {
+    "slug": "a-revolution-without-algorithm"
+  },
+  {
+    "slug": "a-time-and-a-space"
+  },
+  {
+    "slug": "above-all-things"
   },
   {
     "slug": "accuser-of-thy-algorithm-overlords-domains"
@@ -39,6 +54,9 @@ module.exports = [
     "slug": "castle-in-the-fog"
   },
   {
+    "slug": "cities-glows-when-nobody-watches"
+  },
+  {
     "slug": "conditions-to-bloom-in-rust-003"
   },
   {
@@ -48,6 +66,9 @@ module.exports = [
     "slug": "conditions-to-bloom-in-rust-007"
   },
   {
+    "slug": "conditions-to-bloom-in-sadness"
+  },
+  {
     "slug": "conditions-to-bloom-in-silence"
   },
   {
@@ -55,6 +76,9 @@ module.exports = [
   },
   {
     "slug": "conditions-to-bloom-in-the-ashes"
+  },
+  {
+    "slug": "conditions-to-bloom-in-the-past"
   },
   {
     "slug": "conditions-to-bloom-in-winter-011"
@@ -93,6 +117,12 @@ module.exports = [
     "slug": "diablada-chilena"
   },
   {
+    "slug": "entities-00041"
+  },
+  {
+    "slug": "entities-00043"
+  },
+  {
     "slug": "entity777"
   },
   {
@@ -102,10 +132,16 @@ module.exports = [
     "slug": "everything-blooms-from-a-swamp"
   },
   {
+    "slug": "fears-and-hopes"
+  },
+  {
     "slug": "flowers-over-missiles"
   },
   {
     "slug": "harvester-of-thy-algorithm-overlords-domains"
+  },
+  {
+    "slug": "i-am-this-hum-between-meat-machines"
   },
   {
     "slug": "loops-and-anxiety-2"
@@ -114,7 +150,19 @@ module.exports = [
     "slug": "loops-and-anxiety"
   },
   {
+    "slug": "maps-and-traces-001"
+  },
+  {
+    "slug": "maps-and-traces-002"
+  },
+  {
+    "slug": "maps-and-traces-003"
+  },
+  {
     "slug": "modern-needs-meets-modern-audience"
+  },
+  {
+    "slug": "observer-001"
   },
   {
     "slug": "of-war-and-other-obsolete-games"
@@ -163,6 +211,9 @@ module.exports = [
   },
   {
     "slug": "the-blind-march-of-progress"
+  },
+  {
+    "slug": "the-crowning"
   },
   {
     "slug": "the-glitched-queen"
@@ -252,15 +303,12 @@ module.exports = [
     "slug": "transmission-on-time"
   },
   {
-    "slug": "we-all-came-from-a-godess"
+    "slug": "we-all-came-from-a-goddess"
   },
   {
-    "slug": "what-you-hide-and-what-you-show-blending-textures-over-ai-generated-images-on-adobe-photoshop-2025-068"
+    "slug": "what-you-hide-and-what-you-show"
   },
   {
     "slug": "your-silence-is-the-priviledge-of-the-idiots-that-only-speaks-blending-textures-over-ai-generated-images-on-adobe-photoshop-2025-064"
-  },
-  {
-    "slug": "zoology-from-the-dream-world"
   }
 ]

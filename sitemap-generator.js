@@ -17,6 +17,9 @@ const BASE_URL = 'https://vakzthar.com';
     sitemap.write({ url: '/gallery', changefreq: 'weekly', priority: 0.9 });
     sitemap.write({ url: '/about', changefreq: 'weekly', priority: 0.9 });
     sitemap.write({ url: '/manifesto', changefreq: 'weekly', priority: 0.9 });
+    sitemap.write({ url: '/machine', changefreq: 'monthly', priority: 0.8 });
+    sitemap.write({ url: '/vault', changefreq: 'monthly', priority: 0.8 });
+    sitemap.write({ url: '/authorized-narrative-input', changefreq: 'monthly', priority: 0.8 });
 
     // Rutas dinámicas para cada imagen
     works.forEach(work => {
@@ -32,7 +35,7 @@ const BASE_URL = 'https://vakzthar.com';
     const sitemapOutput = await streamToPromise(sitemap).then(data => data.toString());
 
     fs.writeFileSync(path.join(__dirname, 'public', 'sitemap.xml'), sitemapOutput);
-    console.log(`✅ sitemap.xml generado con ${works.length + 2} rutas`);
+    console.log(`✅ sitemap.xml generado correctamente`);
   } catch (err) {
     console.error('❌ Error al generar sitemap:', err);
   }
