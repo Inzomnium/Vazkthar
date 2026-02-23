@@ -37,7 +37,7 @@ export default function Machine_3_4() {
     Some edges are internal.
   </p>
 
-    <p><a  target="_blank"  rel="noopener"  href="https://thevakztharimachine.substack.com/s/the-vakzthar11-postcards-from-the">Read it here</a></p>
+    <p><a  target="_blank"  rel="noreferrer"  href="https://thevakztharimachine.substack.com/s/the-vakzthar11-postcards-from-the">Read it here</a></p>
      
 
   

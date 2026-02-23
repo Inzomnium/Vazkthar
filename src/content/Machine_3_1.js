@@ -42,7 +42,7 @@ export default function Machine_3_1() {
   <p>
     It always is.
   </p>
-  <p><a target="_blank" rel="noopener" href="https://thevakztharimachine.substack.com/p/first-operator-chronicles-index">Read it here</a></p>
+  <p><a target="_blank" rel="noreferrer" href="https://thevakztharimachine.substack.com/p/first-operator-chronicles-index">Read it here</a></p>
       </div>
 
     </div>

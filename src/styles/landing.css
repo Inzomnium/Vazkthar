@@ -117,8 +117,8 @@ box-shadow: 0px 0px 16px 8px rgba(105,105,105,0.72);
     overflow: hidden;
     transition: all ease 0.4s;
         opacity: 0.92;
-        -webkit-box-shadow: 0px 0px 16px 8px rgba(105,105,105,0.72); 
-box-shadow: 0px 0px 16px 8px rgba(105,105,105,0.72);
+        -webkit-box-shadow: 0px 0px 16px 8px rgb(18 20 21);
+box-shadow:  0px 0px 16px 8px rgb(18 20 21);
 }
 .button-gates a img {
   min-width: 100%;

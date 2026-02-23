@@ -1,5 +1,5 @@
 // PanelContainer.jsx
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import Panel from "./Panel";
 import { buildStepPlan } from "./axisPlan";
 import { createCooldown, pulseClass } from "./effects";
@@ -86,48 +86,55 @@ export default function PanelContainer({
     setActiveFlip(Math.random() < chance);
   }, [activeIndex, config.flipChance]);
 
-  function moveToIndex(nextIndex) {
-    const idx = clamp(nextIndex, 0, panelIds.length - 1);
-    if (idx === activeIndex) return;
-    if (!panelIds[idx]) return;
-    if (isMoving) return;
+ const moveToIndex = useCallback((nextIndex) => {
+  const idx = clamp(nextIndex, 0, panelIds.length - 1);
+  if (idx === activeIndex) return;
+  if (!panelIds[idx]) return;
+  if (isMoving) return;
 
-    const prevIdx = activeIndex;
-    const prevDir = prevIdx > 0 ? stepPlan[prevIdx - 1] : null;
-    const nextDir = idx > 0 ? stepPlan[idx - 1] : null;
+  const prevIdx = activeIndex;
+  const prevDir = prevIdx > 0 ? stepPlan[prevIdx - 1] : null;
+  const nextDir = idx > 0 ? stepPlan[idx - 1] : null;
 
-    const isTurn = prevDir && nextDir && prevDir !== nextDir;
+  const isTurn = prevDir && nextDir && prevDir !== nextDir;
 
-    const baseSnapMs = config.snapMs ?? 260;
-    const turnSnapMs = config.turnSnapMs ?? Math.round(baseSnapMs * 1.8);
-    const snapMs = isTurn ? turnSnapMs : baseSnapMs;
+  const baseSnapMs = config.snapMs ?? 260;
+  const turnSnapMs = config.turnSnapMs ?? Math.round(baseSnapMs * 1.8);
+  const snapMs = isTurn ? turnSnapMs : baseSnapMs;
 
-    const glitchMs = config.glitchPulseMs ?? 150;
+  const glitchMs = config.glitchPulseMs ?? 150;
 
-    // guardamos la duración para el effect de cámara
-    snapMsRef.current = snapMs;
+  snapMsRef.current = snapMs;
 
-    setIsMoving(true);
+  setIsMoving(true);
 
-    // Si es giro: glitch ANTES del movimiento
-    if (isTurn && config.turnGlitch && canGlitch()) {
-      pulseClass(viewportRef.current, "pl-glitch", glitchMs);
+  if (isTurn && config.turnGlitch && canGlitch()) {
+    pulseClass(viewportRef.current, "pl-glitch", glitchMs);
 
-      window.setTimeout(() => {
-        setActiveIndex(idx);
-      }, glitchMs);
+    window.setTimeout(() => {
+      setActiveIndex(idx);
+    }, glitchMs);
 
-      window.setTimeout(() => {
-        setIsMoving(false);
-      }, glitchMs + snapMs + 20);
+    window.setTimeout(() => {
+      setIsMoving(false);
+    }, glitchMs + snapMs + 20);
 
-      return;
-    }
-
-    // Paso normal (sin giro o sin glitch)
-    setActiveIndex(idx);
-    window.setTimeout(() => setIsMoving(false), snapMs + 20);
+    return;
   }
+
+  setActiveIndex(idx);
+  window.setTimeout(() => setIsMoving(false), snapMs + 20);
+}, [
+  activeIndex,
+  isMoving,
+  panelIds,
+  stepPlan,
+  config.snapMs,
+  config.turnSnapMs,
+  config.glitchPulseMs,
+  config.turnGlitch,
+  canGlitch,
+]);
 
   // Wheel (desktop): one gesture = next/prev
   useEffect(() => {
@@ -153,7 +160,7 @@ export default function PanelContainer({
 
     el.addEventListener("wheel", onWheel, { passive: false });
     return () => el.removeEventListener("wheel", onWheel);
-  }, [activeIndex, isMoving, config.wheelThreshold]);
+  }, [activeIndex, isMoving, config.wheelThreshold,moveToIndex]);
 
   // Touch (mobile): semántico, con avance LEFT/UP (derecha->izquierda, abajo->arriba)
   useEffect(() => {
@@ -227,7 +234,7 @@ export default function PanelContainer({
       el.removeEventListener("touchend", onTouchEnd);
       el.removeEventListener("touchcancel", onTouchEnd);
     };
-  }, [activeIndex, isMoving, config.swipeMin, config.swipeMinMobile]);
+  }, [activeIndex, isMoving, config.swipeMin, config.swipeMinMobile, moveToIndex]);
 
   // Apply camera transform whenever activeIndex changes
   useEffect(() => {

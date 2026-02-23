@@ -32,7 +32,7 @@ export default function Machine_2_1_1() {
          Your support keeps the system alive.
         </p>
         <p>
-          <a target="_blank" rel="noopener" href="https://ko-fi.com/vakzthar">Visit The Vault Here</a></p>
+          <a target="_blank" rel="noreferrer" href="https://ko-fi.com/vakzthar">Visit The Vault Here</a></p>
      
       </div>
     </div>

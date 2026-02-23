@@ -37,7 +37,7 @@ export default function Machine_3_2() {
     belongs to the Machine.
   </p>
 
-  <p><a  target="_blank"  rel="noopener"  href="https://thevakztharimachine.substack.com/s/love-letters-to-no-one">Read it here</a></p>
+  <p><a  target="_blank"  rel="noreferrer"  href="https://thevakztharimachine.substack.com/s/love-letters-to-no-one">Read it here</a></p>
    
   
       </div>
