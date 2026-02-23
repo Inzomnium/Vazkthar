@@ -14,28 +14,26 @@ export default function Machine_2_1_1() {
       </div>
 
       <div className="panel-container-right">
-        <h2>2.1.1 · A LIVING NATURE</h2>
+        <h2>2.1.1 · How it works</h2>
 
             <p>
-          Nothing inside the Vault<br />
-          is fixed.
+          Some artifacts have limited downloads.
         </p>
 
         <p>
-          Versions drift.<br />
-          Details mutate.<br />
-          Silence accumulates between appearances.
+          Some may reappear altered over time.          
         </p>
 
         <p>
-          If something feels familiar,<br />
-          look closer.
+          Not everything returns.
         </p>
 
         <p>
-          The Vault remembers<br />
-          what you forget.
+         Your support keeps the system alive.
         </p>
+        <p>
+          <a target="_blank" rel="noopener" href="https://ko-fi.com/vakzthar">Visit The Vault Here</a></p>
+     
       </div>
     </div>
   );

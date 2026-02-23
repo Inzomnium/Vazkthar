@@ -38,7 +38,9 @@ const jsonLd = {
     "genre": "Mythopoetic Narrative",
     "keywords": [
       "The Machine",
+      "The Vakzthari Machine",
       "Vakzthar",
+      "Vakzthari",
       "Symbolic narrative",
       "Digital labyrinth",
       "First Operator Cycle"
@@ -66,7 +68,7 @@ export default function Machine() {
 
   {/* Open Graph */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Machine | Vakzthar" />
+  <meta property="og:title" content="The Vakzthari Machine | Vakzthar" />
   <meta
     property="og:description"
     content="Enter the corridor. A structured visual narrative composed of calibrated panels."
@@ -99,7 +101,7 @@ export default function Machine() {
     avoidAlternation: true,
     snapMs: 260,
     wheelThreshold: 140,
-    swipeMin: 40,
+    swipeMin: 10,
     turnGlitch: true,
     debug: false
   }}

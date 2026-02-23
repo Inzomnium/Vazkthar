@@ -13,21 +13,18 @@ export default function Machine_2_1() {
       </div>
 
       <div className="panel-container-right">
-        <h2>2.1 · ABOUT THE VAULT</h2>
+        <h2>2.1 · What you'll find here</h2>
 
             <p>
-          The Vault is a living mechanism.
+          Visual works and experimental pieces
         </p>
 
         <p>
-          It does not grow.<br />
-          It circulates.
+         Technomantic artifacts, including <i>Malleus Nebularum</i>
         </p>
 
         <p>
-          What rests here<br />
-          is not stored,<br />
-          it is suspended.
+         Limited digital editions
         </p>
 
         <p>
@@ -36,13 +33,9 @@ export default function Machine_2_1() {
         </p>
 
         <p>
-          When the condition breaks,<br />
-          the artifact moves on.
+          Occasional releases tied to specific cycles
         </p>
-
-        <p>
-          Stability would kill it.
-        </p>
+        
       </div>
     </div>
   );

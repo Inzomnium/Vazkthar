@@ -7,16 +7,15 @@ import i1 from '../assets/Images/bgs/a2.webp'
 import i2 from '../assets/Images/bgs/a3.webp'
 import i3 from '../assets/Images/bgs/a4.webp'
 import i4 from '../assets/Images/paintings/priestess.webp'
-import i5 from '../img/A Revolution without algorithm&&blooming over blood---Adobe Photoshop experiments with different patterns and textures over AI generated images___2026-01[[2]].jpg'
-import i6 from '../img/Beautiful atrocities&& -   ---Blending textures over AI generated images on Adobe Photoshop___2025-06[[3]].jpg'
-import i7 from '../img/Conditions to bloom in sweetness&& ---Blending textures over AI generated images on Adobe Photoshop___07-2025[[3]].jpg.jpg'
-import i8 from '../img/Maps and Traces 002&&Schematics---Interweaving of textured layers in Adobe Photoshop over curated, AI-generated visuals___2025-11[[2]].jpg'
-import i9 from '../img/There are flowers in the interference&&Bloom between the algorithm---Adobe Photoshop AI image recomposition using selective dithering and manual floral overlay___2025-06[[3]].jpg'
+import i5 from '../assets/Images/bgs/a5.jpg'
+import i6 from '../assets/Images/bgs/a6.jpg'
+import i7 from '../assets/Images/bgs/a7.jpg'
+import i8 from '../assets/Images/bgs/a8.jpg'
 
 
 
 
-const images = [i0, i1, i2, i3, i4, i5, i6, i7, i8, i9];
+const images = [i0, i1, i2, i3, i4, i5, i6, i7, i8];
 // Función para generar una posición aleatoria
 const getRandomBackgroundPosition = () => {
   const x = Math.floor(Math.random() * 100);

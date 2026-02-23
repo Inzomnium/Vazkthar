@@ -208,7 +208,7 @@ export default function Manifesto() {
 
         {/* Header / Hook */}
         <header className="man-header">
-          <h1>The Vakzthar[11] Manifesto</h1>
+          <h1>The Vakzthar[11] <b>Manifesto</b></h1>
           <p className="man-hook">
             Not an artist. Not an engineer. Something beyond <br/> a lucid operator of machines, traversing mediums to illuminate the unseen.
           </p>

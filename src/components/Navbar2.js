@@ -12,6 +12,18 @@ const location = useLocation();
         to="/"
         className={`boton ${location.pathname === "/" ? "active" : ""}`}
         >Home</Link>
+         <Link 
+        to="/machine"
+        className={`boton ${location.pathname === "/" ? "active" : ""}`}
+        >The Machine</Link>
+         <Link 
+        to="/authorized-narrative-input"
+        className={`boton ${location.pathname === "/" ? "active" : ""}`}
+        >The Narrative</Link>
+        <Link 
+        to="/vault"
+        className={`boton ${location.pathname === "/" ? "active" : ""}`}
+        >The Vault</Link>
         <Link        
         to="/gallery"
          className={`boton ${location.pathname === "/gallery" ? "active" : ""}`}

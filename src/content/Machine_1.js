@@ -14,7 +14,7 @@ export default function Machine_1() {
       </div>
 
       <div className="panel-container-right">
-        <h2>1 · THE MACHINE</h2>
+        <h2>1 · THE Vakzthari MACHINE</h2>
         <p>You have tried.</p>
     <p>You have been there.</p>
     <p>The Machine was there.</p>

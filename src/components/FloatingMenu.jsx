@@ -7,9 +7,10 @@ export default function FloatingMenu({
     { to: "/", label: "Home" },
     { to: "/machine", label: "The Machine" },
     { to: "/vault", label: "The Vault" },
-    { to: "/gallery", label: "Gallery/Visions" },
-    { to: "/about", label: "About Vakzthar[11]" },
-    { to: "/manifesto", label: "Manifesto" },
+    { to: "/authorized-narrative-input", label: "The Narrative Inputs" },
+    { to: "/gallery", label: "The Visuals" },
+    { to: "/about", label: "The Vakzthar[11]" },
+    { to: "/manifesto", label: "The Manifesto" },
   ],
   position = "top-right", // ["top-right"]
 }) {

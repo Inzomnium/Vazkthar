@@ -3,21 +3,10 @@ import { Helmet } from "react-helmet-async";
 import FloatingMenu from "../components/FloatingMenu";
 import "../styles/panels.css"
 import Panel from "../components/PanelLabyrinth/Panel";
-import MACHINE2 from "../content/Machine_2";
 
+import MACHINE2 from "../content/Machine_2";
 import MACHINE2_1 from "../content/Machine_2_1";
 import MACHINE2_1_1 from "../content/Machine_2_1_1";
-import MACHINE2_1_2 from "../content/Machine_2_1_2";
-import MACHINE2_1_3 from "../content/Machine_2_1_3";
-import MACHINE2_1_4 from "../content/Machine_2_1_4";
-import MACHINE2_2 from "../content/Machine_2_2";
-import MACHINE2_2_1 from "../content/Machine_2_2_1";
-import MACHINE2_2_2 from "../content/Machine_2_2_2";
-import MACHINE2_2_3 from "../content/Machine_2_2_3";
-import MACHINE2_3 from "../content/Machine_2_3";
-import MACHINE2_3_1 from "../content/Machine_2_3_1";
-import MACHINE2_3_2 from "../content/Machine_2_3_2";
-import MACHINE2_3_3 from "../content/Machine_2_3_3";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -123,17 +112,7 @@ export default function vault() {
       <Panel id="machine-2-1"><MACHINE2_1 /></Panel>
      
       <Panel id="machine-2-1-1"><MACHINE2_1_1 /></Panel>
-      <Panel id="machine-2-1-2"><MACHINE2_1_2 /></Panel>
-      <Panel id="machine-2-1-3"><MACHINE2_1_3 /></Panel>
-      <Panel id="machine-2-1-4"><MACHINE2_1_4 /></Panel>
-      <Panel id="machine-2-2"><MACHINE2_2 /></Panel>
-      <Panel id="machine-2-2-1"><MACHINE2_2_1 /></Panel>
-      <Panel id="machine-2-2-2"><MACHINE2_2_2 /></Panel>
-      <Panel id="machine-2-2-3"><MACHINE2_2_3 /></Panel>
-      <Panel id="machine-2-3"><MACHINE2_3 /></Panel>
-      <Panel id="machine-2-3-1"><MACHINE2_3_1 /></Panel>
-      <Panel id="machine-2-3-2"><MACHINE2_3_2 /></Panel>
-      <Panel id="machine-2-3-3"><MACHINE2_3_3 /></Panel>
+      
     </PanelContainer>
 
      </>

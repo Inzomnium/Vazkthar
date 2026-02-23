@@ -19,6 +19,10 @@
 }
 .panel-block h2 {
     font-family: "Permanent Marker", cursive;
+    text-transform: lowercase;    
+}
+.panel-block h2::first-line {
+   text-transform: capitalize;
 }
 .panel-block p {
     font-family: "Syne Mono", monospace;
@@ -57,6 +61,20 @@
     pointer-events: none;
     
 }
+.panel-block p a {
+    background: #fff1b9;
+    padding: 0.6em;
+    color: #061211;
+    text-shadow: none;
+    border-radius: 2px 5px 1px 6px;
+    text-decoration: none;
+    margin: 0px 7px;
+    display: flex;
+    transition: all ease 0.3s;
+}
+.panel-block p a:hover {
+  transform: scale(110%) rotate(-5deg);
+}
 
 /* Asignamos el índice manualmente en CSS */
 .panel-block p:nth-child(1) { --i: 1; }
@@ -92,6 +110,10 @@
    MOBILE BASE (panel-block)
    ========================= */
 @media (max-width: 768px) {
+
+  .pl-viewport {
+    height: 100dvh;
+  }
 
   .panel-block {
     flex-direction: column;
@@ -148,28 +170,26 @@
 .pl-panel.flip-view .panel-block .panel-container-right {
     top: 1vh;
 }
-.pl-panel.is-last .panel-block .panel-container-right {
-  bottom: 15vh;
-}
+
 
 
   .panel-block h2 {
     font-size: 1.2em;
-    margin-bottom: 0.7em;
+    margin-bottom: 0.6dvh;
     background-color: #061211;
     padding: 4px 7px;
   }
   .panel-block p {
     max-width: 100%;
-    font-size: 1.4vh;
+    font-size: 1.4dvh;
     margin: 0.22em;
   }
 .pl-panel.is-last.is-active::after {
-  right: 27vw;
-  bottom: -12px;
-  width: 170px;
-  background-size: contain;
-  height: 85px;
+          right: 0;
+        bottom: 0;
+        width: 100%;
+        background-size: contain;
+        
 }
 .fm-trigger {
     width: 50px;
@@ -184,4 +204,8 @@
         top: 15px;
         left: 15px;
 }
+
+
+
+
 }

@@ -14,21 +14,22 @@ export default function Machine_2() {
       </div>
 
       <div className="panel-container-right">
-        <h2>2 · THE VAULT</h2>
+        <h2>2 · The Vakzthari Vault</h2>
 
-            <p>
-          This is not an introduction.
+        <p>The Vault is where you can support <b>The Vakzthari Machine</b>,
+            <br />
+    where artifacts become accessible.
         </p>
 
         <p>
-          If you are here,<br />
-          you already crossed something.
+          Some are free.<br />
+          Some require support.       
         </p>
 
         <p>
-          The Vault is not concerned<br />
-          with persuasion.<br />
-          Only with timing.
+          Nothing here is permanent.<br />
+          If something resonates, take it while it’s here.<br />
+          The Vault sustains the Machine.
         </p>
 
         <p>
