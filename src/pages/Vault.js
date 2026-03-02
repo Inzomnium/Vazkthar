@@ -11,7 +11,7 @@ import MACHINE2_1_1 from "../content/Machine_2_1_1";
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "The Vault — Vakzthar",
+    "name": "The Vault - Vakzthar",
     "description":
       "The Vault is a living archive of collectible digital artifacts. Items appear, disappear, and return shifted through Blinks and Movements.",
     "url": "https://vakzthar.com/vault",
@@ -58,7 +58,7 @@ export default function vault() {
      <>
 
     <Helmet>
-      <title>The Vault — Vakzthar</title>
+      <title>The Vakzthari Vault - Vakzthar</title>
 
       <meta
         name="description"
@@ -69,7 +69,7 @@ export default function vault() {
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="The Vault — Vakzthar" />
+      <meta property="og:title" content="The Vault - Vakzthar" />
       <meta
         property="og:description"
         content="A living archive of collectible digital artifacts. Blinks, rare returns, shifted versions."
@@ -79,7 +79,7 @@ export default function vault() {
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="The Vault — Vakzthar" />
+      <meta name="twitter:title" content="The Vault - Vakzthar" />
       <meta
         name="twitter:description"
         content="A living archive of collectible digital artifacts. Blinks, rare returns, shifted versions."

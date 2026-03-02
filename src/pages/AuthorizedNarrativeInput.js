@@ -15,7 +15,7 @@ import MACHINE3_5 from "../content/Machine_3_5";
 const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Authorized Narrative Input — Vakzthar",
+    "name": "Authorized Narrative Input - Vakzthar",
     "description":
       "Authorized fragments released by the Machine. Documents that passed through the Black Box: Operator logs, letters, transmissions, and reality leaks.",
     "url": "https://vakzthar.com/authorized-narrative-input",
@@ -67,7 +67,7 @@ export default function Machine() {
   return (
      <>
      <Helmet>
-      <title>Authorized Narrative Input — Vakzthar</title>
+      <title>Authorized Narrative Input - Vakzthar</title>
 
       <meta
         name="description"
@@ -83,7 +83,7 @@ export default function Machine() {
       <meta property="og:type" content="website" />
       <meta
         property="og:title"
-        content="Authorized Narrative Input — Vakzthar"
+        content="Authorized Narrative Input - Vakzthar"
       />
       <meta
         property="og:description"
@@ -102,7 +102,7 @@ export default function Machine() {
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:title"
-        content="Authorized Narrative Input — Vakzthar"
+        content="Authorized Narrative Input - Vakzthar"
       />
       <meta
         name="twitter:description"

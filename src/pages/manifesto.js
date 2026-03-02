@@ -11,7 +11,7 @@ export default function Manifesto() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "The Vakzthar[11] Manifesto — v1.0",
+    "headline": "The Vakzthar[11] Manifesto - v1.0",
     "alternativeHeadline": "Mythopoethic Createchnics",
     "author": {
       "@type": "Person",
@@ -39,7 +39,7 @@ export default function Manifesto() {
   return (
     <>
       <Helmet>
-        <title>The Vakzthar[11] Manifesto — Mythopoethic Createchnics</title>
+        <title>The Vakzthar[11] Manifesto - Mythopoethic Createchnics</title>
         <meta name="description" content="The Vakzthar[11] Manifesto: tenets, practices, and vows of a mythopoethic createchnics operator. Read the signal, follow the resonance."/>
         <link rel="canonical" href={canonical} />
         <meta property="og:title" content="The Vakzthar[11] Manifesto" />
@@ -64,7 +64,7 @@ export default function Manifesto() {
       "@type": "CreativeWork",
       "name": "The Vakzthar[11] Manifesto",
       "alternateName": "Vakzthari Manifesto",
-      "headline": "The Vakzthar[11] Manifesto — Mythopoethic Createchnics",
+      "headline": "The Vakzthar[11] Manifesto - Mythopoethic Createchnics",
       "alternativeHeadline": "Mythopoethic Createchnics",
       "genre": "Art Manifesto",
       "about": [
@@ -125,7 +125,7 @@ export default function Manifesto() {
           "name": "What is the Vakzthar[11] Manifesto?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A declaration of tenets, practices, and vows around mythopoethic createchnics—an artistic philosophy that values resonance and testimony over applause."
+            "text": "A declaration of tenets, practices, and vows around mythopoethic createchnics-an artistic philosophy that values resonance and testimony over applause."
           }
         },
         {
@@ -133,7 +133,7 @@ export default function Manifesto() {
           "name": "Who is Vakzthar[11]?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The artistic pseudonym of Sebastián Leonardo Cofré Barrientos—author, visual creator, and operator working across mediums with machines."
+            "text": "The artistic pseudonym of Sebastián Leonardo Cofré Barrientos-author, visual creator, and operator working across mediums with machines."
           }
         },
         {
@@ -149,7 +149,7 @@ export default function Manifesto() {
           "name": "What is Mythopoethics?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Poetic myth-making that survives the medium—the story breathes even if the format changes."
+            "text": "Poetic myth-making that survives the medium-the story breathes even if the format changes."
           }
         },
         {
@@ -157,7 +157,7 @@ export default function Manifesto() {
           "name": "What is Poetic Glitch?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Designed imperfection as harmonic divergence—not malfunction. Friction that reveals truth."
+            "text": "Designed imperfection as harmonic divergence-not malfunction. Friction that reveals truth."
           }
         },
         {
@@ -165,7 +165,7 @@ export default function Manifesto() {
           "name": "Is this pro- or anti-AI?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pro-truth. Tools change; truth does not. AI lets you create more, not better—the judgment remains human."
+            "text": "Pro-truth. Tools change; truth does not. AI lets you create more, not better-the judgment remains human."
           }
         },
         {
@@ -181,7 +181,7 @@ export default function Manifesto() {
           "name": "What does “archives over feeds” mean?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Prioritize durable containers—site, PDFs, cycles—so the work can be found and re-read, not just scrolled past once."
+            "text": "Prioritize durable containers-site, PDFs, cycles-so the work can be found and re-read, not just scrolled past once."
           }
         },
         {
@@ -242,7 +242,7 @@ export default function Manifesto() {
     <p className="mf-sub">Curatorial Integration - Consolidated Symbolism</p>
    
   </header>
- <blockquote className="mf-epigraph spectral-medium-italic">“The Glitched Queen stands — not despite the rupture, but because of it.”</blockquote>
+ <blockquote className="mf-epigraph spectral-medium-italic">“The Glitched Queen stands - not despite the rupture, but because of it.”</blockquote>
   <section id="mf-1">
  
   <h3>1. Time is the Only True Curator.</h3>
@@ -252,7 +252,7 @@ export default function Manifesto() {
   <p>And it is Time who decides what remains when every voice has gone silent.</p>
 
   <p>We do not sign to earn applause. We sign to leave testimony.</p>
-  <p>And Time —the only one who needs nothing— will know if we ever deserved to speak.</p>
+  <p>And Time -the only one who needs nothing- will know if we ever deserved to speak.</p>
 
   <p>All of us, whether we like it or not, eventually bow before Father Time. Our work is no exception.</p>
   <p>In the future, when archaeologists unearth what we have done, they will not look for the tweet.</p>
@@ -276,7 +276,7 @@ export default function Manifesto() {
   To search for what we have not yet seen, but know we will someday find.
   Through our hands, our screens, our brushes, our pencils, our prompts.</p>
 
-  <p>We create to portray what it feels like to be alive —on good days and bad—,
+  <p>We create to portray what it feels like to be alive -on good days and bad-,
   in the hope that someone, upon seeing it, might say:</p>
 
   <blockquote>
@@ -302,7 +302,7 @@ export default function Manifesto() {
   <p>And when that day comes, we will probably have no time to hear your other opinions.
   Because we will be busy making something else.</p>
 
-  <p>We will be artists —perhaps— when Father Time sees us, and other generations say: “This was art.”</p>
+  <p>We will be artists -perhaps- when Father Time sees us, and other generations say: “This was art.”</p>
   <p>For now, the trees keep us from seeing the forest.</p>
   </section>
 
@@ -365,7 +365,7 @@ export default function Manifesto() {
   <p>That’s why we shout and build systems, no matter how dissonant.</p>
 
   <p>The modern artist seeks to enter the history books, even if they are written by their friends.</p>
-  <p>And so —to get into those books— they seek to impress those they think will read them: other artists.</p>
+  <p>And so -to get into those books- they seek to impress those they think will read them: other artists.</p>
 
   <blockquote>
     <p>Too many works are winks, not cries. Catalogue quotes. Technical praise. Emotional resonance: anecdotal.</p>
@@ -411,7 +411,7 @@ export default function Manifesto() {
   <p>The history of art is the history of its own negation.</p>
 
   <p>When photography appeared, painting was thought to be dead. But it was liberated.
-  It no longer needed to mirror the world — it could mirror the soul.</p>
+  It no longer needed to mirror the world - it could mirror the soul.</p>
 
   <p>And so impressionism, expressionism, abstract art were born: a beautiful, necessary artistic adolescence.</p>
 
@@ -435,7 +435,7 @@ export default function Manifesto() {
   <p>AI does not make art easy. It only makes the image more accessible.
   Art is still difficult. It still demands discernment. It still demands soul.</p>
 
-  <p>It is our job — as creators and curators — to know when we are facing something worth keeping.</p>
+  <p>It is our job - as creators and curators - to know when we are facing something worth keeping.</p>
 
   <p>Because Time will not ask if you made it in fever, in pain, in war, or in peace.
   Time will only ask: <b>Does it convey something worth remembering?</b></p>
@@ -448,7 +448,7 @@ export default function Manifesto() {
   </section>
 
   <section id="mf-6-5">
-    <h3>6.5. The Freak Show — And How Not to Let It In.</h3>
+    <h3>6.5. The Freak Show - And How Not to Let It In.</h3>
 
   <p>Every new medium brings its own spectacle of oddities. 
   When technique becomes more accessible, the freak show appears.</p>
@@ -464,7 +464,7 @@ export default function Manifesto() {
   But pioneering alone is no virtue.</p>
 
   <p>We end up with a sea of works made to shock: 
-  Genitals, grotesque, scatology — not out of expressive need, 
+  Genitals, grotesque, scatology - not out of expressive need, 
   but out of desperation for visibility.</p>
 
   <p>Like a circus of eccentricities: the bearded woman, the man with six fingers. 
@@ -504,7 +504,7 @@ export default function Manifesto() {
   And if it does not arrive, at least it was sent in truth.</p>
 
   <blockquote>
-    <p>“Art is not the one you feel or what you feel when you see it — 
+    <p>“Art is not the one you feel or what you feel when you see it - 
     it is the one you feel is looking back at you.”</p>
   </blockquote>
 
@@ -533,7 +533,7 @@ export default function Manifesto() {
           <ul>
             <li>Createchnics: vision first, tools second.</li>
             <li>Resonance over novelty; listening over noise.</li>
-            <li>Poetic glitch as harmonic divergence — designed imperfection.</li>
+            <li>Poetic glitch as harmonic divergence - designed imperfection.</li>
             <li>Mythopoethics: meaning that survives format.</li>
             <li>The Operator: any tool, one message.</li>
           </ul>
@@ -544,7 +544,7 @@ export default function Manifesto() {
           <h2>Tenets</h2>
           <ol>
             <li>Medium is a translation layer, not a cage.</li>
-            <li>Beauty emerges at the edge of failure — by design.</li>
+            <li>Beauty emerges at the edge of failure - by design.</li>
             <li>Tools are instruments; intention is the composition.</li>
             <li>Resonance is the metric; attention is not.</li>
             <li>Archives over feeds; cycles over trends.</li>
@@ -592,7 +592,7 @@ export default function Manifesto() {
 
       </article>
         <section className="block man-meta">
-          <p>v1.0 — August 2025 — Málaga</p>         
+          <p>v1.0 - August 2025 - Málaga</p>         
         </section>
       </section>
 

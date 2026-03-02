@@ -19,8 +19,8 @@ import MACHINE1_2_8 from "../content/Machine_1_2_8";
 const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    "name": "The Machine — Vakzthar",
-    "headline": "The Machine — First Operator Cycle",
+    "name": "The Vazkthari Machine - Vakzthar",
+    "headline": "The Vazkthari Machine - First Operator Cycle",
     "description": "A symbolic narrative corridor exploring the concept of The Machine, structured as a navigable labyrinth of panels.",
     "author": {
       "@type": "Person",
@@ -57,7 +57,7 @@ export default function Machine() {
      <Helmet>
 
 
-  <title>The Machine | Vakzthar</title>
+  <title>The Vakzthari Machine - Vakzthar</title>
 
   <meta
     name="description"
