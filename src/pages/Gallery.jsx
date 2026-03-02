@@ -49,7 +49,7 @@ const Gallery = () => {
       <Helmet>
         <title>
           {selectedWork
-            ? `${selectedWork.title} | The Vakzthar Visual Archive`
+            ? `${selectedWork.title} | A Vakzthari Visual`
             : 'The Vakzthar - Visual Art Gallery'}
         </title>
         <meta
@@ -116,7 +116,7 @@ const Gallery = () => {
             "height": 1300,
              "width": 1300,
             "caption": selectedWork.caption || selectedWork.title,
-            "creditText": "Vakzthar[11] — Sebastián Leonardo Cofré Barrientos"
+            "creditText": "Vakzthar[11] - Sebastián Leonardo Cofré Barrientos"
             // "license": "https://vakzthar.com/license" // opcional si tienes una URL de licencia
           }
         };

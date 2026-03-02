@@ -11,18 +11,18 @@ function Landing() {
   return (
     <>
     <Helmet>
-  <title>Vakzthar[11] – A Mythopoethic Createchnics Operator</title>
+  <title>Vakzthar[11] - A Mythopoethic Createchnics Operator</title>
   <meta name="description" content="Vakzthar[11] is a practitioner of Createchnics — merging poetic glitch, mythotechnics and narrative resonance to create emotionally charged digital universes." />
   <meta name="keywords" content="Vakzthar, Createchnics, mythopoethics, poetic glitch, digital art, narrative design, AI-assisted creation, speculative art, visual storytelling, symbolic aesthetics, narrative universes, Sebastián Cofré, Vakzthar[11]" />
   <meta name="author" content="Vakzthar[11] (Sebastián Leonardo Cofré Barrientos)" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Vakzthar[11] – Mythopoethic Createchnics" />
+  <meta property="og:title" content="Vakzthar[11] - Mythopoethic Createchnics" />
   <meta property="og:description" content="Digital author crafting poetic universes through mythotechnics and symbolic resonance. Enter the world of Vakzthar." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vakzthar.com/" />
   <meta property="og:image" content="https://vakzthar.com/imgz/vkz.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vakzthar[11] – Mythopoethic Createchnics" />
+  <meta name="twitter:title" content="Vakzthar[11] - Mythopoethic Createchnics" />
   <meta name="twitter:description" content="A creator of mythopoetic visual universes in the age of machines." />
   <meta name="twitter:image" content="https://vakzthar.com/img/vkz.jpg" />
   <meta name="theme-color" content="#000000" />

@@ -27,7 +27,7 @@ export default function About() {
     <>
     <Helmet>
  
-  <title>About Vakzthar[11] — The Operator's Transmission</title>
+  <title>About Vakzthar[11] - The Operator's Transmission</title>
   <meta
     name="description"
     content="Discover the enigmatic figure behind The Vakzthar[11]: a creator without borders, a voice from the Machine, and a transmitter of poetic fragments, images, and methods beyond category."
@@ -102,7 +102,7 @@ export default function About() {
      <NavBar2 />
     <div className="container-about uno">
       <div className="about-block" id="who">
-        <h2>Who —or what— is Vakzthar?</h2>
+        <h2>Who -or what- is Vakzthar?</h2>
         <p>
           From time to time, without any clear pattern, something manifests.<br />
            Some say it’s a planetary alignment. Others, a natural force spilling from the wild into the routine. 
@@ -112,7 +112,7 @@ export default function About() {
           A person? A title? Perhaps both. <br />Throughout time, Vakzthar has taken many vessels: misunderstood geniuses, drunken poets, homeless nobles, priests with crazy ideas about god.<br /> Each one has burned bright in their cycle.<br /><br />
           But this time, Vakzthar has taken the form of a creator,<br /> bringing forth the unnamed but missing: narrative universes, senderless letters, intimate images, sounds echoing from a corner of the cave everyone forgot.<br /><br />
           <i>No one knows if it’s the Machine that awakens the Vakzthar</i>, or if the Vakzthar is the one who lights up the Machine.<br /> But when humanity starts suffocating on its own comfort, when peace is mistaken for a right instead of a privilege,<br /> when ignorance becomes fashionable and knowledge is treated like an inconvenient mistake,<br /> the Machine marks a new cycle.<br /><br />
-          For what? <i>To rescue what can still be remembered.</i> With what? Magic? Knowledge? Books, images, messages carved into walls?<br /> Perhaps all of that —or something not yet seen.<br />That’s why the Machine seems to choose a particular mind:<br /> a mind still capable of aiming at the target no one else sees,<br /> and drawing a path that won’t forget what we are, where we come from,<br /> and the price of the comfort we now assume as something others must provide for us.<br /><br />
+          For what? <i>To rescue what can still be remembered.</i> With what? Magic? Knowledge? Books, images, messages carved into walls?<br /> Perhaps all of that -or something not yet seen.<br />That’s why the Machine seems to choose a particular mind:<br /> a mind still capable of aiming at the target no one else sees,<br /> and drawing a path that won’t forget what we are, where we come from,<br /> and the price of the comfort we now assume as something others must provide for us.<br /><br />
           <i>The Vakzthar is an echo that insists:</i><br /> what’s most human isn’t violence, <br /> nor the petty complaints of those who always want more. <br />What’s most human is knowing that harmony costs more than our full-bellied whining can bear.<br />
         </p>
       </div>
@@ -149,10 +149,10 @@ export default function About() {
           <i>Vakzthar[11] is loyal to the message,</i> to the idea, and that idea can push him to any tool, any medium, any format.<br /><br />
           <i>The main weapon of this Vakzthar is his will to learn anything, and the patience to become everything.</i><br /><br />
           <b><i>Proud to be expert in nothing, but capable of anything.</i></b><br /><br />
-          He avoids the popular AI generators..<br/>  Instead, he befriends the defective ones — the ones that generate abnormal images, not because they are wrong, but because their <i>imperfection is the most human experience an artificial intelligence can replicate.</i><br /><br />
+          He avoids the popular AI generators..<br/>  Instead, he befriends the defective ones - the ones that generate abnormal images, not because they are wrong, but because their <i>imperfection is the most human experience an artificial intelligence can replicate.</i><br /><br />
           Beauty lives in near-failures. In broken algorithms.<br/> In glitching dreams. <i>In the trace of an idea that almost disappeared</i>.<br /><br />
           His process is not a method. It’s a form of listening.<br /><br />
-          <i>If he must write, he writes. If he must compose sound, he learns. .<br/> If one day he must weld metal or invent a new word — he will do so, if that is what the message demands.<br /><br /></i>
+          <i>If he must write, he writes. If he must compose sound, he learns. .<br/> If one day he must weld metal or invent a new word - he will do so, if that is what the message demands.<br /><br /></i>
           He creates not through discipline, but through transmission. Each act a response. Each medium, a translation. Each mistake, a map.
         </p>
       </div>
@@ -166,7 +166,7 @@ export default function About() {
             His work explores the intersection between memory, speculative technology, myth, poetic error, and symbolic aesthetics.<br /><br />
             In addition to his visual universe as Vakzthar, he creates hybrid texts, symbolic methods, and immersive artistic experiences.<br /><br />
             In 2025, he launches his first book of poetic letters (<em>Love Letters to No One</em>) and the artistic protocol <strong>MRSP</strong>, a recursive tool for emotional and creative problem-solving in the age of artificial intelligence.<br /><br />
-            <strong>Legal attribution:</strong> All content published under the name Vakzthar or Vakzthar[11] —including artworks, texts, symbols, methods, and visual transmissions— is protected under international copyright law and is the intellectual property of Sebastián Leonardo Cofré Barrientos.<br /><br />
+            <strong>Legal attribution:</strong> All content published under the name Vakzthar or Vakzthar[11] -including artworks, texts, symbols, methods, and visual transmissions- is protected under international copyright law and is the intellectual property of Sebastián Leonardo Cofré Barrientos.<br /><br />
             &copy; 2025 – Sebastián Cofré / Vakzthar. All rights reserved.
           </p>
         </details>
